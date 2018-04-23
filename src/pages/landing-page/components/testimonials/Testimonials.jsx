@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Testimonials.css';
-import firstAvatar from './first-avatar.jpg';
 
 export default class Testimonials extends Component {
   render() {
@@ -11,7 +10,7 @@ export default class Testimonials extends Component {
           <div className="demo-card-wide mdl-card mdl-shadow--8dp container">
             <div className="mdl-card__title mdl-card--border">
               <div className="image-container">
-                <img className="image" src={firstAvatar} alt="Avatar" />
+                <img className="image" src="" alt="Avatar" />
               </div>
               <h3 className="mdl-card__title-text author-testimonial">
                 Chxsxsxsris Fxssdeox
@@ -34,7 +33,7 @@ export default class Testimonials extends Component {
           <div className="demo-card-wide mdl-card mdl-shadow--8dp container">
             <div className="mdl-card__title mdl-card--border">
               <div className="image-container">
-                <img className="image" src={firstAvatar} alt="Avatar" />
+                <img className="image" src="" alt="Avatar" />
               </div>
               <h3 className="mdl-card__title-text author-testimonial">
                 Chxsxsxsris Fxssdeox

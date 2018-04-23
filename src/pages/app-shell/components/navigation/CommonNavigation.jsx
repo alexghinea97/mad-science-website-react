@@ -17,13 +17,6 @@ export default class CommonNavigation extends Component {
         <NavLink
           activeClassName="selected"
           className="mdl-navigation__link"
-          to="/search"
-        >
-          Намери книга
-        </NavLink>
-        <NavLink
-          activeClassName="selected"
-          className="mdl-navigation__link"
           to="/blog"
         >
           Блог
@@ -35,16 +28,6 @@ export default class CommonNavigation extends Component {
         >
           Контакти
         </NavLink>
-        <NavLink
-          activeClassName="selected"
-          className="mdl-navigation__link"
-          to="/login"
-        >
-          Влез
-        </NavLink>
-        <a className="mdl-navigation__link" href="/profile/info">
-          Профил
-        </a>
       </nav>
     );
   }

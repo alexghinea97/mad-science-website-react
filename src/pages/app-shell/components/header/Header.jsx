@@ -14,7 +14,7 @@ export default class Header extends Component {
           <span className="mdl-layout-title">
             <NavLink to="/">
               <img src="/images/logo.png" alt="Compnany logo" />
-              <h1>Книга за книга</h1>
+              <h1>Mad Science</h1>
             </NavLink>
           </span>
           <div className="mdl-layout-spacer" />

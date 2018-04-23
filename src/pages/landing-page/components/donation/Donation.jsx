@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Donation.css';
-import TextInputField from '../../../components/input-controls/TextInputField';
+import TextInputField from '../../../../components/input-controls/TextInputField';
 
 export default class Donation extends Component {
   render() {

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import ValueProposition from './components/ValueProposition';
-import SocialMediaBar from '../social-media-bar/SocialMediaBar';
-import TimelineList from './components/TimelineList';
-import Testimonials from './components/Testimonials';
-import Donation from './components/Donation';
+import ValueProposition from './components/value-proposition/ValueProposition';
+import SocialMediaBar from './components/social-media-bar/SocialMediaBar';
+import TimelineList from './components/timeline/TimelineList';
+import Testimonials from './components/testimonials/Testimonials';
+import Donation from './components/donation/Donation';
 import './LandingPage.css';
 
 export default class LandingPage extends Component {
@@ -17,8 +17,9 @@ export default class LandingPage extends Component {
 
     return (
       <div id="landing-page">
-        <h1 className="title-landing-page">Книга за Книга</h1>
+        <h1 className="title-landing-page">Mad Science</h1>
         <img src="/images/example-logo.jpg" id="landing-page-logo" alt="" />
+        <h2 className="center">Let us help you with your digital presence.</h2>
         <div className="mdl-grid">
           <div className="mdl-cell--2-offset-desktop mdl-cell--1-offset-tablet" />
           <div

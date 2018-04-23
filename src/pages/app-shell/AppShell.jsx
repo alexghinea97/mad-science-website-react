@@ -5,9 +5,7 @@ import MobileNavigation from './components/mobile-navigation/MobileNavigation';
 import LandingPage from '../landing-page/LandingPage';
 import About from '../about/About';
 import Contacts from '../contacts/Contacts';
-import Login from '../login/Login';
 import FAQ from '../faq/FAQ';
-import BlogLandingPage from '../blog-landing-page/BlogLandingPage';
 import { Route } from 'react-router-dom';
 
 export default class AppShell extends React.Component {
@@ -20,9 +18,7 @@ export default class AppShell extends React.Component {
           <Route exact path="/" component={LandingPage} />
           <Route path="/about/" component={About} />
           <Route exact path="/contacts" component={Contacts} />
-          <Route exact path="/login" component={Login} />
           <Route exact path="/faq" component={FAQ} />
-          <Route path="/blog" component={BlogLandingPage} />
           <Footer />
         </main>
       </div>

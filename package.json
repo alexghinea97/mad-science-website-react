@@ -26,7 +26,6 @@
     ]
   },
   "scripts": {
-    "flow": "flow",
     "analyze": "source-map-explorer build/static/js/main.*",
     "precommit": "lint-staged",
     "predeploy": "npm run build",
