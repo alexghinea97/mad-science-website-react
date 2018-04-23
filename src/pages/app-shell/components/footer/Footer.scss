@@ -1,0 +1,20 @@
+#page-footer {
+    .mdl-mini-footer {
+        padding: 20px 16px;
+    }
+    .mdl-mini-footer__link-list {
+        font-size: 17px;
+    }
+    .mdl-mini-footer__left-section {
+        margin: auto;
+    }
+    @media (max-width: 480px) {
+        .mdl-mini-footer__link-list {
+            display: block;
+            a {
+                display: inline-block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}

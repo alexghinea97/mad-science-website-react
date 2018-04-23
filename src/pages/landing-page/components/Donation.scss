@@ -1,0 +1,58 @@
+#donation-component {
+    background-color: #F2E9FF;
+    .singleDonationButton {
+        display: inline-block;
+        padding: 10px;
+        margin-left: 30px;
+    }
+    .mdl-chip__text {
+        font-size: 17px;
+    }
+    .monthlyDonationButton {
+        display: inline-block;
+        padding: 10px;
+        margin-left: 30px;
+    }
+    .mdl-card__supporting-text {
+        font-size: 20px;
+        line-height: normal;
+    }
+    .mdl-card__title-text {
+        font-size: 32px;
+        display: inline-block;
+        text-align: center;
+    }
+    .mdl-chip{
+        background-color: aliceblue;
+        color: #f2a409;
+    }
+    .money-for-donation {
+        .mdl-chip {
+            margin-left: 30px;
+            padding: 0 10px;
+            margin-bottom: 15px;
+            color: rgb(63,81,181);
+            background-color: aliceblue;
+        }
+    }
+    .mdl-textfield {
+        width: 70%;
+        margin-left: 10%;
+    }
+    .mdl-card__actions{
+        height: 55px;
+        text-align: center;
+    }
+    .mdl-button{
+        font-size: 20px;
+    }
+    .mdl-card{
+        margin-bottom: 20px;
+    }
+    .other-method-for-donation{
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 15px;
+        color: #f2a409;
+    }
+}

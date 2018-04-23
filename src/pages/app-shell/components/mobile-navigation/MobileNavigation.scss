@@ -1,0 +1,30 @@
+$color_1: #8EC5EE;
+$color_2: #40596B;
+
+@media only screen and (min-width:1024px) {
+	#mobile-navigation {
+		display: none;
+	}
+	.mdl-layout__drawer-button {
+		display: none;
+	}
+}
+#mobile-navigation {
+	.mdl-layout__drawer-button {
+		position: relative;
+	}
+	.mdl-layout__drawer {
+		.mdl-layout-title {
+			font-size: 150%;
+			line-height: 40px;
+		}
+		.mdl-navigation {
+			.mdl-navigation__link {
+				color: $color_1;
+				&:hover {
+					color: $color_2;
+				}
+			}
+		}
+	}
+}

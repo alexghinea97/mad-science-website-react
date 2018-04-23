@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+body {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.6px;
+}
+
+h1 {
+    color: #3f51b5;
+    text-align: center;
+}
+
+h2 {
+    color: #606060;
+}
+
+#not-found-page main img {
+    width: 100%;
+}
+
+#page-subtitle {
+    font-size: 30px;
+    letter-spacing: 3px;
+    line-height: 40px;
+    margin-left: 75px;
+}
+
+.mdl-layout__drawer .mdl-layout-title {
+    color: #3f51b5;
+    text-align: left;
+    font-size: 35px;
+}
+
+.search-cell {
+    margin-left: 0px;
+    border: solid gray 1px;
+    padding: 10px;
+    box-shadow: 5px;
+    border-radius: 10px;
+}
+
+.search-term {
+    font-weight: bold;
+}
+
+.valueProp {
+    list-style: none;
+    padding-left: 0;
+    position: relative;
+    >li {
+        margin-left: 2em;
+    }
+}
+
+.bullet:before {
+    position: absolute;
+    content: '\25CF';
+    width: 1.5em;
+    left: 0;
+    text-align: center;
+}
+
+.accent {
+    font-weight: bold;
+    &:before {
+        position: absolute;
+        content: '\271A';
+        width: 1.5em;
+        left: 0;
+        text-align: center;
+    }
+}
+
+main {
+    display: block;
+}
+
+a {
+    color: #f2a409;
+}
+
+p {
+    font-size: 15px;
+}

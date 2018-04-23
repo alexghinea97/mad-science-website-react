@@ -1,0 +1,94 @@
+@charset "UTF-8";
+#testimonials-component {
+  /* Clear floats after containers */
+  /* Add media queries for responsiveness. This will center both the text and the image inside the container */
+}
+#testimonials-component h2 {
+  padding-right: 8px;
+}
+#testimonials-component .container {
+  border: 2px solid #ccc;
+  background-color: #eee;
+  border-radius: 5px;
+  margin: 16px 0;
+}
+#testimonials-component .container .image {
+  float: left;
+  width: 90px;
+  height: 85px;
+  border-radius: 50%;
+  display: block;
+  margin: 10px;
+}
+#testimonials-component .container .author-testimonial {
+  font-size: 23px;
+  color: #3f51b5;
+  margin-bottom: 30px;
+  word-wrap: break-word;
+}
+#testimonials-component .container .content-testimonial {
+  font-size: 22px;
+  color: #606060;
+}
+#testimonials-component .mdl-card__title {
+  padding: 8px;
+}
+#testimonials-component .mdl-card__supporting-text {
+  padding: 8px;
+}
+#testimonials-component .quotation {
+  font-size: 30px;
+  quotes: '“' '”' '‘' '’';
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+#testimonials-component .quotation:before {
+  content: open-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 25px;
+  color: #3f51b5;
+  font-size: 3.5em;
+}
+#testimonials-component .quotation::after {
+  content: close-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: 10px;
+  position: relative;
+  top: 45px;
+  color: #3f51b5;
+  font-size: 3.5em;
+}
+#testimonials-component .container::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+@media (max-width: 600px) {
+  #testimonials-component .container {
+    text-align: center;
+  }
+  #testimonials-component .mdl-card__title {
+    display: grid;
+  }
+  #testimonials-component .mdl-card__title .image-container {
+    margin-left: 30%;
+  }
+  #testimonials-component .mdl-card__title .image-container .image {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    float: none;
+    display: block;
+  }
+  #testimonials-component .mdl-card__title .author-testimonial {
+    margin-top: 5px;
+    display: inline;
+    margin-bottom: 15px;
+  }
+}

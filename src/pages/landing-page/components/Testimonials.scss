@@ -1,0 +1,93 @@
+#testimonials-component {
+    h2 {
+        padding-right: 8px;
+    }
+    .container {
+        border: 2px solid #ccc;
+        background-color: #eee;
+        border-radius: 5px;
+        margin: 16px 0;
+        .image {
+            float: left;
+            width: 90px;
+            height: 85px;
+            border-radius: 50%;
+            display: block;
+            margin: 10px;
+        }
+        .author-testimonial {
+            font-size: 23px;
+            color: #3f51b5;
+            margin-bottom: 30px;
+            word-wrap: break-word;
+        }
+        .content-testimonial {
+            font-size: 22px;
+            color: #606060;
+        }
+    }
+    .mdl-card__title {
+        padding: 8px;
+    }
+    .mdl-card__supporting-text {
+        padding: 8px;
+    }
+    .quotation {
+        font-size: 30px; //margin: 0 auto;
+        quotes: "\201C""\201D""\2018""\2019";
+        padding: 10px 20px;
+        line-height: 1.4;
+    }
+    .quotation:before {
+        content: open-quote;
+        display: inline;
+        height: 0;
+        line-height: 0;
+        left: -10px;
+        position: relative;
+        top: 25px;
+        color: #3f51b5;
+        font-size: 3.5em;
+    }
+    .quotation::after {
+        content: close-quote;
+        display: inline;
+        height: 0;
+        line-height: 0;
+        left: 10px;
+        position: relative;
+        top: 45px;
+        color: #3f51b5;
+        font-size: 3.5em;
+    }
+    /* Clear floats after containers */
+    .container::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /* Add media queries for responsiveness. This will center both the text and the image inside the container */
+    @media (max-width: 600px) {
+        .container {
+            text-align: center;
+        }
+        .mdl-card__title {
+            display: grid;
+            .image-container {
+                margin-left: 30%;
+                .image {
+                    margin: 0;
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                    float: none;      
+                    display: block;
+                }
+            }
+            .author-testimonial {
+                margin-top: 5px;
+                display: inline;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

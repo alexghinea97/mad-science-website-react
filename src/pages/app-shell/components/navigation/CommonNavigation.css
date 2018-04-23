@@ -1,0 +1,16 @@
+.mdl-layout__header-row .mdl-navigation__link {
+  font-size: 16px;
+  padding: 0px 8px;
+  border-radius: 5px;
+}
+
+.mdl-navigation .mdl-navigation__link {
+  color: #3f51b5;
+}
+.mdl-navigation .mdl-navigation__link:hover {
+  color: #f2a409;
+}
+
+.mdl-navigation .selected {
+  color: #f2a409;
+}

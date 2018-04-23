@@ -1,0 +1,74 @@
+.book-landing-page-card {
+  margin-bottom: 30px;
+}
+.book-landing-page-card .book-name-landing-page {
+  color: #f2a409;
+  font-size: 28px;
+}
+.book-landing-page-card .author-name-landing-page {
+  color: #6b6a66;
+  font-size: 22px;
+  padding: 5px;
+  float: left;
+  width: 50%;
+}
+.book-landing-page-card .author-landing-page {
+  font-size: 22px;
+  align-self: flex-end;
+  color: inherit;
+  display: flex;
+  font-weight: 300;
+  line-height: normal;
+  overflow: hidden;
+  transform-origin: 149px 48px;
+}
+.book-landing-page-card .genre-landing-page {
+  font-size: 22px;
+  padding-top: 15px;
+  padding-left: 15px;
+  align-self: flex-end;
+  color: inherit;
+  display: flex;
+  font-weight: 300;
+  line-height: normal;
+  overflow: hidden;
+  transform-origin: 149px 48px;
+}
+.book-landing-page-card .material-icons {
+  margin-right: 5px;
+}
+.book-landing-page-card .book-description-landing-page {
+  font-size: 17px;
+  padding: 15px;
+  letter-spacing: 0.2px;
+}
+.book-landing-page-card .mdl-card__supporting-text .author-name-landing-page i {
+  display: inline-block;
+  margin-right: 10px;
+}
+.book-landing-page-card .book-genre-profile i {
+  display: inline-block;
+  margin-right: 10px;
+}
+.book-landing-page-card .demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+.book-landing-page-card
+  .book-landing-page-card.demo-card-wide
+  > .mdl-card__title {
+  color: #fff;
+  background: url() center/cover;
+}
+.book-landing-page-card .username-landing-page {
+  font-size: 22px;
+  padding-top: 15px;
+  padding-left: 15px;
+  margin-right: 5px;
+  display: flex;
+  font-weight: 300;
+  line-height: normal;
+  overflow: hidden;
+  transform-origin: 149px 48px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
