@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AppShell from './pages/app-shell/AppShell';
+import AppShell from './app-shell/AppShell';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 class App extends Component {
