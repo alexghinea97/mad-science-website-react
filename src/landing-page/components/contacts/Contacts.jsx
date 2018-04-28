@@ -4,12 +4,12 @@ import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 
-export default function contactUs(props) {
+export default function contacts(props) {
   return (
-    <div id="contact-us">
+    <div id="contacts">
       <Paper zDepth={5}>
         <Card style={{ padding: '15px' }}>
-          <h2>Contact Us</h2>
+          <h2>Contacts</h2>
           <CardText>
             Need More information? You can contact us here or in one of our
             other channels

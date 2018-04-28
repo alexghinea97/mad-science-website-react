@@ -24,8 +24,8 @@ export default class CommonNavigation extends Component {
           onClick={this.scrollToSelection}
         />
         <FlatButton
-          label="About Us"
-          className="about-us-nav"
+          label="Why Us"
+          className="why-us-nav"
           primary={true}
           onClick={this.scrollToSelection}
         />
@@ -43,8 +43,8 @@ export default class CommonNavigation extends Component {
         />
 
         <FlatButton
-          label="Contact Us"
-          className="contact-us-nav"
+          label="Contacts"
+          className="contacts-nav"
           primary={true}
           onClick={this.scrollToSelection}
         />
