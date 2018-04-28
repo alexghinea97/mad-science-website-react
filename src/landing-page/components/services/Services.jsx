@@ -7,19 +7,36 @@ import WebSiteDevelopmentTab from './WebSiteDevelopmentTab';
 import MarketingTab from './MarketingTab';
 import ArtAndDesignTab from './ArtAndDesignTab';
 
+import './Services.css';
+
 export default function Services(props) {
   return (
     <div id="services">
       <Paper zDepth={3} style={{ padding: '15px' }}>
         <h2>Our Services</h2>
-        <Tabs>
-          <Tab label="Website development">
+        <Tabs
+          tabItemContainerStyle={{ display: 'block' }}
+          inkBarStyle={{ display: 'none' }}
+        >
+          <Tab
+            label="Website development"
+            className="service-tab"
+            style={{ display: 'block', width: '100%' }}
+          >
             <WebSiteDevelopmentTab />
           </Tab>
-          <Tab label="Marketing">
+          <Tab
+            label="Marketing"
+            className="service-tab"
+            style={{ display: 'block', width: '100%' }}
+          >
             <MarketingTab />
           </Tab>
-          <Tab label="Art and Design">
+          <Tab
+            label="Art and Design"
+            className="service-tab"
+            style={{ display: 'block', width: '100%' }}
+          >
             <ArtAndDesignTab />
           </Tab>
         </Tabs>
