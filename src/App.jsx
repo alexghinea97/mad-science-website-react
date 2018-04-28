@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import AppShell from './pages/app-shell/AppShell';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 class App extends Component {
   render() {
     return (
-      <Provider store={this.props.store}>
+      <MuiThemeProvider>
         <BrowserRouter>
-          <Switch>
-            <Route path="/" component={AppShell} />
-          </Switch>
+          <Route path="/" component={AppShell} />
         </BrowserRouter>
-      </Provider>
+      </MuiThemeProvider>
     );
   }
 }

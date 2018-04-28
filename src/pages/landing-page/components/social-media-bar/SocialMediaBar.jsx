@@ -9,14 +9,8 @@ export default class SocialMediaBar extends Component {
         <NavLink to="#" className="facebook">
           <i className="fa fa-facebook fa-fw" />
         </NavLink>
-        <NavLink to="#" className="instagram">
-          <i className="fa fa-instagram fa-fw" />
-        </NavLink>
         <NavLink to="#" className="linkedin">
           <i className="fa fa-linkedin fa-fw" />
-        </NavLink>
-        <NavLink to="#" className="youtube">
-          <i className="fa fa-youtube" />
         </NavLink>
       </div>
     );

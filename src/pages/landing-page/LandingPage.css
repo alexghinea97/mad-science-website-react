@@ -10,13 +10,8 @@
 }
 
 #landing-page h1 {
+  text-align: center;
   margin-top: 0px;
-}
-
-#landing-page h2 {
-  text-align: right;
-  width: 100%;
-  color: #f2a409;
 }
 
 #landing-page .center {

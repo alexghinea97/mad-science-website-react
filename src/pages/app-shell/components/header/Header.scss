@@ -1,56 +1,58 @@
-$color_1: #3f51b5;
-
+$color_1: #F34605;
 #page-header {
-	.mdl-layout-title {
-		img {
-			width: 80px;
-			height: 80px;
-		}
-		a {
-			h1 {
-				font-size: x-large;
-				text-decoration: none;
-				color: $color_1;
-				margin-left: 20px;
-				display: inline-block;
-				font-weight: 550;
-			}
-		}
-	}
-	.demo-layout-transparent {
-		.mdl-layout__header {
-			color: $color_1;
-		}
-	}
-	.mdl-layout__header-row {
-		height: 90px;
-		padding-left: 10px;
-		border-bottom: 1px solid #3f51b5;
-		.mdl-navigation__link {
-			font-size: 90%;
-			font-weight: bold;
-		}
-	}
-	header {
-		height: 120px;
-	}
+    .mdl-layout-title {
+        img {
+            width: 80px;
+            height: 80px;
+        }
+        a {
+            h1 {
+                font-size: x-large;
+                text-decoration: none;
+                color: $color_1;
+                margin-left: 20px;
+                display: inline-block;
+                font-weight: 550;
+            }
+        }
+    }
+    .demo-layout-transparent {
+        .mdl-layout__header {
+            color: $color_1;
+        }
+    }
+    .mdl-layout__header-row {
+        height: 90px;
+        padding-left: 10px;
+        border-bottom: 1px solid $color_1;
+        .mdl-navigation__link {
+            font-size: 90%;
+            font-weight: bold;
+        }
+    }
+    header {
+        height: 120px;
+    }
 }
+
 .demo-layout-transparent {
-	.mdl-layout__drawer-button {
-		color: $color_1;
-	}
+    .mdl-layout__drawer-button {
+        color: $color_1;
+    }
 }
+
 @media screen and (max-width: 1024px) {
-	#page-header {
-		.mdl-layout__header {
-			display: block;
-		}
-	}
+    #page-header {
+        .mdl-layout__header {
+            display: block;
+        }
+    }
 }
+
 @media screen and (max-width: 768px) {
-	#page-header {
-		.mdl-layout__header {
-			display: none;
-		}
-	}
+    #page-header {
+        .mdl-layout__header {
+            display: none;
+        }
+    }
 }
