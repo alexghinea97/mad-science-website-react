@@ -7,7 +7,7 @@ import TextField from 'material-ui/TextField';
 export default function contactUs(props) {
   return (
     <div id="contact-us">
-      <Paper zDepth={4}>
+      <Paper zDepth={5}>
         <Card style={{ padding: '15px' }}>
           <h2>Contact Us</h2>
           <CardText>

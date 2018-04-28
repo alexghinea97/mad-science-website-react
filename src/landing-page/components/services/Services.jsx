@@ -10,7 +10,7 @@ import ArtAndDesignTab from './ArtAndDesignTab';
 export default function Services(props) {
   return (
     <div id="services">
-      <Paper style={{ padding: '15px' }}>
+      <Paper zDepth={3} style={{ padding: '15px' }}>
         <h2>Our Services</h2>
         <Tabs>
           <Tab label="Website development">

@@ -3,6 +3,7 @@ import ValueProposition from './components/value-proposition/ValueProposition';
 import SocialMediaBar from './components/social-media-bar/SocialMediaBar';
 import ContactUs from './components/contact-us/ContactUs';
 import Services from './components/services/Services';
+import Portfolio from './components/portfolio/Portfolio';
 import './LandingPage.css';
 
 export default class LandingPage extends Component {
@@ -37,6 +38,10 @@ export default class LandingPage extends Component {
           <div className="mdl-cell--1-offset-desktop mdl-cell--2-offset-tablet mdl-cell--1-offset-phone" />
           <div className="mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet">
             <Services />
+          </div>
+          <div className="mdl-cell--1-offset-desktop mdl-cell--2-offset-tablet mdl-cell--1-offset-phone" />
+          <div className="mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet">
+            <Portfolio />
           </div>
           <div className="mdl-cell--1-offset-desktop mdl-cell--2-offset-tablet mdl-cell--1-offset-phone" />
           <div className="mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet">
