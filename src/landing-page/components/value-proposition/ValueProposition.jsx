@@ -5,18 +5,17 @@ export default class ValueProposition extends Component {
   render() {
     return (
       <div id="value-proposition">
-        <h3>
-          <b>Знанието няма цена. То принадлежи на света.</b>
-        </h3>
         <p>
-          Ние от <b>Книга за Книга</b> се опитваме да създадем най-голямата{' '}
-          <b>обществена онлайн библиотека с реални книги.</b> <br />
-          Самият ти можеш да допринесеш за това, като обявиш за{' '}
-          <b>размяна книга</b>, която не смяташ, че ще прочетеш отново, за да
-          получиш възможността да вземеш някое четиво, до което си искал да се
-          добереш от известно време.
+          Online presence nowadays is a must in every business field starting
+          from small individuals and all the way up to the billion dollar
+          companies.
         </p>
-        <p>Виж какви книги има около теб, още сега:</p>
+        <p>
+          That is why you can think about your own web footprint. Is it big and
+          impressive enough? Does it reflect your personality or brand? If not,
+          we are here to help you show your full potential in the world wide web
+          world.
+        </p>
       </div>
     );
   }
