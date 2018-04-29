@@ -48,6 +48,12 @@ export default class CommonNavigation extends Component {
           primary={true}
           onClick={this.scrollToSelection}
         />
+        <FlatButton
+          label="Hiring"
+          className="hiring-nav"
+          primary={true}
+          onClick={this.scrollToSelection}
+        />
       </nav>
     );
   }
