@@ -16,44 +16,34 @@ const styles = {
 
 const tilesData = [
   {
-    img: 'images/grid-list/00-52-29-429_640.jpg',
-    title: 'Breakfast',
-    author: 'jill111'
+    img: 'images/template-images-cover/img_temp_band.jpg',
+    title: 'Band Template',
+    url: 'templates/band-template.html'
   },
   {
-    img: 'images/grid-list/burger-827309_640.jpg',
-    title: 'Tasty burger',
-    author: 'pashminu'
+    img: 'images/template-images-cover/img_temp_gourmet_catering.jpg',
+    title: 'Gourmet Catering Template',
+    url: 'templates/gourmet-catering-template.html'
   },
   {
-    img: 'images/grid-list/camera-813814_640.jpg',
-    title: 'Camera',
-    author: 'Danson67'
+    img: 'images/template-images-cover/img_temp_architect.jpg',
+    title: 'Architect Template',
+    url: 'templates/architect-template.html'
   },
   {
-    img: 'images/grid-list/morning-819362_640.jpg',
-    title: 'Morning',
-    author: 'fancycrave1'
+    img: 'images/template-images-cover/img_temp_parallax.jpg',
+    title: 'Parallax Template',
+    url: 'templates/parallax-template.html'
   },
   {
-    img: 'images/grid-list/hats-829509_640.jpg',
-    title: 'Hats',
-    author: 'Hans'
+    img: 'images/template-images-cover/img_temp_blog.jpg',
+    title: 'Blog Template',
+    url: 'templates/blog-template.html'
   },
   {
-    img: 'images/grid-list/honey-823614_640.jpg',
-    title: 'Honey',
-    author: 'fancycravel'
-  },
-  {
-    img: 'images/grid-list/vegetables-790022_640.jpg',
-    title: 'Vegetables',
-    author: 'jill111'
-  },
-  {
-    img: 'images/grid-list/water-plant-821293_640.jpg',
-    title: 'Water plant',
-    author: 'BkrmadtyaKarki'
+    img: 'images/template-images-cover/img_temp_food_blog.jpg',
+    title: 'Food Blog Template',
+    url: 'templates/food-blog-templates.html'
   }
 ];
 
@@ -64,17 +54,10 @@ export default function Tempaltes() {
       <div style={styles.root}>
         <GridList cellHeight={180} style={styles.gridList}>
           {tilesData.map(tile => (
-            <GridTile
-              key={tile.img}
-              title={tile.title}
-              subtitle={
-                <span>
-                  by <b>{tile.author}</b>
-                </span>
-              }
-            >
-              <img src={tile.img} />
-              <a href="#">Hello</a>
+            <GridTile key={tile.img} title={tile.title} url={tile.url}>
+              <a href={tile.url} target="blank">
+                <img src={tile.img} />
+              </a>
             </GridTile>
           ))}
         </GridList>
