@@ -25,7 +25,7 @@ export default function Services(props) {
           >
             <WebSiteDevelopmentTab />
           </Tab>
-          <Tab
+          {/* <Tab
             label="Marketing Solutions"
             className="service-tab"
             style={{ display: 'block', width: '100%' }}
@@ -38,7 +38,7 @@ export default function Services(props) {
             style={{ display: 'block', width: '100%' }}
           >
             <ArtAndDesignTab />
-          </Tab>
+          </Tab> */}
         </Tabs>
       </Paper>
     </div>
