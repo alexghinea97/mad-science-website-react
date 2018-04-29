@@ -5,6 +5,7 @@ import WhyUs from './components/why-us/WhyUs';
 import Services from './components/services/Services';
 import Portfolio from './components/portfolio/Portfolio';
 import Contacts from './components/contacts/Contacts';
+import Hiring from './components/hiring/Hiring';
 import './LandingPage.css';
 
 export default class LandingPage extends Component {
@@ -47,6 +48,10 @@ export default class LandingPage extends Component {
           <div className="mdl-cell--1-offset-desktop mdl-cell--2-offset-tablet mdl-cell--1-offset-phone" />
           <div className="mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet">
             <Contacts />
+          </div>
+          <div className="mdl-cell--1-offset-desktop mdl-cell--2-offset-tablet mdl-cell--1-offset-phone" />
+          <div className="mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet">
+            <Hiring />
           </div>
         </div>
       </div>

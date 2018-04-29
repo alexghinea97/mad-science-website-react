@@ -3,6 +3,7 @@ import Paper from 'material-ui/Paper';
 import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
+import Divider from 'material-ui/Divider';
 
 export default function contacts(props) {
   return (
@@ -10,6 +11,7 @@ export default function contacts(props) {
       <Paper zDepth={5}>
         <Card style={{ padding: '15px' }}>
           <h2>Contacts</h2>
+          <Divider />
           <CardText>
             Need More information? You can contact us here or in one of our
             other channels
