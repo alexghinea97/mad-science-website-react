@@ -11,8 +11,12 @@ import {
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import { RaisedButton } from 'material-ui';
-import { Step, Stepper, StepLabel } from 'material-ui/Stepper';
 import { List, ListItem } from 'material-ui/List';
+import Divider from 'material-ui/Divider';
+import Paper from 'material-ui/Paper';
+
+import ServicesOrderStepper from '../../componentns/ServicesOrderStepper';
+import Templates from './components/Templates';
 
 export default class WebSiteDevelopmentTab extends Component {
   constructor(props) {
@@ -48,35 +52,11 @@ export default class WebSiteDevelopmentTab extends Component {
       <div>
         <h3>WebSite Developent</h3>
         <p>This is an example tab.</p>
-        <Stepper activeStep={0}>
-          <Step>
-            <StepLabel>Select campaign settings</StepLabel>
-          </Step>
-          <Step>
-            <StepLabel>Create an ad group</StepLabel>
-          </Step>
-          <Step>
-            <StepLabel>Create an ad</StepLabel>
-          </Step>
-        </Stepper>
-
-        <h4>Templates</h4>
-        <List>
-          <ListItem>
-            <a target="blank" href="/templates/band-template.html">
-              Band Template
-            </a>
-          </ListItem>
-          <ListItem primaryText="Trash" />
-          <ListItem primaryText="Spam" />
-          <ListItem primaryText="Follow up" />
-        </List>
-
+        <Templates />
         <Table>
           <TableHeader>
             <TableRow>
               <TableHeaderColumn>Name</TableHeaderColumn>
-              <TableHeaderColumn>Status</TableHeaderColumn>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -88,7 +68,6 @@ export default class WebSiteDevelopmentTab extends Component {
                   onClick={this.handleOpen}
                 />
               </TableRowColumn>
-              <TableRowColumn>Employed</TableRowColumn>
             </TableRow>
             <TableRow>
               <TableRowColumn>
@@ -98,7 +77,6 @@ export default class WebSiteDevelopmentTab extends Component {
                   onClick={this.handleOpen}
                 />
               </TableRowColumn>
-              <TableRowColumn>Unemployed</TableRowColumn>
             </TableRow>
             <TableRow>
               <TableRowColumn>
@@ -108,7 +86,6 @@ export default class WebSiteDevelopmentTab extends Component {
                   onClick={this.handleOpen}
                 />
               </TableRowColumn>
-              <TableRowColumn>Employed</TableRowColumn>
             </TableRow>
             <TableRow>
               <TableRowColumn>
@@ -118,7 +95,6 @@ export default class WebSiteDevelopmentTab extends Component {
                   onClick={this.handleOpen}
                 />
               </TableRowColumn>
-              <TableRowColumn>Employed</TableRowColumn>
             </TableRow>
             <TableRow>
               <TableRowColumn>
@@ -128,10 +104,15 @@ export default class WebSiteDevelopmentTab extends Component {
                   onClick={this.handleOpen}
                 />
               </TableRowColumn>
-              <TableRowColumn>Unemployed</TableRowColumn>
             </TableRow>
           </TableBody>
         </Table>
+        <br />
+        <Divider />
+        <br />
+        <Paper zDepth={1}>
+          <ServicesOrderStepper />
+        </Paper>
         <Dialog>
           title="Dialog With Actions" actions={actions}
           modal={false}
