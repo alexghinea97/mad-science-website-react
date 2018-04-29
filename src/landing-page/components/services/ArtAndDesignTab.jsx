@@ -12,7 +12,7 @@ import {
 export default function MarketingTab() {
   return (
     <div>
-      <h2>Tab Three</h2>
+      <h3>Art and Design Solutions</h3>
       <Table>
         <TableHeader>
           <TableRow>

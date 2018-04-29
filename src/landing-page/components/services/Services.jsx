@@ -19,21 +19,21 @@ export default function Services(props) {
           inkBarStyle={{ display: 'none' }}
         >
           <Tab
-            label="Website development"
+            label="Website development Solutions"
             className="service-tab"
             style={{ display: 'block', width: '100%' }}
           >
             <WebSiteDevelopmentTab />
           </Tab>
           <Tab
-            label="Marketing"
+            label="Marketing Solutions"
             className="service-tab"
             style={{ display: 'block', width: '100%' }}
           >
             <MarketingTab />
           </Tab>
           <Tab
-            label="Art and Design"
+            label="Art and Design Solutions"
             className="service-tab"
             style={{ display: 'block', width: '100%' }}
           >
