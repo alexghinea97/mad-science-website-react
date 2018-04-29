@@ -10,12 +10,15 @@ import {
 } from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
 import './Portfolio.css';
+import Divider from 'material-ui/Divider';
 
 export default function portfolio(props) {
   return (
     <div id="portfolio">
       <Paper zDepth={4} style={{ padding: '15px' }}>
         <h2>Our Portfolio</h2>
+        <Divider />
+        <br />
         <Card className="portfolio-entity-card">
           <CardMedia
             overlay={
