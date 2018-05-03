@@ -3,7 +3,7 @@ import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
 
 import ServicesOrderStepper from '../../componentns/ServicesOrderStepper';
-import Templates from './components/Templates';
+import Templates from './components/Templates.jsx';
 import WebSiteServices from './components/WebSiteServices';
 
 import './WebSiteDevelopmentTab.css';

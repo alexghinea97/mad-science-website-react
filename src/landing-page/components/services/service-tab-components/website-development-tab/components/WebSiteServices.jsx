@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { RaisedButton } from 'material-ui';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
+import services from './website-services.json';
 
 export default class WebSiteServices extends Component {
   constructor(props) {
@@ -35,69 +36,18 @@ export default class WebSiteServices extends Component {
 
     return (
       <div>
-        <div className="row">
-          <div className="column left-column" />
-        </div>
-        <div className="row">
-          <div className="column left-column">
+        {services.map(service => {
+          return (
             <RaisedButton
               fullWidth={true}
-              label="Google analytics integration"
+              label={service.name}
               primary={true}
               onClick={this.handleOpen}
+              style={{ 'margin-bottom': '10px' }}
             />
-          </div>
-        </div>
-        <div className="row">
-          <div className="column left-column">
-            <RaisedButton
-              fullWidth={true}
-              label="Facebook pixel integration"
-              primary={true}
-              onClick={this.handleOpen}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="column left-column">
-            <RaisedButton
-              fullWidth={true}
-              label="Email Subscription integration"
-              primary={true}
-              onClick={this.handleOpen}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="column left-column">
-            <RaisedButton
-              fullWidth={true}
-              label="Localization"
-              primary={true}
-              onClick={this.handleOpen}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="column left-column">
-            <RaisedButton
-              fullWidth={true}
-              label="Users and Authentication"
-              primary={true}
-              onClick={this.handleOpen}
-            />
-          </div>
-        </div>
-        <div className="row">
-          <div className="column left-column">
-            <RaisedButton
-              fullWidth={true}
-              label="Blog and blog management"
-              primary={true}
-              onClick={this.handleOpen}
-            />
-          </div>
-        </div>
+          );
+        })}
+
         <Dialog
           title="Dialog With Actions"
           actions={actions}

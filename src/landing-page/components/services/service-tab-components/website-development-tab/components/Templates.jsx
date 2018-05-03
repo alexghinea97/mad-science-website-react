@@ -4,13 +4,8 @@ import { Card, CardHeader, CardText } from 'material-ui/Card';
 import tilesData from './templates.json';
 
 const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around'
-  },
   gridList: {
-    width: '90%',
+    width: '95%',
     height: 600,
     overflowY: 'auto'
   }
@@ -19,7 +14,7 @@ const styles = {
 export default function Tempaltes() {
   return (
     <div>
-      <Card style={{ padding: '15px' }}>
+      <Card style={{ padding: '7px' }}>
         <CardHeader
           title="Templates"
           actAsExpander={true}
@@ -27,10 +22,15 @@ export default function Tempaltes() {
           className="templates-header"
         />
         <CardText expandable={true}>
-          <div style={styles.root}>
-            <GridList cellHeight={180} style={styles.gridList}>
+          <div>
+            <GridList className="grid-list" style={styles.gridList}>
               {tilesData.map(tile => (
-                <GridTile key={tile.img} title={tile.title} url={tile.url}>
+                <GridTile
+                  className="grid-tile"
+                  key={tile.img}
+                  title={tile.title}
+                  url={tile.url}
+                >
                   <a href={tile.url} target="blank">
                     <img src={tile.img} alt={tile.alt} />
                   </a>
