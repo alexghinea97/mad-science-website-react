@@ -3,6 +3,7 @@ import Paper from 'material-ui/Paper';
 import { Card, CardActions, CardText } from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 import Divider from 'material-ui/Divider';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default function contacts(props) {
   return (
@@ -44,6 +45,11 @@ export default function contacts(props) {
               rows={5}
             />
           </CardText>
+          <RaisedButton
+            label="Primary"
+            primary={true}
+            style={{ margin: '12px' }}
+          />
         </Card>
       </Paper>
     </div>
