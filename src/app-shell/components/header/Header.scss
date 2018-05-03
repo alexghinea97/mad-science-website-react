@@ -47,6 +47,11 @@ $color_1: #F34605;
             display: block;
         }
     }
+    #mobile-navigation{
+        .mdl-layout-title{
+            text-align: center;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
