@@ -103,7 +103,7 @@ class ServicesOrderStepper extends React.Component {
         {finished && (
           <p style={{ margin: '20px 0', textAlign: 'center' }}>
             <a
-              href="#"
+              href="jsx-a11y/href-no-hash"
               onClick={event => {
                 event.preventDefault();
                 this.setState({ stepIndex: 0, finished: false });

@@ -3,7 +3,6 @@ import Paper from 'material-ui/Paper';
 import {
   Card,
   CardActions,
-  CardHeader,
   CardMedia,
   CardTitle,
   CardText

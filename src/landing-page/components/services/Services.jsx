@@ -1,11 +1,8 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
-import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 import { Tabs, Tab } from 'material-ui/Tabs';
 
 import WebSiteDevelopmentTab from './service-tab-components/website-development-tab/WebSiteDevelopmentTab';
-import MarketingTab from './service-tab-components/marketing-tab/MarketingTab';
-import ArtAndDesignTab from './service-tab-components/art-and-design-tab/ArtAndDesignTab';
 
 import './Services.css';
 
