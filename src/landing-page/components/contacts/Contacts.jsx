@@ -10,46 +10,40 @@ export default function contacts(props) {
     <div id="contacts">
       <Paper zDepth={5}>
         <Card style={{ padding: '15px' }}>
-          <CardHeader
-            title="Contacts"
-            actAsExpander={true}
-            showExpandableButton={true}
-          />
+          <h2>Contacts</h2>
           <Divider />
-          <CardText expandable={true}>
-            <CardText>
-              Need More information? You can contact us here or in one of our
-              other channels
-            </CardText>
-            <CardActions>
-              <a href="" className="facebook">
-                <i className="fa fa-facebook fa-fw" />
-              </a>
-              <a href="" className="linkedin">
-                <i className="fa fa-linkedin fa-fw" />
-              </a>
-            </CardActions>
-            <CardText>
-              <TextField
-                hintText="Enter your email"
-                floatingLabelText="Your email"
-                type="email"
-              />
-              <TextField
-                fullWidth={true}
-                hintText="Enter the reason for which you are contacting us"
-                floatingLabelText="Subject"
-                type="text"
-              />
-              <TextField
-                fullWidth={true}
-                hintText="Ask us anything or simply share your thoughts"
-                floatingLabelText="Email content  "
-                type="text"
-                multiLine={true}
-                rows={5}
-              />
-            </CardText>
+          <CardText>
+            Need More information? You can contact us here or in one of our
+            other channels
+          </CardText>
+          <CardActions>
+            <a href="" className="facebook">
+              <i className="fa fa-facebook fa-fw" />
+            </a>
+            <a href="" className="linkedin">
+              <i className="fa fa-linkedin fa-fw" />
+            </a>
+          </CardActions>
+          <CardText>
+            <TextField
+              hintText="Enter your email"
+              floatingLabelText="Your email"
+              type="email"
+            />
+            <TextField
+              fullWidth={true}
+              hintText="Enter the reason for which you are contacting us"
+              floatingLabelText="Subject"
+              type="text"
+            />
+            <TextField
+              fullWidth={true}
+              hintText="Ask us anything or simply share your thoughts"
+              floatingLabelText="Email content  "
+              type="text"
+              multiLine={true}
+              rows={5}
+            />
           </CardText>
         </Card>
       </Paper>

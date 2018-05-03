@@ -10,23 +10,17 @@ export default function whyUs(props) {
     <div id="why-us">
       <Paper zDepth={5}>
         <Card style={{ padding: '15px' }}>
-          <CardHeader
-            title="Why Us"
-            actAsExpander={true}
-            showExpandableButton={true}
-          />
+          <h2>Why Us</h2>
           <Divider />
           <br />
-          <CardText expandable={true}>
-            <p>
-              Cutting edge technlogies, Active support, Experienced developers
-              from all fields, Resillient and stable systems
-            </p>
-            <p>
-              We regard our strongest side to be the people that work in the
-              company.{' '}
-            </p>
-          </CardText>
+          <p>
+            Cutting edge technlogies, Active support, Experienced developers
+            from all fields, Resillient and stable systems
+          </p>
+          <p>
+            We regard our strongest side to be the people that work in the
+            company.{' '}
+          </p>
         </Card>
       </Paper>
     </div>
