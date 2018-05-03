@@ -1,5 +1,6 @@
 import React from 'react';
 import { GridList, GridTile } from 'material-ui/GridList';
+import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 
 const styles = {
   root: {
@@ -220,18 +221,26 @@ const tilesData = [
 export default function Tempaltes() {
   return (
     <div>
-      <h4>Templates</h4>
-      <div style={styles.root}>
-        <GridList cellHeight={180} style={styles.gridList}>
-          {tilesData.map(tile => (
-            <GridTile key={tile.img} title={tile.title} url={tile.url}>
-              <a href={tile.url} target="blank">
-                <img src={tile.img} />
-              </a>
-            </GridTile>
-          ))}
-        </GridList>
-      </div>
+      <Card style={{ padding: '15px' }}>
+        <CardHeader
+          title="Templates"
+          actAsExpander={true}
+          showExpandableButton={true}
+        />
+        <CardText expandable={true}>
+          <div style={styles.root}>
+            <GridList cellHeight={180} style={styles.gridList}>
+              {tilesData.map(tile => (
+                <GridTile key={tile.img} title={tile.title} url={tile.url}>
+                  <a href={tile.url} target="blank">
+                    <img src={tile.img} />
+                  </a>
+                </GridTile>
+              ))}
+            </GridList>
+          </div>
+        </CardText>
+      </Card>
     </div>
   );
 }
