@@ -1,12 +1,4 @@
 import React, { Component } from 'react';
-import {
-  Table,
-  TableBody,
-  TableHeader,
-  TableHeaderColumn,
-  TableRow,
-  TableRowColumn
-} from 'material-ui/Table';
 import { RaisedButton } from 'material-ui';
 import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
@@ -43,85 +35,69 @@ export default class WebSiteServices extends Component {
 
     return (
       <div>
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHeaderColumn>Name</TableHeaderColumn>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            <TableRow>
-              <TableRowColumn>
-                <RaisedButton
-                  fullWidth={true}
-                  primary={true}
-                  label="Basic static website"
-                  onClick={this.handleOpen}
-                />
-              </TableRowColumn>
-            </TableRow>
-            <TableRow>
-              <TableRowColumn>
-                <RaisedButton
-                  fullWidth={true}
-                  label="Google analytics integration"
-                  primary={true}
-                  onClick={this.handleOpen}
-                />
-              </TableRowColumn>
-            </TableRow>
-            <TableRow>
-              <TableRowColumn>
-                <RaisedButton
-                  fullWidth={true}
-                  label="Facebook pixel integration"
-                  primary={true}
-                  onClick={this.handleOpen}
-                />
-              </TableRowColumn>
-            </TableRow>
-            <TableRow>
-              <TableRowColumn>
-                <RaisedButton
-                  fullWidth={true}
-                  label="Email Subscription integration"
-                  primary={true}
-                  onClick={this.handleOpen}
-                />
-              </TableRowColumn>
-            </TableRow>
-            <TableRow>
-              <TableRowColumn>
-                <RaisedButton
-                  fullWidth={true}
-                  label="Localization"
-                  primary={true}
-                  onClick={this.handleOpen}
-                />
-              </TableRowColumn>
-            </TableRow>
-            <TableRow>
-              <TableRowColumn>
-                <RaisedButton
-                  fullWidth={true}
-                  label="Users and Authentication"
-                  primary={true}
-                  onClick={this.handleOpen}
-                />
-              </TableRowColumn>
-            </TableRow>
-            <TableRow>
-              <TableRowColumn>
-                <RaisedButton
-                  fullWidth={true}
-                  label="Blog and blog management"
-                  primary={true}
-                  onClick={this.handleOpen}
-                />
-              </TableRowColumn>
-            </TableRow>
-          </TableBody>
-        </Table>
+        <div className="row">
+          <div className="column left-column" />
+        </div>
+        <div className="row">
+          <div className="column left-column">
+            <RaisedButton
+              fullWidth={true}
+              label="Google analytics integration"
+              primary={true}
+              onClick={this.handleOpen}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column left-column">
+            <RaisedButton
+              fullWidth={true}
+              label="Facebook pixel integration"
+              primary={true}
+              onClick={this.handleOpen}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column left-column">
+            <RaisedButton
+              fullWidth={true}
+              label="Email Subscription integration"
+              primary={true}
+              onClick={this.handleOpen}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column left-column">
+            <RaisedButton
+              fullWidth={true}
+              label="Localization"
+              primary={true}
+              onClick={this.handleOpen}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column left-column">
+            <RaisedButton
+              fullWidth={true}
+              label="Users and Authentication"
+              primary={true}
+              onClick={this.handleOpen}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="column left-column">
+            <RaisedButton
+              fullWidth={true}
+              label="Blog and blog management"
+              primary={true}
+              onClick={this.handleOpen}
+            />
+          </div>
+        </div>
         <Dialog
           title="Dialog With Actions"
           actions={actions}
@@ -129,7 +105,6 @@ export default class WebSiteServices extends Component {
           open={this.state.open}
           onRequestClose={this.handleClose}
         >
-          {' '}
           The actions in this window were passed in as an array of React
           objects.
         </Dialog>

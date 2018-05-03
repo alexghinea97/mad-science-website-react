@@ -6,13 +6,17 @@ import ServicesOrderStepper from '../../componentns/ServicesOrderStepper';
 import Templates from './components/Templates';
 import WebSiteServices from './components/WebSiteServices';
 
+import './WebSiteDevelopmentTab.css';
+
 export default class WebSiteDevelopmentTab extends Component {
   render() {
     return (
-      <div>
-        <h3>WebSite Developent</h3>
-        <p>This is an example tab.</p>
+      <div id="website-development-tab">
+        <h3>Website Developent</h3>
         <Templates />
+        <br />
+
+        <br />
         <WebSiteServices />
         <br />
         <Divider />

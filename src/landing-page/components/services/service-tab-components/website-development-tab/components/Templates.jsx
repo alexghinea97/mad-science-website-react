@@ -24,6 +24,7 @@ export default function Tempaltes() {
           title="Templates"
           actAsExpander={true}
           showExpandableButton={true}
+          className="templates-header"
         />
         <CardText expandable={true}>
           <div style={styles.root}>
