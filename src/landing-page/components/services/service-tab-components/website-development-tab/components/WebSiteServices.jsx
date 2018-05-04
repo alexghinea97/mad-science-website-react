@@ -36,14 +36,15 @@ export default class WebSiteServices extends Component {
 
     return (
       <div>
-        {services.map(service => {
+        {services.map((service, index) => {
           return (
             <RaisedButton
               fullWidth={true}
               label={service.name}
               primary={true}
               onClick={this.handleOpen}
-              style={{ 'margin-bottom': '10px' }}
+              style={{ marginBottom: '10px' }}
+              key={index}
             />
           );
         })}

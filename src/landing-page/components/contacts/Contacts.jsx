@@ -5,6 +5,8 @@ import TextField from 'material-ui/TextField';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
 
+import firebase from '../../../firebase.js';
+
 export default class Contacts extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +22,18 @@ export default class Contacts extends Component {
     this.handleSubmitForm = this.handleSubmitForm.bind(this);
   }
 
-  handleSubmitForm(eventData) {}
+  componentDidMount() {}
+
+  handleSubmitForm(eventData) {
+    firebase
+      .database()
+      .ref('/contacts')
+      .set({
+        email: this.state.email,
+        subject: this.state.subject,
+        content: this.state.content
+      });
+  }
 
   handleContentChange(eventData) {
     this.setState({

@@ -22,10 +22,10 @@ export default function hiring(props) {
           name="mc-embedded-subscribe-form"
           className="validate"
           target="_blank"
-          novalidate
+          noValidate
         >
           <div id="mc_embed_signup_scroll">
-            <label for="mce-EMAIL">Subscribe to our mailing list</label>
+            <label htmlFor="mce-EMAIL">Subscribe to our mailing list</label>
             <input
               type="email"
               name="EMAIL"
@@ -41,10 +41,10 @@ export default function hiring(props) {
               <input
                 type="text"
                 name="b_8777db87bb8bbed5bf8b9b93b_2b756700bb"
-                tabindex="-1"
+                tabIndex="-1"
               />
             </div>
-            <div class="clear">
+            <div className="clear">
               <input
                 type="submit"
                 value="Subscribe"
