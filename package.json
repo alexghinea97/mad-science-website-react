@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This is the official website of Mad Science Ltd., Bulgaria. It is a SPA that displays the offered services from the company, the people that work here and the pricing for services. ",
   "dependencies": {
+    "firebase": "^4.13.1",
     "lodash": "^4.17.5",
     "material-design-icons": "^3.0.1",
     "material-ui": "^0.20.0",
