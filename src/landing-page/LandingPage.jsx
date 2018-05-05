@@ -10,13 +10,6 @@ import './LandingPage.css';
 
 export default class LandingPage extends Component {
   render() {
-    function parallax() {
-      var prlx_lyr = document.getElementById('landing-page');
-      prlx_lyr.style.top = -(window.pageYOffset / -4) + 'px';
-    }
-
-    window.addEventListener('scroll', parallax, false);
-
     return (
       <div id="landing-page">
         <SocialMediaBar />

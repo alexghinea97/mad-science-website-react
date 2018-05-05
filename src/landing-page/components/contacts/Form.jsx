@@ -106,7 +106,12 @@ export default class Form extends Component {
           <a href="" className="linkedin">
             <i className="fa fa-linkedin fa-fw" />
           </a>
+          <div
+            className="fb-send"
+            data-href="https://developers.facebook.com/docs/plugins/"
+          />
         </CardActions>
+
         <CardText>
           <TextField
             hintText="Enter your email"

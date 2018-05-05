@@ -1,8 +1,4 @@
 #landing-page {
-    body,
-    html {
-        height: 100%;
-    }
     #landing-page-logo {
         margin: auto;
         display: block;
@@ -17,5 +13,12 @@
     }
     h2 {
         text-align: center;
+    }
+    .website-title-appear {
+        opacity: 0.01;
+    }
+    .website-title-appear.website-title-appear-active {
+        opacity: 1;
+        transition: opacity .9s ease-in-out;
     }
 }
