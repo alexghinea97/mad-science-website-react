@@ -1,6 +1,5 @@
 $color_1: #3f51b5;
 $color_2: #f2a409;
-
 .mdl-layout__header-row {
 	.mdl-navigation__link {
 		font-size: 16px;
@@ -8,11 +7,14 @@ $color_2: #f2a409;
 		border-radius: 5px;
 	}
 }
+
 .mdl-navigation {
-	.mdl-navigation__link {
-		color: $color_1;
-		&:hover {
-			color: $color_2;
+	.mdl-navigation {
+		.mdl-navigation__link {
+			color: $color_1;
+			&:hover {
+				color: $color_2;
+			}
 		}
 	}
 	.selected {

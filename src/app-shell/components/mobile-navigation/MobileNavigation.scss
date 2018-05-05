@@ -8,10 +8,14 @@ $color_2: #40596B;
 	.mdl-layout__drawer-button {
 		display: none;
 	}
+	
 }
 #mobile-navigation {
 	.mdl-layout__drawer-button {
 		position: relative;
+	}
+	.localization-popover{
+		margin-left: 30%;
 	}
 	.mdl-layout__drawer {
 		.mdl-layout-title {

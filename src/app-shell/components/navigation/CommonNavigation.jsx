@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FlatButton from 'material-ui/FlatButton';
+import LocalizationPopover from '../../../shared-components/LocalizationPopover';
 import './CommonNavigation.css';
 
 export default class CommonNavigation extends Component {
@@ -40,7 +41,6 @@ export default class CommonNavigation extends Component {
           primary={true}
           onClick={this.scrollToSelection}
         />
-
         <FlatButton
           label="Contacts"
           className="contacts-nav"
@@ -53,6 +53,7 @@ export default class CommonNavigation extends Component {
           primary={true}
           onClick={this.scrollToSelection}
         />
+        <LocalizationPopover />
       </nav>
     );
   }
