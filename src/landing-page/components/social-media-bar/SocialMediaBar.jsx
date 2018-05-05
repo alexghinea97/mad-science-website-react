@@ -12,6 +12,9 @@ export default class SocialMediaBar extends Component {
         <NavLink to="#" className="linkedin">
           <i className="fa fa-linkedin fa-fw" />
         </NavLink>
+        <NavLink to="#" className="mail">
+          <i className="fa fa-envelope fa-fw" />
+        </NavLink>
       </div>
     );
   }

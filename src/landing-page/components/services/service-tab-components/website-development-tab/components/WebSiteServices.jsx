@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
 import { RaisedButton } from 'material-ui';
-import Dialog from 'material-ui/Dialog';
-import FlatButton from 'material-ui/FlatButton';
 import services from './website-services.json';
+import WebsiteServiceModal from './WebsiteServiceModal';
 
 export default class WebSiteServices extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: false,
+      selectedService: {
+        name: ''
+      }
     };
 
     this.handleOpen = this.handleOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
   }
 
-  handleOpen() {
-    this.setState({ open: true });
+  handleOpen(eventData) {
+    console.log(eventData.target);
+    this.setState({
+      open: true,
+      selectedService: { name: eventData.target.innerText }
+    });
   }
 
   handleClose() {
@@ -24,16 +30,6 @@ export default class WebSiteServices extends Component {
   }
 
   render() {
-    const actions = [
-      <FlatButton label="Cancel" primary={true} onClick={this.handleClose} />,
-      <FlatButton
-        label="Submit"
-        primary={true}
-        keyboardFocused={true}
-        onClick={this.handleClose}
-      />
-    ];
-
     return (
       <div>
         {services.map((service, index) => {
@@ -48,17 +44,11 @@ export default class WebSiteServices extends Component {
             />
           );
         })}
-
-        <Dialog
-          title="Dialog With Actions"
-          actions={actions}
-          modal={false}
+        <WebsiteServiceModal
+          title={this.state.selectedService.name}
           open={this.state.open}
-          onRequestClose={this.handleClose}
-        >
-          The actions in this window were passed in as an array of React
-          objects.
-        </Dialog>
+          handleClose={this.handleClose}
+        />
       </div>
     );
   }
