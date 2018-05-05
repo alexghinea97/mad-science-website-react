@@ -19,20 +19,19 @@ export default function portfolio(props) {
         <Divider />
         <br />
         <Card className="portfolio-entity-card">
-          <CardMedia overlay={<CardTitle title="Книга за Книга" />}>
+          <CardMedia overlay={<CardTitle title="Book Exchange" />}>
             <img src="/images/booksexchange-logo.jpeg" alt="" />
           </CardMedia>
           <CardText>
-            Знанието е нещо важно за всички ни. Ние от екипа на Mad Science
-            създадохме платформа, която ни помага да разменяме книги с цяла
-            България. Съпричастни сме към по-достъпното образование, без
-            значение от възрастта. Всеки има възможността да напише нещо повече
-            за конкретна книга, която притежава и да даде своето мнение за нея.
-            Книгата бива разменяна, с някого, когото иска да я прочете и да
-            извлече максимално много от нея.
+            Knowledge is something important for everyone. Our team from Mad
+            Science create a platform which helps us to exchange books all over
+            Bulgaria. We sympathizing to have an accessible education no matter
+            the age. Every person has an opportunity to give an opinion for a
+            book which owns. The book could be exchanged with someone who wants
+            to read it.
           </CardText>
           <CardActions>
-            <FlatButton label="Научи повече" />
+            <FlatButton label="LEARN MORE" />
           </CardActions>
         </Card>
       </Paper>

@@ -3,6 +3,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
+import strings from '../../src/LocalizedStrings';
 
 export default class LocalizationPopover extends React.Component {
   constructor(props) {
@@ -29,6 +30,16 @@ export default class LocalizationPopover extends React.Component {
     });
   };
 
+  onSetLanguageToBulgarian = () => {
+    strings.setLanguage('bg');
+    this.setState({});
+  };
+
+  onSetLanguageToEnglish = () => {
+    strings.setLanguage('en');
+    this.setState({});
+  };
+
   render() {
     return (
       <div>
@@ -46,8 +57,14 @@ export default class LocalizationPopover extends React.Component {
           onRequestClose={this.handleRequestClose}
         >
           <Menu>
-            <MenuItem primaryText="Български" />
-            <MenuItem primaryText="English" />
+            <MenuItem
+              onClick={this.onSetLanguageToBulgarian}
+              primaryText="Български"
+            />
+            <MenuItem
+              onClick={this.onSetLanguageToEnglish}
+              primaryText="English"
+            />
           </Menu>
         </Popover>
       </div>

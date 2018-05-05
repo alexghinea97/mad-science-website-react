@@ -9,19 +9,19 @@ export default class Footer extends Component {
         <div className="mdl-mini-footer__left-section">
           <ul className="mdl-mini-footer__link-list">
             <li>
-              <NavLink to="/">Начало</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/faq">Често задавани въпроси</NavLink>
+              <NavLink to="/faq">FAQ</NavLink>
             </li>
             <li>
-              <NavLink to="/general-terms">Общи условия</NavLink>
+              <NavLink to="/general-terms">General terms</NavLink>
             </li>
             <li>
-              <NavLink to="/about">За нас</NavLink>
+              <NavLink to="/about">About us</NavLink>
             </li>
             <li>
-              <NavLink to="/contacts">Контакти</NavLink>
+              <NavLink to="/contacts">Contacts</NavLink>
             </li>
           </ul>
         </div>

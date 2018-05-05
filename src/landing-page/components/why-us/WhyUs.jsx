@@ -20,9 +20,9 @@ export default function whyUs(props) {
 
           <p>
             The technological stack used in the development of your digital
-            presence includes cutting edge solutions which are both scalable and
-            resillient. For the case most of our products step on the shoulder
-            of giants like Microsoft and Google that are considered extremelly
+            presence includes cutting-edge solutions which are both scalable and
+            resilient. For the case, most of our products step on the shoulder
+            of giants like Microsoft and Google that are considered extremely
             reliable.
           </p>
 
