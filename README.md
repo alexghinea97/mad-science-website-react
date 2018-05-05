@@ -20,6 +20,7 @@ Node.js
 * **[React](https://reactjs.org/)** - for UI management
 * **[Material Design](https://getmdl.io/)** - for UI styling 
 * **[Material Design Components](https://www.material-ui.com/)** - for UI styling components 
+* **[Transitions](https://www.npmjs.com/package/react-transition-group)** - for animating transitions
 * **[SASS](https://sass-lang.com/)** - for writing CSS 
 * **[npm](https://www.npmjs.com/)** - for package management and build automation 
 * **[React Router](https://reacttraining.com/react-router/)** - for routing client-side
