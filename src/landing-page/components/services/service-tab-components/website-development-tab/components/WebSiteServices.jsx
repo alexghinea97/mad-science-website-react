@@ -41,7 +41,7 @@ export default class WebSiteServices extends Component {
             <RaisedButton
               fullWidth={true}
               label={service.name}
-              primary={true}
+              secondary={true}
               onClick={this.handleOpen}
               style={{ marginBottom: '10px' }}
               key={index}
