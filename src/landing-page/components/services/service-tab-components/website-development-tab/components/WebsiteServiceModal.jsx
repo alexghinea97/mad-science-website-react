@@ -20,6 +20,8 @@ export default function websiteServiceModal(props) {
       modal={false}
       open={props.open}
       onRequestClose={props.handleClose}
-    />
+    >
+      {props.children}
+    </Dialog>
   );
 }
