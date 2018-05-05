@@ -1,6 +1,6 @@
 # Mad-science-website-react front-end 
 
-This is url of the website currently: @ https://booksexchange.bitbucket.io/ 
+This is url of the website currently: @ https://madsciencebulgaria.github.io/
 
 ## Getting Started
 
