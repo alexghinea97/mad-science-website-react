@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Divider from 'material-ui/Divider';
 import Paper from 'material-ui/Paper';
 
-import ServicesOrderStepper from '../../componentns/ServicesOrderStepper';
+import ServicesOrderStepper from '../../components/ServicesOrderStepper';
 import WebsiteServices from './components/WebsiteServices';
 
 import './WebSiteDevelopmentTab.css';
