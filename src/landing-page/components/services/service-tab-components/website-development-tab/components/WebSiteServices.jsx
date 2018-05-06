@@ -36,7 +36,7 @@ export default class WebSiteServices extends Component {
   };
 
   render() {
-    const modalFill = services[this.state.selectedService.index].component();
+    const modalFill = services[this.state.selectedService.index].component;
     return (
       <div>
         {services.map((service, index) => {
@@ -56,7 +56,7 @@ export default class WebSiteServices extends Component {
           open={this.state.open}
           handleClose={this.handleClose}
         >
-          {modalFill}
+          {React.createElement(modalFill)}
         </WebsiteServiceModal>
       </div>
     );
