@@ -4,7 +4,7 @@ import { Card, CardActions, CardText } from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
 import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
-
+import LocalizedStrings from '../../../LocalizedStrings';
 import firebase from '../../../firebase.js';
 
 export default class Form extends Component {
@@ -88,12 +88,9 @@ export default class Form extends Component {
   render() {
     return (
       <Card style={{ padding: '15px' }}>
-        <h2>Contacts</h2>
+        <h2>{LocalizedStrings.body.contacts.title}</h2>
         <Divider />
-        <CardText>
-          Need More information? You can contact us here or in one of our other
-          channels
-        </CardText>
+        <CardText>{LocalizedStrings.body.contacts.contactsInfo}</CardText>
         <CardActions>
           <a href="" className="facebook">
             <i className="fa fa-facebook fa-fw" />
@@ -109,24 +106,24 @@ export default class Form extends Component {
 
         <CardText>
           <TextField
-            hintText="Enter your email"
-            floatingLabelText="Your email"
+            hintText={LocalizedStrings.body.contacts.form.email}
+            floatingLabelText={LocalizedStrings.body.contacts.form.email}
             type="email"
             onChange={this.handleEmailChange}
             value={this.state.email}
           />
           <TextField
             fullWidth={true}
-            hintText="Enter the reason for which you are contacting us"
-            floatingLabelText="Subject"
+            hintText={LocalizedStrings.body.contacts.form.subjectFloatingLabel}
+            floatingLabelText={LocalizedStrings.body.contacts.form.subject}
             type="text"
             onChange={this.handleSubjectChange}
             value={this.state.subject}
           />
           <TextField
             fullWidth={true}
-            hintText="Ask us anything or simply share your thoughts"
-            floatingLabelText="Email content  "
+            hintText={LocalizedStrings.body.contacts.form.contentFloatingLabel}
+            floatingLabelText={LocalizedStrings.body.contacts.form.content}
             type="text"
             multiLine={true}
             rows={5}
@@ -135,7 +132,7 @@ export default class Form extends Component {
           />
         </CardText>
         <RaisedButton
-          label="Submit"
+          label={LocalizedStrings.body.contacts.contactsButton}
           primary={true}
           onClick={this.handleSubmitForm}
           style={{ margin: '12px' }}

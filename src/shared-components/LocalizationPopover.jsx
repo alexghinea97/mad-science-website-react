@@ -4,6 +4,7 @@ import Popover from 'material-ui/Popover';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
 import strings from '../../src/LocalizedStrings';
+import LocalizedStrings from '../LocalizedStrings';
 
 export default class LocalizationPopover extends React.Component {
   constructor(props) {
@@ -45,7 +46,7 @@ export default class LocalizationPopover extends React.Component {
       <div>
         <RaisedButton
           onClick={this.handleClick}
-          label="Language"
+          label={LocalizedStrings.header.language}
           primary={true}
           className="localization-popover"
         />

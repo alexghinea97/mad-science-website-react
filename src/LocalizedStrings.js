@@ -9,7 +9,7 @@ let strings = new LocalizedStrings({
       portfolio: 'PORTFOLIO',
       contacts: 'CONTACTS',
       hiring: 'HIRING',
-      languge: 'LANGUAGE'
+      language: 'LANGUAGE'
     },
     body: {
       moto: 'Let us help you with your digital presence.',
@@ -34,7 +34,7 @@ let strings = new LocalizedStrings({
         websiteDev: 'WEBSITE DEVELOPMENT',
         templates: 'Templates',
         websiteOptions: {
-          staticWebsite: 'STATIC WEBSITE',
+          websiteDevelopment: 'WEBSITE DEVELOPMENT',
           googleAnalitycsInt: 'GOOGLE ANALITYCS INTEGRATION',
           facebookPixelInt: 'FACEBOOK PIXEL INTEGRATION',
           facebookMessengerInt: 'FACEBOOK MESSENGER INTEGRATION',
@@ -56,7 +56,15 @@ let strings = new LocalizedStrings({
         title: 'Contacts',
         contactsInfo:
           'Need More information? You can contact us here or in one of our other channels',
-        contactsButton: 'SUBMIT'
+        contactsButton: 'SUBMIT',
+        form: {
+          email: 'Enter your email',
+          subject: 'Subject',
+          subjectFloatingLabel:
+            'Enter the reason for which you are contacting us',
+          content: 'Email content',
+          contentFloatingLabel: 'Ask us anything or simply share your thoughts'
+        }
       }
     },
     footer: {
@@ -76,7 +84,7 @@ let strings = new LocalizedStrings({
       portfolio: 'ПОРТФОЛИО',
       contacts: 'КОНТАКТИ',
       hiring: 'НАЕМАНЕ',
-      languge: 'ЕЗИК'
+      language: 'ЕЗИК'
     },
     body: {
       moto: 'Нека ви помогнем с вашето дигитално присъствие.',
@@ -101,39 +109,49 @@ let strings = new LocalizedStrings({
         websiteDev: 'СЪЗДАВАНЕ НА УЕБСАЙТ',
         templates: 'ШАБЛОНИ',
         websiteOptions: {
-          staticWebsite: 'СТАТИЧЕН УЕБСАЙТ',
+          websiteDevelopment: 'РАЗРАБОТКА НА УЕБСАЙТ',
           googleAnalitycsInt: 'GOOGLE ANALITYCS ИНТЕГРАЦИЯ',
           facebookPixelInt: 'FACEBOOK PIXEL ИНТЕГРАЦИЯ',
           facebookMessengerInt: 'FACEBOOK MESSENGER ИНТЕГРАЦИЯ',
-          emailSubscrInt: 'EMAIL SUBSCRIPTION ИНТЕГРАЦИЯ',
+          emailSubscrInt: 'ИНТЕГРАЦИЯ НА ИМЕЙЛ АБОНАМЕНТ',
           localization: 'ЛОКАЛИЗАЦИЯ',
           blogAndBlogManagement: 'БЛОГ И БЛОГ МЕНИДЖМЪНТ'
         }
-      }
-    },
-    portfolio: {
-      title: 'Нашето портфолио',
-      project: {
-        title: 'Книга за Книга',
-        description:
-          'Знанието е нещо важно за всички ни. Ние от екипа на Mad Science създадохме платформа, която ни помага да разменяме книги с цяла България. Съпричастни сме към по-достъпното образование, без значение от възрастта. Всеки има възможността да напише нещо повече за конкретна книга, която притежава и да даде своето мнение за нея. Книгата бива разменяна, с някого, когото иска да я прочете и да извлече максимално много от нея.',
-        buttonForPortfolio: 'НАУЧИ ПОВЕЧЕ'
+      },
+      portfolio: {
+        title: 'Нашето портфолио',
+        project: {
+          title: 'Книга за Книга',
+          description:
+            'Знанието е нещо важно за всички ни. Ние от екипа на Mad Science създадохме платформа, която ни помага да разменяме книги с цяла България. Съпричастни сме към по-достъпното образование, без значение от възрастта. Всеки има възможността да напише нещо повече за конкретна книга, която притежава и да даде своето мнение за нея. Книгата бива разменяна, с някого, когото иска да я прочете и да извлече максимално много от нея.',
+          buttonForPortfolio: 'НАУЧИ ПОВЕЧЕ'
+        }
       },
       contacts: {
         title: 'Контакти',
         contactsInfo:
           'Искаш да знаеш повече? Свържи се с нас тук или чрез някой от каналите.',
-        contactsButton: 'ИЗПРАТИ'
+        contactsButton: 'ИЗПРАТИ',
+        form: {
+          email: 'Напиши своя имейл',
+          subject: 'Тема',
+          subjectFloatingLabel:
+            'Въведи каква е причината, заради която искаш да се свържеш с нас',
+          content: 'Съдържание',
+          contentFloatingLabel: 'Попитай ни или сподели своето мнение'
+        }
       }
+    },
+    footer: {
+      home: 'Начало',
+      faq: 'Често задавани въпроси',
+      generalTerms: 'Общи условия',
+      aboutUs: 'За нас',
+      contacts: 'Контакти'
     }
-  },
-  footer: {
-    home: 'Начало',
-    faq: 'Често задавани въпроси',
-    generalTerms: 'Общи условия',
-    aboutUs: 'За нас',
-    contacts: 'Контакти'
   }
 });
+
+strings.setLanguage('bg');
 
 export default strings;

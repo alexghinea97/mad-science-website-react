@@ -1,7 +1,7 @@
 import React from 'react';
 import Paper from 'material-ui/Paper';
 import { Tabs, Tab } from 'material-ui/Tabs';
-
+import LocalizedStrings from '../../../LocalizedStrings';
 import WebSiteDevelopmentTab from './service-tab-components/website-development-tab/WebSiteDevelopmentTab';
 
 import './Services.css';
@@ -10,13 +10,13 @@ export default function Services(props) {
   return (
     <div id="services">
       <Paper zDepth={3} style={{ padding: '15px' }}>
-        <h2>Our Services</h2>
+        <h2>{LocalizedStrings.body.services.title}</h2>
         <Tabs
           tabItemContainerStyle={{ display: 'block' }}
           inkBarStyle={{ display: 'none' }}
         >
           <Tab
-            label="Website development Solutions"
+            label={LocalizedStrings.body.services.buttonWebsiteDevSol}
             className="service-tab"
             style={{ display: 'block', width: '100%' }}
           >
