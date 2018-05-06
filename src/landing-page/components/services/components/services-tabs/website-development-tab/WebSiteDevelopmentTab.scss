@@ -5,4 +5,15 @@
     .row {
         margin-bottom: 5px;
     }
+    #website-services-image {
+        background: url('/images/website-services.jpeg');
+        background-size: cover;
+        height: 305px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    >div {
+        display: inline-block;
+        width: 50%;
+    }
 }

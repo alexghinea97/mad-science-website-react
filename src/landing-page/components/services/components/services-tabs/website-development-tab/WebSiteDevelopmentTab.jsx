@@ -9,7 +9,12 @@ export default class WebSiteDevelopmentTab extends Component {
     return (
       <div id="website-development-tab">
         <h3>{LocalizedStrings.body.services.websiteDev}</h3>
-        <WebsiteServices />
+        <div>
+          <div id="website-services-image" />
+        </div>
+        <div>
+          <WebsiteServices />
+        </div>
       </div>
     );
   }
