@@ -1,23 +1,30 @@
-import React from 'react';
-import { Card, CardActions, CardText } from 'material-ui/Card';
-
+import React, { Component } from 'react';
+import Dialog from 'material-ui/Dialog';
 import RaisedButton from 'material-ui/RaisedButton';
+import LocalizedStrings from '../../../LocalizedStrings';
 
-export default function thankYou(props) {
-  return (
-    <Card style={{ padding: '15px' }}>
-      <h2>Thank you for contacting us</h2>
+export default class ThankYou extends Component {
+  render() {
+    const actions = [
+      <RaisedButton
+        label={LocalizedStrings.body.contacts.thankYou.closeButton}
+        primary={true}
+        onClick={this.props.handleClose}
+      />
+    ];
 
-      <CardText>We will try to contact you back as soon as possible.</CardText>
-
-      <CardActions>
-        <RaisedButton
-          label="Contact us again"
-          primary={true}
-          onClick={props.toggleThankYou}
-          style={{ margin: '12px' }}
-        />
-      </CardActions>
-    </Card>
-  );
+    return (
+      <div>
+        <Dialog
+          title={LocalizedStrings.body.contacts.thankYou.title}
+          actions={actions}
+          modal={false}
+          open={this.props.open}
+          onRequestClose={this.handleClose}
+        >
+          {LocalizedStrings.body.contacts.thankYou.description}
+        </Dialog>
+      </div>
+    );
+  }
 }

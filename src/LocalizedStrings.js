@@ -64,6 +64,11 @@ let strings = new LocalizedStrings({
             'Enter the reason for which you are contacting us',
           content: 'Email content',
           contentFloatingLabel: 'Ask us anything or simply share your thoughts'
+        },
+        thankYou: {
+          title: 'Thank you for contacting us',
+          description: 'We will try to contact you back as soon as possible.',
+          closeButton: 'CLOSE'
         }
       }
     },
@@ -139,6 +144,11 @@ let strings = new LocalizedStrings({
             'Въведи каква е причината, заради която искаш да се свържеш с нас',
           content: 'Съдържание',
           contentFloatingLabel: 'Попитай ни или сподели своето мнение'
+        },
+        thankYou: {
+          title: 'Благодарим Ви, че се свързахте с нас',
+          description: 'Ще се опитаме да Ви отговорим възможно най-скоро.',
+          closeButton: 'ЗАТВОРИ'
         }
       }
     },
