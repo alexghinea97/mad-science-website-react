@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Tab } from 'material-ui/Tabs';
 import {
   Table,
   TableBody,

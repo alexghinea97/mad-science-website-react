@@ -1,6 +1,8 @@
 import React from 'react';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import WebSiteDevelopmentTab from './website-development-tab/WebSiteDevelopmentTab';
+import MarketingTab from './marketing-tab/MarketingTab';
+import ArtAndDesignTab from './art-and-design-tab/ArtAndDesignTab';
 import LocalizedStrings from '../../../../../LocalizedStrings';
 
 export default function servicesTabs(props) {
@@ -18,7 +20,7 @@ export default function servicesTabs(props) {
         >
           <WebSiteDevelopmentTab />
         </Tab>
-        {/* <Tab
+        <Tab
           label="Marketing Solutions"
           className="service-tab"
           style={{ display: 'block', width: '100%' }}
@@ -31,7 +33,7 @@ export default function servicesTabs(props) {
           style={{ display: 'block', width: '100%' }}
         >
           <ArtAndDesignTab />
-        </Tab> */}
+        </Tab>
       </Tabs>
     </div>
   );
