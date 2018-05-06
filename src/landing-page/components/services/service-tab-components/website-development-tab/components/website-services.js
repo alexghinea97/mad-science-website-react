@@ -1,4 +1,4 @@
-import StaticWebsiteDevelopmentModalContent from './modal-contents/StaticWebsiteDevelopmentModalContent';
+import WebsiteDevelopmentModalContent from './modal-contents/WebsiteDevelopmentModalContent';
 import GoogleAnalyticsIntegrationModalContent from './modal-contents/GoogleAnalyticsIntegrationModalContent';
 import FacebookPixelIntegrationModalContent from './modal-contents/FacebookPixelIntegrationModalContent';
 import FacebookMessengerIntegrationModalContent from './modal-contents/FacebookMessengerIntegrationModalContent';

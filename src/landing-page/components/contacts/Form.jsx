@@ -15,14 +15,9 @@ export default class Form extends Component {
       subject: '',
       content: ''
     };
-
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handleSubjectChange = this.handleSubjectChange.bind(this);
-    this.handleContentChange = this.handleContentChange.bind(this);
-    this.handleSubmitForm = this.handleSubmitForm.bind(this);
   }
 
-  handleSubmitForm(eventData) {
+  handleSubmitForm = eventData => {
     const state = this.getDataState();
     if (state.isValid) {
       this.sendDataToDatabase();
@@ -33,21 +28,21 @@ export default class Form extends Component {
         //Show a snackbar
       });
     }
-  }
+  };
 
-  clearForm() {
+  clearForm = () => {
     this.setState({
       email: '',
       content: '',
       subject: ''
     });
-  }
+  };
 
-  handleRequestClose(eventData) {
+  handleRequestClose = eventData => {
     console.dir(eventData);
-  }
+  };
 
-  sendDataToDatabase() {
+  sendDataToDatabase = () => {
     firebase
       .database()
       .ref('/contacts/' + uuid.v4())
@@ -61,7 +56,7 @@ export default class Form extends Component {
           console.dir(err);
         }
       );
-  }
+  };
 
   getDataState() {
     const state = {

@@ -34,7 +34,7 @@ let strings = new LocalizedStrings({
         websiteDev: 'WEBSITE DEVELOPMENT',
         templates: 'Templates',
         websiteOptions: {
-          staticWebsite: 'STATIC WEBSITE',
+          websiteDevelopment: 'WEBSITE DEVELOPMENT',
           googleAnalitycsInt: 'GOOGLE ANALITYCS INTEGRATION',
           facebookPixelInt: 'FACEBOOK PIXEL INTEGRATION',
           facebookMessengerInt: 'FACEBOOK MESSENGER INTEGRATION',
@@ -109,7 +109,7 @@ let strings = new LocalizedStrings({
         websiteDev: 'СЪЗДАВАНЕ НА УЕБСАЙТ',
         templates: 'ШАБЛОНИ',
         websiteOptions: {
-          staticWebsite: 'СТАТИЧЕН УЕБСАЙТ',
+          websiteDevelopment: 'РАЗРАБОТКА НА УЕБСАЙТ',
           googleAnalitycsInt: 'GOOGLE ANALITYCS ИНТЕГРАЦИЯ',
           facebookPixelInt: 'FACEBOOK PIXEL ИНТЕГРАЦИЯ',
           facebookMessengerInt: 'FACEBOOK MESSENGER ИНТЕГРАЦИЯ',

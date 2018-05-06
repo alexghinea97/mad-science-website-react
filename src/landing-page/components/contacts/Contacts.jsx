@@ -11,15 +11,13 @@ export default class Contacts extends Component {
     this.state = {
       shouldShowThankYou: false
     };
-
-    this.toggleThankYou = this.toggleThankYou.bind(this);
   }
 
-  toggleThankYou() {
+  toggleThankYou = () => {
     this.setState({
       shouldShowThankYou: !this.state.shouldShowThankYou
     });
-  }
+  };
 
   render() {
     return (
