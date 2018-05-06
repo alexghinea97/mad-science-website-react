@@ -3,20 +3,22 @@ import { Tabs, Tab } from 'material-ui/Tabs';
 import WebSiteDevelopmentTab from './website-development-tab/WebSiteDevelopmentTab';
 import LocalizedStrings from '../../../../../LocalizedStrings';
 
-export default function serviceTabs(props) {
+export default function servicesTabs(props) {
   return (
-    <Tabs
-      tabItemContainerStyle={{ display: 'block' }}
-      inkBarStyle={{ display: 'none' }}
-    >
-      <Tab
-        label={LocalizedStrings.body.services.buttonWebsiteDevSol}
-        className="service-tab"
-        style={{ display: 'block', width: '100%' }}
+    <div>
+      <h2>{LocalizedStrings.body.services.title}</h2>
+      <Tabs
+        tabItemContainerStyle={{ display: 'block' }}
+        inkBarStyle={{ display: 'none' }}
       >
-        <WebSiteDevelopmentTab />
-      </Tab>
-      {/* <Tab
+        <Tab
+          label={LocalizedStrings.body.services.buttonWebsiteDevSol}
+          className="service-tab"
+          style={{ display: 'block', width: '100%' }}
+        >
+          <WebSiteDevelopmentTab />
+        </Tab>
+        {/* <Tab
           label="Marketing Solutions"
           className="service-tab"
           style={{ display: 'block', width: '100%' }}
@@ -30,6 +32,7 @@ export default function serviceTabs(props) {
         >
           <ArtAndDesignTab />
         </Tab> */}
-    </Tabs>
+      </Tabs>
+    </div>
   );
 }

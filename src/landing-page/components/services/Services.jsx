@@ -1,9 +1,9 @@
 import React from 'react';
+
+import ServicesTabs from './components/services-tabs/ServicesTabs';
+import ServicesForm from './components/services-form/ServicesForm';
+
 import Paper from 'material-ui/Paper';
-
-import LocalizedStrings from '../../../LocalizedStrings';
-
-import ServiceTabs from './components/service-tabs/ServiceTabs';
 import { Step, Stepper, StepLabel, StepContent } from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
@@ -39,14 +39,6 @@ export default class Services extends React.Component {
 
     return (
       <div style={{ margin: '12px 0' }}>
-        <RaisedButton
-          label={stepIndex === 2 ? 'Finish' : 'Next'}
-          disableTouchRipple={true}
-          disableFocusRipple={true}
-          primary={true}
-          onClick={this.handleNext}
-          style={{ marginRight: 12 }}
-        />
         {step > 0 && (
           <FlatButton
             label="Back"
@@ -56,6 +48,14 @@ export default class Services extends React.Component {
             onClick={this.handlePrev}
           />
         )}
+        <RaisedButton
+          label={stepIndex === 2 ? 'Finish' : 'Next'}
+          disableTouchRipple={true}
+          disableFocusRipple={true}
+          primary={true}
+          onClick={this.handleNext}
+          style={{ marginRight: 12 }}
+        />
       </div>
     );
   }
@@ -63,19 +63,21 @@ export default class Services extends React.Component {
     return (
       <div id="services">
         <Paper zDepth={3} style={{ padding: '15px' }}>
-          <h2>{LocalizedStrings.body.services.title}</h2>
           <div style={{ maxWidth: '100%', margin: 'auto' }}>
             <Stepper activeStep={this.state.stepIndex} orientation="vertical">
               <Step>
                 <StepLabel>Select campaign settings</StepLabel>
                 <StepContent>
-                  <ServiceTabs />
+                  <ServicesTabs />
                   {this.renderStepActions(0)}
                 </StepContent>
               </Step>
               <Step>
                 <StepLabel>Create an ad group</StepLabel>
-                <StepContent>{this.renderStepActions(1)}</StepContent>
+                <StepContent>
+                  <ServicesForm />
+                  {this.renderStepActions(1)}
+                </StepContent>
               </Step>
               <Step>
                 <StepLabel>Create an ad</StepLabel>
