@@ -20,6 +20,7 @@ export default function websiteServiceModal(props) {
       modal={false}
       open={props.open}
       onRequestClose={props.handleClose}
+      autoScrollBodyContent={true}
     >
       {props.children}
     </Dialog>
