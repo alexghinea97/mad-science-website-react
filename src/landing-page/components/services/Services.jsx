@@ -49,7 +49,7 @@ export default class Services extends React.Component {
           />
         )}
         <RaisedButton
-          label={stepIndex === 2 ? 'Finish' : 'Next'}
+          label={stepIndex === 3 ? 'Finish' : 'Next'}
           disableTouchRipple={true}
           disableFocusRipple={true}
           primary={true}
@@ -66,21 +66,28 @@ export default class Services extends React.Component {
           <div style={{ maxWidth: '100%', margin: 'auto' }}>
             <Stepper activeStep={this.state.stepIndex} orientation="vertical">
               <Step>
-                <StepLabel>Select campaign settings</StepLabel>
+                <StepLabel>Select the services you would like</StepLabel>
                 <StepContent>
                   <ServicesTabs />
                   {this.renderStepActions(0)}
                 </StepContent>
               </Step>
               <Step>
-                <StepLabel>Create an ad group</StepLabel>
+                <StepLabel>Contacts and additional info</StepLabel>
                 <StepContent>
                   <ServicesForm />
                   {this.renderStepActions(1)}
                 </StepContent>
               </Step>
               <Step>
-                <StepLabel>Create an ad</StepLabel>
+                <StepLabel>Request summary</StepLabel>
+                <StepContent>
+                  <ServicesForm />
+                  {this.renderStepActions(1)}
+                </StepContent>
+              </Step>
+              <Step>
+                <StepLabel>Thank you</StepLabel>
                 <StepContent>{this.renderStepActions(2)}</StepContent>
               </Step>
             </Stepper>
