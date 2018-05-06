@@ -45,11 +45,18 @@ let strings = new LocalizedStrings({
       },
       portfolio: {
         title: 'Our Portfolio',
-        project: {
+        bookExchangeProject: {
           title: 'Book Exchange',
           description:
             'Knowledge is something important for everyone. Our team from Mad Science create a platform which helps us to exchange books all over Bulgaria. We sympathizing to have an accessible education no matter the age. Every person has an opportunity to give an opinion for a book which owns. The book could be exchanged with someone who wants to read it.',
           buttonForPortfolio: 'LEARN MORE'
+        },
+        openSourceTitle: 'Open-source projects',
+        madScienceProject: {
+          title: 'Mad Science',
+          description:
+            'The official website of Mad Science is an open-source project. The source code can be found in GitHub. For carrying out the project we used JavaScript(JS) and one of the most popular JavaScript libraries – React. For the design philosophy we step upon the shoulders of Material Design by Google. More information can be found on GitHub in the readme file.',
+          buttonForPortfolio: 'SOURCE IN GITHUB'
         }
       },
       contacts: {
@@ -88,7 +95,7 @@ let strings = new LocalizedStrings({
       services: 'УСЛУГИ',
       portfolio: 'ПОРТФОЛИО',
       contacts: 'КОНТАКТИ',
-      hiring: 'НАЕМАНЕ',
+      hiring: 'ПРИСЪЕДИНИ СЕ',
       language: 'ЕЗИК'
     },
     body: {
@@ -125,11 +132,18 @@ let strings = new LocalizedStrings({
       },
       portfolio: {
         title: 'Нашето портфолио',
-        project: {
+        bookExchangeProject: {
           title: 'Книга за Книга',
           description:
             'Знанието е нещо важно за всички ни. Ние от екипа на Mad Science създадохме платформа, която ни помага да разменяме книги с цяла България. Съпричастни сме към по-достъпното образование, без значение от възрастта. Всеки има възможността да напише нещо повече за конкретна книга, която притежава и да даде своето мнение за нея. Книгата бива разменяна, с някого, когото иска да я прочете и да извлече максимално много от нея.',
           buttonForPortfolio: 'НАУЧИ ПОВЕЧЕ'
+        },
+        openSourceTitle: 'Проекти с отворен код',
+        madScienceProject: {
+          title: 'Mad Science',
+          description:
+            'Официалният сайт на Mad Science e open-source проект, неговият код може да бъде намерен в GitHub. За осъществяването му са използвани JavaScript(JS) и една от най-модерните JavaScript библиотеки - React. Приложената философия за дизайна е Material Design от Google. За по-детайлна техническа информация може да посетите проектът в GitHub и да прочетете в readme-то.',
+          buttonForPortfolio: 'СОРС КОД В GITHUB'
         }
       },
       contacts: {

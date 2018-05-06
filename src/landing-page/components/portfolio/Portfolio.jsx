@@ -23,18 +23,49 @@ export default function portfolio(props) {
           <CardMedia
             overlay={
               <CardTitle
-                title={LocalizedStrings.body.portfolio.project.title}
+                title={
+                  LocalizedStrings.body.portfolio.bookExchangeProject.title
+                }
               />
             }
           >
             <img src="/images/booksexchange-logo.jpeg" alt="" />
           </CardMedia>
           <CardText>
-            {LocalizedStrings.body.portfolio.project.description}
+            {LocalizedStrings.body.portfolio.bookExchangeProject.description}
           </CardText>
           <CardActions>
             <FlatButton
-              label={LocalizedStrings.body.portfolio.project.buttonForPortfolio}
+              label={
+                LocalizedStrings.body.portfolio.bookExchangeProject
+                  .buttonForPortfolio
+              }
+            />
+          </CardActions>
+        </Card>
+        <br />
+        <Divider />
+        <br />
+        <h3>{LocalizedStrings.body.portfolio.openSourceTitle}</h3>
+        <Card className="portfolio-entity-card">
+          <CardMedia
+            overlay={
+              <CardTitle
+                title={LocalizedStrings.body.portfolio.madScienceProject.title}
+              />
+            }
+          >
+            <img src="/images/booksexchange-logo.jpeg" alt="" />
+          </CardMedia>
+          <CardText>
+            {LocalizedStrings.body.portfolio.madScienceProject.description}
+          </CardText>
+          <CardActions>
+            <FlatButton
+              label={
+                LocalizedStrings.body.portfolio.madScienceProject
+                  .buttonForPortfolio
+              }
             />
           </CardActions>
         </Card>
