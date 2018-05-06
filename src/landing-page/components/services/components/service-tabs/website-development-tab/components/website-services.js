@@ -3,6 +3,7 @@ import GoogleAnalyticsIntegrationModalContent from './modal-contents/GoogleAnaly
 import FacebookPixelIntegrationModalContent from './modal-contents/FacebookPixelIntegrationModalContent';
 import FacebookMessengerIntegrationModalContent from './modal-contents/FacebookMessengerIntegrationModalContent';
 import EmailSubscriptionIntegrationModalContent from './modal-contents/EmailSubscriptionIntegrationModalContent';
+import LocalizationIntegrationModalContent from './modal-contents/LocalizationIntegrationModalContent';
 import LocalizedStrings from '../../../../../../../LocalizedStrings';
 
 export default [
@@ -27,7 +28,8 @@ export default [
     component: EmailSubscriptionIntegrationModalContent
   },
   {
-    name: LocalizedStrings.body.services.websiteOptions.localization
+    name: LocalizedStrings.body.services.websiteOptions.localization,
+    component: LocalizationIntegrationModalContent
   },
   {
     name: LocalizedStrings.body.services.websiteOptions.blogAndBlogManagement

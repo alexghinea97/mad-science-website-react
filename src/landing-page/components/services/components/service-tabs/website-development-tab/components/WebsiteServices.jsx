@@ -16,7 +16,6 @@ export default class WebSiteServices extends Component {
   }
 
   handleOpen = eventData => {
-    console.log(eventData.target);
     this.setState({
       open: true,
       selectedService: {
