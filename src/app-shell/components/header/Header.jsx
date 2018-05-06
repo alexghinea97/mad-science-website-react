@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import './Header.css';
 import CommonNavigation from '../navigation/CommonNavigation';
+import './Header.css';
 
 export default class Header extends Component {
   render() {

@@ -3,32 +3,33 @@ import GoogleAnalyticsIntegrationModalContent from './modal-contents/GoogleAnaly
 import FacebookPixelIntegrationModalContent from './modal-contents/FacebookPixelIntegrationModalContent';
 import FacebookMessengerIntegrationModalContent from './modal-contents/FacebookMessengerIntegrationModalContent';
 import EmailSubscriptionIntegrationModalContent from './modal-contents/EmailSubscriptionIntegrationModalContent';
+import LocalizedStrings from '../../../../../../LocalizedStrings';
 
 export default [
   {
-    name: 'Static website',
+    name: LocalizedStrings.body.services.websiteOptions.staticWebsite,
     component: StaticWebsiteDevelopmentModalContent
   },
   {
-    name: 'Google analytics integration',
+    name: LocalizedStrings.body.services.websiteOptions.googleAnalitycsInt,
     component: GoogleAnalyticsIntegrationModalContent
   },
   {
-    name: 'Facebook pixel integration',
+    name: LocalizedStrings.body.services.websiteOptions.facebookPixelInt,
     component: FacebookPixelIntegrationModalContent
   },
   {
-    name: 'Facebook messenger integration',
+    name: LocalizedStrings.body.services.websiteOptions.facebookMessengerInt,
     component: FacebookMessengerIntegrationModalContent
   },
   {
-    name: 'Email Subscription integration',
+    name: LocalizedStrings.body.services.websiteOptions.emailSubscrInt,
     component: EmailSubscriptionIntegrationModalContent
   },
   {
-    name: 'Localization'
+    name: LocalizedStrings.body.services.websiteOptions.localization
   },
   {
-    name: 'Blog and blog management'
+    name: LocalizedStrings.body.services.websiteOptions.blogAndBlogManagement
   }
 ];
