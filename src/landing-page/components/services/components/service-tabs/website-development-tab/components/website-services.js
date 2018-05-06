@@ -3,7 +3,7 @@ import GoogleAnalyticsIntegrationModalContent from './modal-contents/GoogleAnaly
 import FacebookPixelIntegrationModalContent from './modal-contents/FacebookPixelIntegrationModalContent';
 import FacebookMessengerIntegrationModalContent from './modal-contents/FacebookMessengerIntegrationModalContent';
 import EmailSubscriptionIntegrationModalContent from './modal-contents/EmailSubscriptionIntegrationModalContent';
-import LocalizedStrings from '../../../../../../LocalizedStrings';
+import LocalizedStrings from '../../../../../../../LocalizedStrings';
 
 export default [
   {
