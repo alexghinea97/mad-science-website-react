@@ -13,12 +13,9 @@ export default class WebSiteServices extends Component {
         index: 0
       }
     };
-
-    this.handleOpen = this.handleOpen.bind(this);
-    this.handleClose = this.handleClose.bind(this);
   }
 
-  handleOpen(eventData) {
+  handleOpen = eventData => {
     console.log(eventData.target);
     this.setState({
       open: true,
@@ -32,11 +29,11 @@ export default class WebSiteServices extends Component {
         })
       }
     });
-  }
+  };
 
-  handleClose() {
+  handleClose = () => {
     this.setState({ open: false });
-  }
+  };
 
   render() {
     const modalFill = services[this.state.selectedService.index].component();
