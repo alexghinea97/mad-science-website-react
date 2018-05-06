@@ -9,7 +9,7 @@ for (let i = 0; i < 100; i++) {
   items.push(<MenuItem value={i} key={i} primaryText={`Item ${i}`} />);
 }
 
-export default class StaticWebsiteDevelopmentModalContent extends React.Component {
+export default class WebsiteDevelopmentModalContent extends React.Component {
   constructor(props) {
     super(props);
     this.state = { value: 10 };

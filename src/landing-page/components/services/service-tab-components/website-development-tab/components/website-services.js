@@ -7,8 +7,8 @@ import LocalizedStrings from '../../../../../../LocalizedStrings';
 
 export default [
   {
-    name: LocalizedStrings.body.services.websiteOptions.staticWebsite,
-    component: StaticWebsiteDevelopmentModalContent
+    name: LocalizedStrings.body.services.websiteOptions.websiteDevelopment,
+    component: WebsiteDevelopmentModalContent
   },
   {
     name: LocalizedStrings.body.services.websiteOptions.googleAnalitycsInt,

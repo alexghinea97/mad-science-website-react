@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import LocalizedStrings from '../../../LocalizedStrings';
 import './ValueProposition.css';
-import strings from '../../../LocalizedStrings';
 
 export default class ValueProposition extends Component {
   render() {
