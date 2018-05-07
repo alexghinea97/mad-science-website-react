@@ -16,3 +16,6 @@ p {
     font-family: 'Roboto', sans-serif;
     letter-spacing: 0.6px;
 }
+img{
+    width: 100%;
+}
