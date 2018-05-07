@@ -1,10 +1,10 @@
-import WebsiteDevelopmentModalContent from './modal-contents/WebsiteDevelopmentModalContent';
-import GoogleAnalyticsIntegrationModalContent from './modal-contents/GoogleAnalyticsIntegrationModalContent';
-import FacebookPixelIntegrationModalContent from './modal-contents/FacebookPixelIntegrationModalContent';
-import FacebookMessengerIntegrationModalContent from './modal-contents/FacebookMessengerIntegrationModalContent';
-import EmailSubscriptionIntegrationModalContent from './modal-contents/EmailSubscriptionIntegrationModalContent';
-import LocalizationIntegrationModalContent from './modal-contents/LocalizationIntegrationModalContent';
-import LocalizedStrings from '../../../../../../../LocalizedStrings';
+import WebsiteDevelopmentModalContent from './components/modal-contents/WebsiteDevelopmentModalContent';
+import GoogleAnalyticsIntegrationModalContent from './components/modal-contents/GoogleAnalyticsIntegrationModalContent';
+import FacebookPixelIntegrationModalContent from './components/modal-contents/FacebookPixelIntegrationModalContent';
+import FacebookMessengerIntegrationModalContent from './components/modal-contents/FacebookMessengerIntegrationModalContent';
+import EmailSubscriptionIntegrationModalContent from './components/modal-contents/EmailSubscriptionIntegrationModalContent';
+import LocalizationIntegrationModalContent from './components/modal-contents/LocalizationIntegrationModalContent';
+import LocalizedStrings from '../../../../../../LocalizedStrings';
 
 export default [
   {
