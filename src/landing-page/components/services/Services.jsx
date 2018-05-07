@@ -5,8 +5,12 @@ import ServicesForm from './components/services-form/ServicesForm';
 
 import Paper from 'material-ui/Paper';
 import { Step, Stepper, StepLabel, StepContent } from 'material-ui/Stepper';
+import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
+import Badge from 'material-ui/Badge';
+import IconButton from 'material-ui/IconButton';
+import ActionShoppingCart from 'material-ui/svg-icons/action/shopping-cart';
 
 import './Services.css';
 
@@ -15,7 +19,8 @@ export default class Services extends React.Component {
     super(props);
     this.state = {
       finished: false,
-      stepIndex: 0
+      stepIndex: 0,
+      open: true
     };
   }
 
@@ -33,6 +38,8 @@ export default class Services extends React.Component {
       this.setState({ stepIndex: stepIndex - 1 });
     }
   };
+
+  handleToggle = () => this.setState({ open: !this.state.open });
 
   renderStepActions(step) {
     const { stepIndex } = this.state;
@@ -54,8 +61,23 @@ export default class Services extends React.Component {
           disableFocusRipple={true}
           primary={true}
           onClick={this.handleNext}
-          style={{ marginRight: 12 }}
+          style={{ marginLeft: 12 }}
         />
+        {(() => {
+          if (stepIndex < 2) {
+            return (
+              <Badge
+                badgeContent={10}
+                secondary={true}
+                badgeStyle={{ top: 12, right: 12 }}
+              >
+                <IconButton onClick={this.handleToggle} tooltip="Notifications">
+                  <ActionShoppingCart />
+                </IconButton>
+              </Badge>
+            );
+          }
+        })()}
       </div>
     );
   }
@@ -91,22 +113,17 @@ export default class Services extends React.Component {
                 <StepContent>{this.renderStepActions(2)}</StepContent>
               </Step>
             </Stepper>
-            {this.state.finished && (
-              <p style={{ margin: '20px 0', textAlign: 'center' }}>
-                <a
-                  href="jsx-a11y/href-no-hash"
-                  onClick={event => {
-                    event.preventDefault();
-                    this.setState({ stepIndex: 0, finished: false });
-                  }}
-                >
-                  Click here
-                </a>{' '}
-                to reset the example.
-              </p>
-            )}
           </div>
         </Paper>
+        <Drawer
+          width={300}
+          openSecondary={true}
+          zDepth={4}
+          containerStyle={{ top: 90 }}
+          open={this.state.open}
+        >
+          <h2>Hello</h2>
+        </Drawer>
       </div>
     );
   }
