@@ -1,7 +1,7 @@
 import React from 'react';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
-
+import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 import Templates from '../Templates.jsx';
 
 const items = [];
@@ -20,11 +20,8 @@ export default class WebsiteDevelopmentModalContent extends React.Component {
   render() {
     return (
       <div>
-        <h2>Let's get started</h2>
-        <p>
-          You can choose from one of the templates below which can later be
-          customized for your own style and needs.
-        </p>
+        <h2>{LocalizedStrings.body.services.websiteDevelopmentDialog.title}</h2>
+        <p>{LocalizedStrings.body.services.websiteDevelopmentDialog.textOne}</p>
         <Templates />
         <br />
         <DropDownMenu
@@ -38,8 +35,7 @@ export default class WebsiteDevelopmentModalContent extends React.Component {
         </DropDownMenu>
         <br />
         <p>
-          ... Or you can give us your own concept of a desing an we'll implement
-          it.
+          {LocalizedStrings.body.services.websiteDevelopmentDialog.textSecond}
         </p>
       </div>
     );

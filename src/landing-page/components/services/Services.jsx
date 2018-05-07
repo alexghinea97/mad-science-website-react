@@ -1,8 +1,6 @@
 import React from 'react';
-
 import ServicesTabs from './components/services-tabs/ServicesTabs';
 import ServicesForm from './components/services-form/ServicesForm';
-
 import Paper from 'material-ui/Paper';
 import { Step, Stepper, StepLabel, StepContent } from 'material-ui/Stepper';
 import Drawer from 'material-ui/Drawer';
@@ -11,7 +9,7 @@ import FlatButton from 'material-ui/FlatButton';
 import Badge from 'material-ui/Badge';
 import IconButton from 'material-ui/IconButton';
 import ActionShoppingCart from 'material-ui/svg-icons/action/shopping-cart';
-
+import LocalizedStrings from '../../../LocalizedStrings';
 import './Services.css';
 
 export default class Services extends React.Component {
@@ -48,7 +46,7 @@ export default class Services extends React.Component {
       <div style={{ margin: '12px 0' }}>
         {step > 0 && (
           <FlatButton
-            label="Back"
+            label={LocalizedStrings.buttons.back}
             disabled={stepIndex === 0}
             disableTouchRipple={true}
             disableFocusRipple={true}
@@ -56,7 +54,11 @@ export default class Services extends React.Component {
           />
         )}
         <RaisedButton
-          label={stepIndex === 3 ? 'Finish' : 'Next'}
+          label={
+            stepIndex === 3
+              ? LocalizedStrings.buttons.finish
+              : LocalizedStrings.buttons.next
+          }
           disableTouchRipple={true}
           disableFocusRipple={true}
           primary={true}
@@ -88,28 +90,36 @@ export default class Services extends React.Component {
           <div style={{ maxWidth: '100%', margin: 'auto' }}>
             <Stepper activeStep={this.state.stepIndex} orientation="vertical">
               <Step>
-                <StepLabel>Select the services you would like</StepLabel>
+                <StepLabel>
+                  {LocalizedStrings.body.services.steps.firstStep}
+                </StepLabel>
                 <StepContent>
                   <ServicesTabs />
                   {this.renderStepActions(0)}
                 </StepContent>
               </Step>
               <Step>
-                <StepLabel>Contacts and additional info</StepLabel>
+                <StepLabel>
+                  {LocalizedStrings.body.services.steps.secondStep}
+                </StepLabel>
                 <StepContent>
                   <ServicesForm />
                   {this.renderStepActions(1)}
                 </StepContent>
               </Step>
               <Step>
-                <StepLabel>Request summary</StepLabel>
+                <StepLabel>
+                  {LocalizedStrings.body.services.steps.thirdStep}
+                </StepLabel>
                 <StepContent>
                   <ServicesForm />
                   {this.renderStepActions(1)}
                 </StepContent>
               </Step>
               <Step>
-                <StepLabel>Thank you</StepLabel>
+                <StepLabel>
+                  {LocalizedStrings.body.services.steps.fourthStep}
+                </StepLabel>
                 <StepContent>{this.renderStepActions(2)}</StepContent>
               </Step>
             </Stepper>
