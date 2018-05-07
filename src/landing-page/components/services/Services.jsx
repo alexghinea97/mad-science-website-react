@@ -20,7 +20,7 @@ export default class Services extends React.Component {
     this.state = {
       finished: false,
       stepIndex: 0,
-      open: true
+      open: false
     };
   }
 
