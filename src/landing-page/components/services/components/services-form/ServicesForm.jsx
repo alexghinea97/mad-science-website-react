@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-
 import TextField from 'material-ui/TextField';
+import LocalizedStrings from '../../../../../LocalizedStrings';
 import DatePicker from 'material-ui/DatePicker';
-
 import './ServicesForm.css';
 
 export default class ServicesForm extends Component {
@@ -35,12 +34,14 @@ export default class ServicesForm extends Component {
   render() {
     return (
       <div id="services-form">
-        <h2>Just a little bit more and we're done...</h2>
+        <h2>{LocalizedStrings.body.services.formAbouTheRequest.title}</h2>
         <div>
           <TextField
             fullWidth={true}
             hintText=""
-            floatingLabelText="Name"
+            floatingLabelText={
+              LocalizedStrings.body.services.formAbouTheRequest.name
+            }
             type="text"
             onChange={this.handleNameChange}
             value={this.state.name}
@@ -48,7 +49,9 @@ export default class ServicesForm extends Component {
           <TextField
             fullWidth={true}
             hintText=""
-            floatingLabelText="Email"
+            floatingLabelText={
+              LocalizedStrings.body.services.formAbouTheRequest.email
+            }
             type="text"
             onChange={this.handleEmailChange}
             value={this.state.email}
@@ -58,7 +61,10 @@ export default class ServicesForm extends Component {
             hintText=""
             multiLine={true}
             rows={8}
-            floatingLabelText="Additional info about the request"
+            floatingLabelText={
+              LocalizedStrings.body.services.formAbouTheRequest
+                .infoAbotTheRequest
+            }
             type="text"
             onChange={this.handleInfoChange}
             value={this.state.info}

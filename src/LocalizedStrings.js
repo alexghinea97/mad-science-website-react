@@ -9,7 +9,14 @@ let strings = new LocalizedStrings({
       portfolio: 'PORTFOLIO',
       contacts: 'CONTACTS',
       hiring: 'HIRING',
-      language: 'LANGUAGE'
+      language: 'ENGLISH'
+    },
+    buttons: {
+      back: 'BACK',
+      next: 'NEXT',
+      cancel: 'CANCEL',
+      add: 'ADD',
+      finish: 'FINISH'
     },
     body: {
       moto: 'Let us help you with your digital presence.',
@@ -33,6 +40,26 @@ let strings = new LocalizedStrings({
         buttonWebsiteDevSol: 'Website development solutions',
         websiteDev: 'WEBSITE DEVELOPMENT',
         templates: 'Templates',
+        formAbouTheRequest: {
+          title: "Just a little bit more and we're done...",
+          name: 'Name',
+          email: 'Email',
+          infoAbotTheRequest: 'Additional info about the request'
+        },
+        steps: {
+          firstStep: 'Select the services you would like',
+          secondStep: 'Contacts and additional info',
+          thirdStep: 'Request summary',
+          fourthStep: 'Thank you'
+        },
+        websiteDevelopmentDialog: {
+          title: "Let's get started",
+          textOne:
+            'You can choose from one of the templates below which can later be customized for your own style and needs.',
+          textLabel: 'Templates',
+          textSecond:
+            "... Or you can give us your own concept of a design and we'll implement it."
+        },
         websiteOptions: {
           websiteDevelopment: 'WEBSITE DEVELOPMENT',
           googleAnalitycsInt: 'GOOGLE ANALITYCS INTEGRATION',
@@ -77,6 +104,15 @@ let strings = new LocalizedStrings({
           description: 'We will try to contact you back as soon as possible.',
           closeButton: 'CLOSE'
         }
+      },
+      hiring: {
+        title: 'Do you want to join?',
+        textOne: 'Sorry we are currently not having open positions',
+        textSecond:
+          'Subscribe below to hear from us, when we have open positions.',
+        toSubscribeLabel: 'Subscribe to our mailing list',
+        input: 'email address',
+        button: 'Subscribe'
       }
     },
     footer: {
@@ -96,7 +132,14 @@ let strings = new LocalizedStrings({
       portfolio: 'ПОРТФОЛИО',
       contacts: 'КОНТАКТИ',
       hiring: 'ПРИСЪЕДИНИ СЕ',
-      language: 'ЕЗИК'
+      language: 'БЪЛГАРСКИ'
+    },
+    buttons: {
+      back: 'НАЗАД',
+      next: 'НАПРЕД',
+      cancel: 'ЗАТВОРИ',
+      add: 'ДОБАВИ',
+      finish: 'ЗАВЪРШИ ПОРЪЧКАТА'
     },
     body: {
       moto: 'Нека ви помогнем с вашето дигитално присъствие.',
@@ -120,6 +163,34 @@ let strings = new LocalizedStrings({
         buttonWebsiteDevSol: 'РЕШЕНИЯ ЗА РАЗРАБОТВАНЕ НА УЕБСАЙТОВЕ',
         websiteDev: 'СЪЗДАВАНЕ НА УЕБСАЙТ',
         templates: 'ШАБЛОНИ',
+        formAbouTheRequest: {
+          title: 'Нужна ни е още малко информация и сме готови ...',
+          name: 'Име',
+          email: 'Имейл',
+          infoAbotTheRequest: 'Допълнителна информация за заявката'
+        },
+        steps: {
+          firstStep: 'Изберете усугите, които искате',
+          secondStep: 'Контакти и допълнителна информация',
+          thirdStep: 'Резюме на заявката',
+          fourthStep: 'Благодарим Ви'
+        },
+        websiteDevelopmentDialog: {
+          title: 'Нека започнем',
+          textOne:
+            'Може да изберете един от шаблоните, който по-късно ще бъде направен специално за Вас и Вашите нужди.',
+          textLabel: 'Шаблони',
+          textSecond:
+            '... Или можете да ни дадете своя собствена концепция и ние ще я изпълним.'
+        },
+        localizationDialog: {
+          textOne:
+            'С помощта на локализацията Вие ще можете да разивате вашите идеи, тъй като съдържанието, което ще достига до потребителите ще бъде съобразено според използвания език и страните, в които искате да се развива вашият сайт.',
+          textSecond:
+            'В менюто може да изберете желаните езици, на които искате да бъде преведен вашият сайт. Ние ще се погрижим съдържанието да е максимално точно предадено.',
+          textThird:
+            'Цената се определя според обема на текста и срока за превод.'
+        },
         websiteOptions: {
           websiteDevelopment: 'РАЗРАБОТКА НА УЕБСАЙТ',
           googleAnalitycsInt: 'GOOGLE ANALITYCS ИНТЕГРАЦИЯ',
@@ -164,6 +235,15 @@ let strings = new LocalizedStrings({
           description: 'Ще се опитаме да Ви отговорим възможно най-скоро.',
           closeButton: 'ЗАТВОРИ'
         }
+      },
+      hiring: {
+        title: 'Искаш ли да се присъединиш?',
+        textOne: 'Съжаляваме, но в момента нямаме свободни позиции',
+        textSecond:
+          'Абонирайте се, за да Ви уведомим, когато имаме отворени позиции.',
+        toSubscribeLabel: 'Абонирай се за нашия списък',
+        input: 'имейл адрес',
+        button: 'Абониране'
       }
     },
     footer: {

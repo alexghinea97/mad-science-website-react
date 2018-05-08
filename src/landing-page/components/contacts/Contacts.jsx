@@ -107,6 +107,9 @@ export default class Contacts extends Component {
               <a href="" className="linkedin">
                 <i className="fa fa-linkedin fa-fw" />
               </a>
+              <a href="" className="envelope">
+                <i className="fa fa-envelope fa-fw" />
+              </a>
               <div
                 className="fb-send"
                 data-href="https://developers.facebook.com/docs/plugins/"

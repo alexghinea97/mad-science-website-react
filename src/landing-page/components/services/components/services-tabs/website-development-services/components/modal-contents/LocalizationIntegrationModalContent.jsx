@@ -3,6 +3,7 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import { List, ListItem } from 'material-ui/List';
 import ActionDelete from 'material-ui/svg-icons/action/delete';
+import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 
 export default class LocalizationIntegrationModalContent extends React.Component {
   constructor(props) {
@@ -34,18 +35,9 @@ export default class LocalizationIntegrationModalContent extends React.Component
 
     return (
       <div>
-        <p>
-          С помощта на локализацията Вие ще можете да разивате вашите идеи, тъй
-          като съдържанието, което ще достига до потребителите ще бъде
-          съобразено според използвания език и страните, в които искате да се
-          развива вашият сайт.
-        </p>
-        <p>
-          В менюто може да изберете желаните езици, на които искате да бъде
-          преведен вашият сайт. Ние ще се погрижим съдържанието да е максимално
-          точно предадено.
-        </p>
-        <p>Цената се определя според обема на текста и срока за превод.</p>
+        <p>{LocalizedStrings.body.services.localizationDialog.textOne}</p>
+        <p>{LocalizedStrings.body.services.localizationDialog.textSecond}</p>
+        <p>{LocalizedStrings.body.services.localizationDialog.textThird}</p>
         <DropDownMenu
           maxHeight={120}
           value={this.state.value}
