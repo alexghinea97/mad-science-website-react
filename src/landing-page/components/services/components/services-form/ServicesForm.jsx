@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import TextField from 'material-ui/TextField';
+import DatePicker from 'material-ui/DatePicker';
 
 import './ServicesForm.css';
 
@@ -62,6 +63,7 @@ export default class ServicesForm extends Component {
             onChange={this.handleInfoChange}
             value={this.state.info}
           />
+          <DatePicker hintText="Due date for the project" />
         </div>
         <div>
           <img src="/images/form.png" alt="" />

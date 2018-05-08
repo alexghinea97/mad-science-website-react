@@ -2,6 +2,7 @@ import React from 'react';
 
 import ServicesTabs from './components/services-tabs/ServicesTabs';
 import ServicesForm from './components/services-form/ServicesForm';
+import ServicesRequestConfirmation from './components/services-request-confirmation/ServicesRequestConfirmation';
 
 import Paper from 'material-ui/Paper';
 import { Step, Stepper, StepLabel, StepContent } from 'material-ui/Stepper';
@@ -56,7 +57,9 @@ export default class Services extends React.Component {
           />
         )}
         <RaisedButton
-          label={stepIndex === 3 ? 'Finish' : 'Next'}
+          label={
+            stepIndex === 3 ? 'Finish' : stepIndex === 2 ? 'Confirm' : 'Next'
+          }
           disableTouchRipple={true}
           disableFocusRipple={true}
           primary={true}
@@ -102,9 +105,9 @@ export default class Services extends React.Component {
                 </StepContent>
               </Step>
               <Step>
-                <StepLabel>Request summary</StepLabel>
+                <StepLabel>Request Confirmation</StepLabel>
                 <StepContent>
-                  <ServicesForm />
+                  <ServicesRequestConfirmation />
                   {this.renderStepActions(1)}
                 </StepContent>
               </Step>
