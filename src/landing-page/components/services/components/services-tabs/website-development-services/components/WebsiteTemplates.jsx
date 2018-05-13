@@ -12,7 +12,7 @@ const styles = {
   }
 };
 
-export default function Tempaltes() {
+export default function WebsiteTemplates() {
   return (
     <div>
       <Card style={{ padding: '7px' }}>

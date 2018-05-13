@@ -1,8 +1,9 @@
 import React from 'react';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
+import TextField from 'material-ui/TextField';
 import LocalizedStrings from '../../../../../../../../LocalizedStrings';
-import Templates from '../Templates.jsx';
+import WebsiteTemplates from '../WebsiteTemplates.jsx';
 
 const items = [];
 for (let i = 0; i < 100; i++) {
@@ -22,7 +23,7 @@ export default class WebsiteDevelopmentModalContent extends React.Component {
       <div>
         <h2>{LocalizedStrings.body.services.websiteDevelopmentDialog.title}</h2>
         <p>{LocalizedStrings.body.services.websiteDevelopmentDialog.textOne}</p>
-        <Templates />
+        <WebsiteTemplates />
         <br />
         <DropDownMenu
           autoWidth={false}
@@ -37,6 +38,11 @@ export default class WebsiteDevelopmentModalContent extends React.Component {
         <p>
           {LocalizedStrings.body.services.websiteDevelopmentDialog.textSecond}
         </p>
+        <TextField
+          fullWidth={true}
+          hintText="Link to a file or a webpage with wanted design: "
+          floatingLabelText="Link"
+        />
       </div>
     );
   }
