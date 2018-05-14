@@ -24,6 +24,8 @@ export default class Services extends React.Component {
     };
   }
 
+  handleAddService = serviceObject => {};
+
   handleNext = () => {
     const { stepIndex } = this.state;
     this.setState({

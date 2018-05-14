@@ -4,16 +4,19 @@ import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField';
 import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 import WebsiteTemplates from '../WebsiteTemplates.jsx';
+import websiteTemplatesData from './../templates.json';
 
 const items = [];
-for (let i = 0; i < 100; i++) {
-  items.push(<MenuItem value={i} key={i} primaryText={`Item ${i}`} />);
-}
+websiteTemplatesData.forEach((element, index) => {
+  items.push(
+    <MenuItem value={index} key={index} primaryText={element.title} />
+  );
+});
 
 export default class WebsiteDevelopmentModalContent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: 10 };
+    this.state = { value: -1 };
   }
 
   handleChange = (event, index, value) => this.setState({ value });
