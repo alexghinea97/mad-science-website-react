@@ -11,7 +11,7 @@ const items = [
 export default class GoogleAnalyticsIntegrationModalContent extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: 10 };
+    this.state = { value: 1 };
   }
 
   handleChange = (event, index, value) => this.setState({ value });
@@ -31,6 +31,7 @@ export default class GoogleAnalyticsIntegrationModalContent extends React.Compon
           alt=""
           width="100%"
           height="300px"
+          style={{ marginBottom: '10px' }}
         />
         <p>
           Please choose on of the following options for the integration of

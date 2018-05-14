@@ -252,6 +252,4 @@ let strings = new LocalizedStrings({
   }
 });
 
-strings.setLanguage('en');
-
 export default strings;
