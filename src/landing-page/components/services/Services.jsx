@@ -2,6 +2,7 @@ import React from 'react';
 import ServicesTabs from './components/services-tabs/ServicesTabs';
 import ServicesForm from './components/services-form/ServicesForm';
 import ServicesRequestConfirmation from './components/services-request-confirmation/ServicesRequestConfirmation';
+import ServicesThankYou from './components/services-thank-you/ServicesThankYou';
 
 import Paper from 'material-ui/Paper';
 import { Step, Stepper, StepLabel, StepContent } from 'material-ui/Stepper';
@@ -126,7 +127,10 @@ export default class Services extends React.Component {
                 <StepLabel>
                   {LocalizedStrings.body.services.steps.fourthStep}
                 </StepLabel>
-                <StepContent>{this.renderStepActions(2)}</StepContent>
+                <StepContent>
+                  <ServicesThankYou />
+                  {this.renderStepActions(2)}
+                </StepContent>
               </Step>
             </Stepper>
           </div>

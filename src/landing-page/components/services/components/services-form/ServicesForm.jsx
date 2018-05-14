@@ -71,9 +71,7 @@ export default class ServicesForm extends Component {
           />
           <DatePicker hintText="Due date for the project" />
         </div>
-        <div>
-          <img src="/images/form.png" alt="" />
-        </div>
+        <div id="service-form-img" />
       </div>
     );
   }

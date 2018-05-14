@@ -3,4 +3,9 @@
         width: 50%;
         display: inline-block;
     }
+    #service-form-img {
+        height: 500px;
+        background-image: url('/images/form.png');
+        background-size: cover;
+    }
 }
