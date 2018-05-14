@@ -26,7 +26,7 @@ Node.js
 * **[React Router](https://reacttraining.com/react-router/)** - for routing client-side
 * **[WebPack](https://webpack.js.org/)** - for bundling
 * **[React-Localization](https://www.npmjs.com/package/react-localization)** - for translating the website 
-* **[Firebase](https://firebase.google.com)** - for a database
+* **[Firebase](https://firebase.google.com)** - for a database and hosting
 
 
 ###Styling 
@@ -41,6 +41,7 @@ When cloning the repository you need to do an
 
 ```
 npm install
+npm install -g firebase-tools (for using the Firebase CLI) 
 ```
 
 And change the back-end url in appSettings to your local runned back-end instance
@@ -86,6 +87,18 @@ Give an example
 ###GitHub Pages Deployment
 
 Describe the process for deploying the testing application to github.io
+
+
+###Firebase production deployment
+
+In order to deploy the app in Google Firebase you have to run the following command in the console: 
+```
+npm run-script build
+```
+and after the build has finnished you can simply run: 
+```
+firebase deploy
+```
 
 ## Versioning
 
