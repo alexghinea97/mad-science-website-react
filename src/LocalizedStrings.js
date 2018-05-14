@@ -22,9 +22,7 @@ let strings = new LocalizedStrings({
       moto: 'Let us help you with your digital presence.',
       valueProposition: {
         valueText1:
-          'Online presence nowadays is a must in every business field starting from small individuals and all the way up to the billion dollar companies.',
-        valueText2:
-          'That is why you can think about your own web footprint. Is it big and impressive enough? Does it reflect your personality or brand? If not, we are here to help you show your full potential in the world wide web world.'
+          'Online presence nowadays is a must in every business field starting from small individuals and all the way up to the billion dollar companies.'
       },
       whyUs: {
         title: 'WhyUs',
@@ -145,9 +143,7 @@ let strings = new LocalizedStrings({
       moto: 'Нека ви помогнем с вашето дигитално присъствие.',
       valueProposition: {
         valueText1:
-          'Онлайн присъствието в днешно време е задължително във всяка област на бизнеса, започвайки от малкия бизнес и по целия път до компаниите в милиарда долари.',
-        valueText2:
-          'Ето защо можете да мислите за следата, която оставяте в интернет пространството. Дали е достатъчно голяма и впечатляваща? Отразява ли вашата личност или марка? Ако не, ние сме тук, за да ви помогнем да покажете пълния си потенциал в световната мрежа.'
+          'Онлайн присъствието в днешно време е задължително във всяка област на бизнеса, започвайки от малкия бизнес и по целия път до компаниите в милиарда долари.'
       },
       whyUs: {
         title: 'Защо ние',
@@ -256,6 +252,6 @@ let strings = new LocalizedStrings({
   }
 });
 
-strings.setLanguage('bg');
+strings.setLanguage('en');
 
 export default strings;

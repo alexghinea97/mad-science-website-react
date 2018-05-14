@@ -12,8 +12,11 @@ export default function whyUs(props) {
           <h2>{LocalizedStrings.body.whyUs.title}</h2>
           <Divider />
           <br />
+          <h3>Our experts:</h3>
           <p>{LocalizedStrings.body.whyUs.whyUsFirstParagraph}</p>
+          <h3>Technological expertise:</h3>
           <p>{LocalizedStrings.body.whyUs.whyUsSecondParagraph}</p>
+          <h3>Availability:</h3>
           <p>{LocalizedStrings.body.whyUs.whyUsThirdParagraph}</p>
         </Card>
       </Paper>

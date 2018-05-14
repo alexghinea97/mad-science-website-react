@@ -7,7 +7,6 @@ export default class ValueProposition extends Component {
     return (
       <div id="value-proposition">
         <p>{LocalizedStrings.body.valueProposition.valueText1}</p>
-        <p>{LocalizedStrings.body.valueProposition.valueText2}</p>
       </div>
     );
   }
