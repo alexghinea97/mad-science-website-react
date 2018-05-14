@@ -65,12 +65,17 @@ export default function portfolio(props) {
             </p>
           </CardText>
           <CardActions>
-            <FlatButton
-              label={
-                LocalizedStrings.body.portfolio.madScienceProject
-                  .buttonForPortfolio
-              }
-            />
+            <a
+              href="https://github.com/madsciencebulgaria/mad-science-website-react"
+              target="blank"
+            >
+              <FlatButton
+                label={
+                  LocalizedStrings.body.portfolio.madScienceProject
+                    .buttonForPortfolio
+                }
+              />
+            </a>
           </CardActions>
         </Card>
       </Paper>

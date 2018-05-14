@@ -41,7 +41,9 @@ export default class ServicesTabs extends React.Component {
     const modalFill = services[this.state.selectedService.index].component;
     return (
       <div>
-        <h2>{LocalizedStrings.body.services.title}</h2>
+        <h2 style={{ marginBottom: '20px' }}>
+          {LocalizedStrings.body.services.title}
+        </h2>
         <Tabs
           tabItemContainerStyle={{ display: 'block' }}
           inkBarStyle={{ display: 'none' }}
