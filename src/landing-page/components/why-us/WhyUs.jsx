@@ -3,6 +3,7 @@ import Paper from 'material-ui/Paper';
 import Divider from 'material-ui/Divider';
 import { Card } from 'material-ui/Card';
 import LocalizedStrings from '../../../LocalizedStrings';
+import './WhyUs.css';
 
 export default function whyUs(props) {
   return (
@@ -16,6 +17,7 @@ export default function whyUs(props) {
           <p>{LocalizedStrings.body.whyUs.whyUsFirstParagraph}</p>
           <h3>Technological expertise:</h3>
           <p>{LocalizedStrings.body.whyUs.whyUsSecondParagraph}</p>
+
           <h3>Availability:</h3>
           <p>{LocalizedStrings.body.whyUs.whyUsThirdParagraph}</p>
         </Card>

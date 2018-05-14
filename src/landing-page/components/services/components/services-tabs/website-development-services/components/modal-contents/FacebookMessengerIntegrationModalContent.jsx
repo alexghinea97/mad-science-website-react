@@ -28,7 +28,7 @@ export default class FacebookMessengerIntegrationModalContent extends React.Comp
           its events.
         </p>
         <img
-          src="/images/facebook-pixel.jpg"
+          src="/images/messenger-integration.jpeg"
           alt=""
           width="100%"
           height="500px"
