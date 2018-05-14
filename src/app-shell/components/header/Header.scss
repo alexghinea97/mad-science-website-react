@@ -24,7 +24,6 @@ $color_1: #F34605;
     .mdl-layout__header-row {
         height: 90px;
         padding-left: 10px;
-        border-bottom: 1px solid $color_1;
         .mdl-navigation__link {
             font-size: 90%;
             font-weight: bold;
@@ -47,8 +46,8 @@ $color_1: #F34605;
             display: block;
         }
     }
-    #mobile-navigation{
-        .mdl-layout-title{
+    #mobile-navigation {
+        .mdl-layout-title {
             text-align: center;
         }
     }

@@ -99,7 +99,9 @@ export default class Contacts extends Component {
           <Card style={{ padding: '15px' }}>
             <h2>{LocalizedStrings.body.contacts.title}</h2>
             <Divider />
-            <CardText>{LocalizedStrings.body.contacts.contactsInfo}</CardText>
+            <CardText>
+              <p>{LocalizedStrings.body.contacts.contactsInfo}</p>
+            </CardText>
             <CardActions>
               <a href="" className="facebook">
                 <i className="fa fa-facebook fa-fw" />

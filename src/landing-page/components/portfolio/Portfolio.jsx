@@ -32,7 +32,9 @@ export default function portfolio(props) {
             <img src="/images/booksexchange-logo.jpeg" alt="" />
           </CardMedia>
           <CardText>
-            {LocalizedStrings.body.portfolio.bookExchangeProject.description}
+            <p>
+              {LocalizedStrings.body.portfolio.bookExchangeProject.description}
+            </p>
           </CardText>
           <CardActions>
             <FlatButton
@@ -58,7 +60,9 @@ export default function portfolio(props) {
             <img src="/images/booksexchange-logo.jpeg" alt="" />
           </CardMedia>
           <CardText>
-            {LocalizedStrings.body.portfolio.madScienceProject.description}
+            <p>
+              {LocalizedStrings.body.portfolio.madScienceProject.description}
+            </p>
           </CardText>
           <CardActions>
             <FlatButton
