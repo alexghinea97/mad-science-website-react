@@ -9,12 +9,6 @@ export default function websiteServiceModal(props) {
       label={LocalizedStrings.buttons.cancel}
       primary={true}
       onClick={props.handleClose}
-    />,
-    <FlatButton
-      label={LocalizedStrings.buttons.add}
-      primary={true}
-      keyboardFocused={true}
-      onClick={props.handleClose}
     />
   ];
 

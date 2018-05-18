@@ -62,7 +62,9 @@ export default class ServicesTabs extends React.Component {
           handleClose={this.handleClose}
           handleAddService={this.handleAddService}
         >
-          {React.createElement(modalFill)}
+          {React.createElement(modalFill, {
+            handleModalClose: this.handleClose
+          })}
         </WebsiteServiceModal>
       </div>
     );
