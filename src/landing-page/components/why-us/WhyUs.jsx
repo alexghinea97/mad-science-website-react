@@ -3,7 +3,7 @@ import Paper from 'material-ui/Paper';
 import Divider from 'material-ui/Divider';
 import { Card, CardText } from 'material-ui/Card';
 import LocalizedStrings from '../../../LocalizedStrings';
-import './WhyUs.css';
+//import './WhyUs.css';
 
 export default function whyUs(props) {
   return (
