@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import profile from './profile';
+import services from './services';
 const madScienceSite = combineReducers({
-  profile
+  services
 });
 
 export default madScienceSite;

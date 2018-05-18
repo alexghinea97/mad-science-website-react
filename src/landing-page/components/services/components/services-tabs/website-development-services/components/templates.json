@@ -193,10 +193,5 @@
     "img": "images/template-images-cover/img_temp_mail.jpg",
     "title": "Mail Template",
     "url": "templates/mail-template.html"
-  },
-  {
-    "img": "images/template-images-cover/img_temp_demosite.jpg",
-    "title": "Kitchen Sink/W3.CSS Demo Template",
-    "url": "templates/kitchen-sink-template.html"
   }
 ]
