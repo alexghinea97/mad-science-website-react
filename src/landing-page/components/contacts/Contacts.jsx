@@ -17,21 +17,22 @@ export default class Contacts extends Component {
       openThankYou: false,
       email: '',
       subject: '',
-      content: ''
+      content: '',
+      errorMessages: {
+        contentErrorEmail: undefined,
+        contentErrorSubject: undefined,
+        contentErrorMessage: undefined
+      }
     };
   }
 
   //#region
   handleSubmitForm = eventData => {
-    const state = this.getDataState();
-    if (state.isValid) {
+    const stateValid = this.isStateValid();
+    if (stateValid) {
       this.sendDataToDatabase();
       this.clearForm();
       this.setState({ openThankYou: true });
-    } else {
-      state.errors.forEach(dataError => {
-        //Show a snackbar
-      });
     }
   };
 
@@ -63,13 +64,52 @@ export default class Contacts extends Component {
       );
   };
 
-  getDataState() {
-    const state = {
-      isValid: true,
-      errors: []
-    };
+  isStateValid() {
+    let stateErrorMessages = { ...this.state.errorMessages };
+    let validContent = this.isValidContent(stateErrorMessages);
+    let validEmail = this.isValidEmail(stateErrorMessages);
+    let validSubject = this.isValidSubject(stateErrorMessages);
 
-    return state;
+    if (validContent && validEmail && validSubject) {
+      return true;
+    } else {
+      this.setState({
+        errorMessages: stateErrorMessages
+      });
+
+      return false;
+    }
+  }
+
+  isValidEmail(stateErrorMessages) {
+    var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (!this.state.email.match(emailRegex)) {
+      stateErrorMessages.contentErrorEmail = 'Email does not match';
+
+      return false;
+    }
+
+    return true;
+  }
+
+  isValidSubject(stateErrorMessages) {
+    if (this.state.content === '') {
+      stateErrorMessages.contentErrorSubject = 'Subject does not match';
+
+      return false;
+    }
+
+    return true;
+  }
+
+  isValidContent(stateErrorMessages) {
+    if (this.state.content === '') {
+      stateErrorMessages.contentErrorMessage = 'Content is required';
+
+      return false;
+    }
+
+    return true;
   }
 
   handleContentChange = eventData => {
@@ -136,6 +176,7 @@ export default class Contacts extends Component {
                 floatingLabelText={LocalizedStrings.body.contacts.form.email}
                 type="email"
                 onChange={this.handleEmailChange}
+                errorText={this.state.errorMessages.contentErrorEmail}
                 value={this.state.email}
               />
               <TextField
@@ -146,6 +187,7 @@ export default class Contacts extends Component {
                 floatingLabelText={LocalizedStrings.body.contacts.form.subject}
                 type="text"
                 onChange={this.handleSubjectChange}
+                errorText={this.state.errorMessages.contentErrorSubject}
                 value={this.state.subject}
               />
               <TextField
@@ -158,6 +200,7 @@ export default class Contacts extends Component {
                 multiLine={true}
                 rows={5}
                 value={this.state.content}
+                errorText={this.state.errorMessages.contentErrorMessage}
                 onChange={this.handleContentChange}
               />
             </CardText>
