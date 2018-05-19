@@ -5,7 +5,7 @@ import { List, ListItem } from 'material-ui/List';
 import ActionDelete from 'material-ui/svg-icons/action/delete';
 import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 
-export default class LocalizationIntegrationModalContent extends React.Component {
+export default class LocalizationIntegrationService extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

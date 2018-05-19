@@ -8,7 +8,7 @@ const items = [
   <MenuItem value={3} primaryText={`Advanced integration`} />
 ];
 
-export default class FacebookPixelIntegrationModalContent extends React.Component {
+export default class EmailSubscriptionIntegrationService extends React.Component {
   constructor(props) {
     super(props);
     this.state = { value: 1 };
@@ -19,7 +19,7 @@ export default class FacebookPixelIntegrationModalContent extends React.Componen
   render() {
     return (
       <div>
-        <h2> Facebook pixel</h2>
+        <h2> Email Subscritpion</h2>
         <p>
           Google analytics is a useful tool for monitoring and measuring the
           performance of your web presence. That is why we can help you with its
@@ -28,7 +28,7 @@ export default class FacebookPixelIntegrationModalContent extends React.Componen
           its events.
         </p>
         <img
-          src="/images/facebook-pixel.jpg"
+          src="/images/email-subscription.jpeg"
           alt=""
           width="100%"
           height="500px"

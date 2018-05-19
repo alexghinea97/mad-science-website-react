@@ -3,8 +3,8 @@ import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField';
 import LocalizedStrings from '../../../../../../../../LocalizedStrings';
-import WebsiteTemplates from '../WebsiteTemplates.jsx';
-import websiteTemplatesData from './../templates.json';
+import WebsiteTemplates from './WebsiteTemplates.jsx';
+import websiteTemplatesData from './templates.json';
 import { connect } from 'react-redux';
 import { addWebsiteDevService } from '../../../../../../../../actions/servicesActions';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -16,7 +16,7 @@ websiteTemplatesData.forEach((element, index) => {
   );
 });
 
-class WebsiteDevelopmentModalContent extends React.Component {
+class WebsiteDevelopmentService extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -91,4 +91,4 @@ function mapDispatchToProps(dispatch) {
 
 export default connect(() => {
   return {};
-}, mapDispatchToProps)(WebsiteDevelopmentModalContent);
+}, mapDispatchToProps)(WebsiteDevelopmentService);

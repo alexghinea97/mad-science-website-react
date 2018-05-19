@@ -8,17 +8,18 @@ const items = [
   <MenuItem value={3} primaryText={`Advanced integration`} />
 ];
 
-export default class GoogleAnalyticsIntegrationModalContent extends React.Component {
+export default class FacebookMessengerIntegrationService extends React.Component {
   constructor(props) {
     super(props);
     this.state = { value: 1 };
   }
 
   handleChange = (event, index, value) => this.setState({ value });
+
   render() {
     return (
       <div>
-        <h2> Google analyics</h2>
+        <h2> Facebook pixel</h2>
         <p>
           Google analytics is a useful tool for monitoring and measuring the
           performance of your web presence. That is why we can help you with its
@@ -27,10 +28,10 @@ export default class GoogleAnalyticsIntegrationModalContent extends React.Compon
           its events.
         </p>
         <img
-          src="/images/google-analytics.jpeg"
+          src="/images/messenger-integration.jpeg"
           alt=""
           width="100%"
-          height="300px"
+          height="500px"
           style={{ marginBottom: '10px' }}
         />
         <p>
