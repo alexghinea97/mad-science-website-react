@@ -1,13 +1,14 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import { addFacebookPixelIntegrationService } from '../../../../../../../../actions/servicesActions';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
+import { addFacebookPixelIntegrationService } from '../../../../../../../../actions/servicesActions';
 
 class FacebookPixelIntegrationService extends React.Component {
   handleChange = (event, index, value) => this.setState({ value });
 
   handleAddService = () => {
     this.props.addFacebookPixelIntegrationService(true);
+    this.props.handleModalClose();
   };
 
   render() {
@@ -28,13 +29,15 @@ class FacebookPixelIntegrationService extends React.Component {
           height="500px"
           style={{ marginBottom: '10px' }}
         />
-        <RaisedButton
-          fullWidth={true}
-          primary={true}
+        <Button
+          fullWidth
+          variant="raised"
+          color="primary"
           onClick={this.handleAddService}
-          label={'Add Website development service'}
           style={{ marginBottom: '20px', marginTop: '20px' }}
-        />
+        >
+          {'Add Website development service'}
+        </Button>
       </div>
     );
   }
