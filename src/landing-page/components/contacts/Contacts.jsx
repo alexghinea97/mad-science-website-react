@@ -19,8 +19,8 @@ export default class Contacts extends Component {
       subject: '',
       content: '',
       errorMessages: {
-        contentErrorEmail: undefined,
-        contentErrorSubject: undefined,
+        emailErrorMessage: undefined,
+        subjectErrorMessage: undefined,
         contentErrorMessage: undefined
       }
     };
@@ -84,21 +84,23 @@ export default class Contacts extends Component {
   isValidEmail(stateErrorMessages) {
     var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!this.state.email.match(emailRegex)) {
-      stateErrorMessages.contentErrorEmail = 'Email does not match';
+      stateErrorMessages.emailErrorMessage = 'Email does not match';
 
       return false;
     }
 
+    stateErrorMessages.emailErrorMessage = undefined;
     return true;
   }
 
   isValidSubject(stateErrorMessages) {
-    if (this.state.content === '') {
-      stateErrorMessages.contentErrorSubject = 'Subject does not match';
+    if (this.state.subject === '') {
+      stateErrorMessages.subjectErrorMessage = 'Subject does not match';
 
       return false;
     }
 
+    stateErrorMessages.subjectErrorMessage = undefined;
     return true;
   }
 
@@ -109,6 +111,7 @@ export default class Contacts extends Component {
       return false;
     }
 
+    stateErrorMessages.contentErrorMessage = undefined;
     return true;
   }
 
@@ -176,7 +179,7 @@ export default class Contacts extends Component {
                 floatingLabelText={LocalizedStrings.body.contacts.form.email}
                 type="email"
                 onChange={this.handleEmailChange}
-                errorText={this.state.errorMessages.contentErrorEmail}
+                errorText={this.state.errorMessages.emailErrorMessage}
                 value={this.state.email}
               />
               <TextField
@@ -187,7 +190,7 @@ export default class Contacts extends Component {
                 floatingLabelText={LocalizedStrings.body.contacts.form.subject}
                 type="text"
                 onChange={this.handleSubjectChange}
-                errorText={this.state.errorMessages.contentErrorSubject}
+                errorText={this.state.errorMessages.subjectErrorMessage}
                 value={this.state.subject}
               />
               <TextField
