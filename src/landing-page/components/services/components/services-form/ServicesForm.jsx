@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import TextField from 'material-ui/TextField';
-import LocalizedStrings from '../../../../../LocalizedStrings';
-import DatePicker from 'material-ui/DatePicker';
+import TextField from '@material-ui/core/TextField';
 import './ServicesForm.css';
+import LocalizedStrings from '../../../../../LocalizedStrings';
 
 export default class ServicesForm extends Component {
   constructor(props) {
@@ -37,39 +36,47 @@ export default class ServicesForm extends Component {
         <h2>{LocalizedStrings.body.services.formAbouTheRequest.title}</h2>
         <div>
           <TextField
-            fullWidth={true}
+            fullWidth
             hintText=""
-            floatingLabelText={
-              LocalizedStrings.body.services.formAbouTheRequest.name
-            }
+            label={LocalizedStrings.body.services.formAbouTheRequest.name}
             type="text"
             onChange={this.handleNameChange}
             value={this.state.name}
+            margin="normal"
           />
           <TextField
-            fullWidth={true}
+            fullWidth
             hintText=""
-            floatingLabelText={
-              LocalizedStrings.body.services.formAbouTheRequest.email
-            }
+            label={LocalizedStrings.body.services.formAbouTheRequest.email}
             type="text"
             onChange={this.handleEmailChange}
             value={this.state.email}
+            margin="normal"
           />
           <TextField
-            fullWidth={true}
+            fullWidth
             hintText=""
-            multiLine={true}
-            rows={8}
-            floatingLabelText={
+            multiLine
+            rows="8"
+            label={
               LocalizedStrings.body.services.formAbouTheRequest
                 .infoAbotTheRequest
             }
             type="text"
             onChange={this.handleInfoChange}
             value={this.state.info}
+            margin="normal"
           />
-          <DatePicker hintText="Due date for the project" />
+          <p>Due date for the project</p>
+          <TextField
+            hintText="Due date for the project"
+            type="date"
+            defaultValue="2017-05-24"
+            className={this.props.textField}
+            InputLabelProps={{
+              shrink: true
+            }}
+          />
         </div>
         <div id="service-form-img" />
       </div>

@@ -50,6 +50,7 @@ export default class Services extends React.Component {
       <div style={{ margin: '12px 0' }}>
         {step > 0 && (
           <Button
+            variant="raised"
             disabled={stepIndex === 0}
             disableTouchRipple={true}
             disableFocusRipple={true}
