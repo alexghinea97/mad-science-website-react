@@ -4,6 +4,7 @@ import MenuItem from 'material-ui/MenuItem';
 import { List, ListItem } from 'material-ui/List';
 import ActionDelete from 'material-ui/svg-icons/action/delete';
 import LocalizedStrings from '../../../../../../../../LocalizedStrings';
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class LocalizationIntegrationService extends React.Component {
   constructor(props) {
@@ -52,6 +53,12 @@ export default class LocalizationIntegrationService extends React.Component {
             );
           })}
         </List>
+        <RaisedButton
+          fullWidth={true}
+          primary={true}
+          onClick={this.handleAddService}
+          label={'Add Website development service'}
+        />
       </div>
     );
   }

@@ -1,12 +1,5 @@
 import React from 'react';
-import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
-
-const items = [
-  <MenuItem value={1} primaryText={`Beginner integration`} />,
-  <MenuItem value={2} primaryText={`Most common events integration`} />,
-  <MenuItem value={3} primaryText={`Advanced integration`} />
-];
+import RaisedButton from 'material-ui/RaisedButton';
 
 export default class EmailSubscriptionIntegrationService extends React.Component {
   constructor(props) {
@@ -38,15 +31,13 @@ export default class EmailSubscriptionIntegrationService extends React.Component
           Please choose on of the following options for the integration of
           google analytics:{' '}
         </p>
-        <DropDownMenu
-          autoWidth={false}
-          style={{ width: '100%' }}
-          maxHeight={300}
-          value={this.state.value}
-          onChange={this.handleChange}
-        >
-          {items}
-        </DropDownMenu>
+        <RaisedButton
+          fullWidth={true}
+          primary={true}
+          onClick={this.handleAddService}
+          label={'Add Website development service'}
+          style={{ marginBottom: '20px', marginTop: '20px' }}
+        />
       </div>
     );
   }

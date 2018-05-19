@@ -1,20 +1,19 @@
 import React from 'react';
-import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
+import RaisedButton from 'material-ui/RaisedButton';
+import { connect } from 'react-redux';
+import { addFacebookMessengerIntegrationService } from '../../../../../../../../actions/servicesActions';
 
-const items = [
-  <MenuItem value={1} primaryText={`Beginner integration`} />,
-  <MenuItem value={2} primaryText={`Most common events integration`} />,
-  <MenuItem value={3} primaryText={`Advanced integration`} />
-];
-
-export default class FacebookMessengerIntegrationService extends React.Component {
+class FacebookMessengerIntegrationService extends React.Component {
   constructor(props) {
     super(props);
     this.state = { value: 1 };
   }
 
   handleChange = (event, index, value) => this.setState({ value });
+
+  handleAddService = () => {
+    this.props.addFacebookMessengerIntegrationService(true);
+  };
 
   render() {
     return (
@@ -38,16 +37,26 @@ export default class FacebookMessengerIntegrationService extends React.Component
           Please choose on of the following options for the integration of
           google analytics:{' '}
         </p>
-        <DropDownMenu
-          autoWidth={false}
-          style={{ width: '100%' }}
-          maxHeight={300}
-          value={this.state.value}
-          onChange={this.handleChange}
-        >
-          {items}
-        </DropDownMenu>
+        <RaisedButton
+          fullWidth={true}
+          primary={true}
+          onClick={this.handleAddService}
+          label={'Add Facebook Messenger integration service'}
+          style={{ marginBottom: '20px', marginTop: '20px' }}
+        />
       </div>
     );
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addFacebookMessengerIntegrationService: requestObj => {
+      dispatch(addFacebookMessengerIntegrationService(requestObj));
+    }
+  };
+}
+
+export default connect(() => {
+  return {};
+}, mapDispatchToProps)(FacebookMessengerIntegrationService);

@@ -10,7 +10,7 @@ export default class ServicesTabs extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false,
+      isModalOpen: false,
       selectedService: {
         name: '',
         index: 0
@@ -18,9 +18,9 @@ export default class ServicesTabs extends React.Component {
     };
   }
 
-  handleOpen = eventData => {
+  handleModalOpen = eventData => {
     this.setState({
-      open: true,
+      isModalOpen: true,
       selectedService: {
         name: eventData.target.innerText,
         index: services.findIndex(service => {
@@ -33,8 +33,8 @@ export default class ServicesTabs extends React.Component {
     });
   };
 
-  handleClose = () => {
-    this.setState({ open: false });
+  handleModalClose = () => {
+    this.setState({ isModalOpen: false });
   };
 
   render() {
@@ -53,17 +53,17 @@ export default class ServicesTabs extends React.Component {
             className="service-tab"
             style={{ display: 'block', width: '100%' }}
           >
-            <WebSiteDevelopmentServices handleOpen={this.handleOpen} />
+            <WebSiteDevelopmentServices handleOpen={this.handleModalOpen} />
           </Tab>
         </Tabs>
         <WebsiteServiceModal
           title={this.state.selectedService.name}
-          open={this.state.open}
-          handleClose={this.handleClose}
+          open={this.state.isModalOpen}
+          handleClose={this.handleModalClose}
           handleAddService={this.handleAddService}
         >
           {React.createElement(modalFill, {
-            handleModalClose: this.handleClose
+            handleModalClose: this.handleModalClose
           })}
         </WebsiteServiceModal>
       </div>

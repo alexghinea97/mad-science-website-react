@@ -53,7 +53,7 @@ let strings = new LocalizedStrings({
         websiteDevelopmentDialog: {
           title: "Let's get started",
           textOne:
-            'You can choose from one of the templates below which can later be customized for your own style and needs.',
+            'Since we wanted you to have a wide choise of designs, so that you can easily relate to the one that suits you best, you can choose from one of the templates below which can later be customized for your own style and needs.',
           textLabel: 'Templates',
           textSecond:
             "... Or you can give us your own concept of a design and we'll implement it."
