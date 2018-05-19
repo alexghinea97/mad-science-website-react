@@ -1,18 +1,14 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import { addFacebookMessengerIntegrationService } from '../../../../../../../../actions/servicesActions';
 
 class FacebookMessengerIntegrationService extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: 1 };
-  }
-
   handleChange = (event, index, value) => this.setState({ value });
 
   handleAddService = () => {
     this.props.addFacebookMessengerIntegrationService(true);
+    this.props.handleModalClose();
   };
 
   render() {
@@ -37,13 +33,15 @@ class FacebookMessengerIntegrationService extends React.Component {
           Please choose on of the following options for the integration of
           google analytics:{' '}
         </p>
-        <RaisedButton
-          fullWidth={true}
-          primary={true}
+        <Button
+          fullWidth
+          variant="raised"
+          color="primary"
           onClick={this.handleAddService}
-          label={'Add Facebook Messenger integration service'}
           style={{ marginBottom: '20px', marginTop: '20px' }}
-        />
+        >
+          {'Add Facebook Messenger integration service'}
+        </Button>
       </div>
     );
   }
