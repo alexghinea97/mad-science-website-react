@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import Paper from '@material-ui/core/Paper';
 import uuid from 'uuid';
-import { Card, CardActions, CardText } from 'material-ui/Card';
-import TextField from 'material-ui/TextField';
-import Divider from 'material-ui/Divider';
-import RaisedButton from 'material-ui/RaisedButton';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import TextField from '@material-ui/core/TextField';
+import Divider from '@material-ui/core/Divider';
+import Button from '@material-ui/core/Button';
+import FormControl from '@material-ui/core/FormControl';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
 import LocalizedStrings from '../../../LocalizedStrings';
 import firebase from '../../../firebase.js';
 import ThankYou from './ThankYou';
@@ -142,9 +147,9 @@ export default class Contacts extends Component {
           <Card style={{ padding: '15px' }}>
             <h2>{LocalizedStrings.body.contacts.title}</h2>
             <Divider />
-            <CardText>
+            <CardContent>
               <p>{LocalizedStrings.body.contacts.contactsInfo}</p>
-            </CardText>
+            </CardContent>
             <CardActions>
               <a
                 target="blank"
@@ -173,16 +178,37 @@ export default class Contacts extends Component {
               />
             </CardActions>
 
-            <CardText>
+            <CardContent>
               <TextField
+                value={this.state.email}
+                type="email"
+                onChange={this.handleEmailChange}
+                label={LocalizedStrings.body.contacts.form.email}
+                helperText={LocalizedStrings.body.contacts.form.email}
+                margin="normal"
+              />
+
+              {/* <TextField
                 hintText={LocalizedStrings.body.contacts.form.email}
                 floatingLabelText={LocalizedStrings.body.contacts.form.email}
                 type="email"
                 onChange={this.handleEmailChange}
                 errorText={this.state.errorMessages.emailErrorMessage}
                 value={this.state.email}
-              />
+              /> */}
+
               <TextField
+                fullWidth
+                value={this.state.subject}
+                type="text"
+                onChange={this.handleSubjectChange}
+                label={LocalizedStrings.body.contacts.form.subject}
+                helperText={
+                  LocalizedStrings.body.contacts.form.subjectFloatingLabel
+                }
+                margin="normal"
+              />
+              {/* <TextField
                 fullWidth={true}
                 hintText={
                   LocalizedStrings.body.contacts.form.subjectFloatingLabel
@@ -192,8 +218,23 @@ export default class Contacts extends Component {
                 onChange={this.handleSubjectChange}
                 errorText={this.state.errorMessages.subjectErrorMessage}
                 value={this.state.subject}
-              />
+              /> */}
+
               <TextField
+                fullWidth
+                multiline
+                rowsMax="5"
+                value={this.state.content}
+                type="text"
+                onChange={this.handleContentChange}
+                label={LocalizedStrings.body.contacts.form.content}
+                helperText={
+                  LocalizedStrings.body.contacts.form.contentFloatingLabel
+                }
+                margin="normal"
+              />
+
+              {/* <TextField
                 fullWidth={true}
                 hintText={
                   LocalizedStrings.body.contacts.form.contentFloatingLabel
@@ -205,14 +246,16 @@ export default class Contacts extends Component {
                 value={this.state.content}
                 errorText={this.state.errorMessages.contentErrorMessage}
                 onChange={this.handleContentChange}
-              />
-            </CardText>
-            <RaisedButton
-              label={LocalizedStrings.body.contacts.contactsButton}
-              primary={true}
+              /> */}
+            </CardContent>
+            <Button
+              variant="raised"
+              color="primary"
               onClick={this.handleSubmitForm}
               style={{ margin: '12px' }}
-            />
+            >
+              {LocalizedStrings.body.contacts.contactsButton}
+            </Button>
           </Card>
         </Paper>
         <ThankYou

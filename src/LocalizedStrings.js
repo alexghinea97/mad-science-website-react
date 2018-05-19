@@ -94,7 +94,7 @@ let strings = new LocalizedStrings({
           subject: 'Subject',
           subjectFloatingLabel:
             'Enter the reason for which you are contacting us',
-          content: 'Email content',
+          content: 'Content',
           contentFloatingLabel: 'Ask us anything or simply share your thoughts'
         },
         thankYou: {
