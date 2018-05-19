@@ -8,7 +8,7 @@ import Paper from 'material-ui/Paper';
 import { Step, Stepper, StepLabel, StepContent } from 'material-ui/Stepper';
 import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 // import Badge from 'material-ui/Badge';
 // import IconButton from 'material-ui/IconButton';
 // import ActionShoppingCart from 'material-ui/svg-icons/action/shopping-cart';
@@ -50,28 +50,29 @@ export default class Services extends React.Component {
     return (
       <div style={{ margin: '12px 0' }}>
         {step > 0 && (
-          <FlatButton
-            label={LocalizedStrings.buttons.back}
+          <Button
             disabled={stepIndex === 0}
             disableTouchRipple={true}
             disableFocusRipple={true}
             onClick={this.handlePrev}
-          />
+          >
+            {LocalizedStrings.buttons.back}
+          </Button>
         )}
-        <RaisedButton
-          label={
-            stepIndex === 3
-              ? LocalizedStrings.buttons.finish
-              : stepIndex === 2
-                ? 'Confirm'
-                : LocalizedStrings.buttons.next
-          }
+        <Button
+          variant="raised"
+          color="primary"
           disableTouchRipple={true}
           disableFocusRipple={true}
-          primary={true}
           onClick={this.handleNext}
           style={{ marginLeft: 12 }}
-        />
+        >
+          {stepIndex === 3
+            ? LocalizedStrings.buttons.finish
+            : stepIndex === 2
+              ? 'Confirm'
+              : LocalizedStrings.buttons.next}
+        </Button>
         {(() => {
           if (stepIndex < 2) {
             // return (

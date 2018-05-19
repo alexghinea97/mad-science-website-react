@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import LocalizationPopover from '../../../shared-components/LocalizationPopover';
 import LocalizedStrings from '../../../LocalizedStrings';
 import './CommonNavigation.css';
@@ -7,7 +7,8 @@ import './CommonNavigation.css';
 export default class CommonNavigation extends Component {
   scrollToSelection(eventData) {
     let selectedNav = eventData.target.className;
-    let wantedSection = selectedNav.substring(0, selectedNav.lastIndexOf('-'));
+    let lastClass = selectedNav.substring(selectedNav.lastIndexOf(' ') + 1);
+    let wantedSection = lastClass.substring(0, lastClass.lastIndexOf('-'));
 
     document.querySelector('#' + wantedSection).scrollIntoView({
       behavior: 'smooth'
@@ -18,42 +19,48 @@ export default class CommonNavigation extends Component {
     /*<NavLink className="mdl-navigation__link" to="/faq">Често задавани въпроси</NavLink>*/
     return (
       <nav className="mdl-navigation">
-        <FlatButton
-          label={LocalizedStrings.header.home}
+        <Button
           className="home-nav"
-          primary={true}
+          color="primary"
           onClick={this.scrollToSelection}
-        />
-        <FlatButton
-          label={LocalizedStrings.header.whyUs}
+        >
+          {LocalizedStrings.header.home}
+        </Button>
+        <Button
           className="why-us-nav"
-          primary={true}
+          color="primary"
           onClick={this.scrollToSelection}
-        />
-        <FlatButton
-          label={LocalizedStrings.header.services}
+        >
+          {LocalizedStrings.header.whyUs}
+        </Button>
+        <Button
           className="services-nav"
-          primary={true}
+          color="primary"
           onClick={this.scrollToSelection}
-        />
-        <FlatButton
-          label={LocalizedStrings.header.portfolio}
+        >
+          {LocalizedStrings.header.services}
+        </Button>
+        <Button
           className="portfolio-nav"
-          primary={true}
+          color="primary"
           onClick={this.scrollToSelection}
-        />
-        <FlatButton
-          label={LocalizedStrings.header.contacts}
+        >
+          {LocalizedStrings.header.portfolio}
+        </Button>
+        <Button
           className="contacts-nav"
-          primary={true}
+          color="primary"
           onClick={this.scrollToSelection}
-        />
-        <FlatButton
-          label={LocalizedStrings.header.hiring}
+        >
+          {LocalizedStrings.header.contacts}
+        </Button>
+        <Button
           className="hiring-nav"
-          primary={true}
+          color="primary"
           onClick={this.scrollToSelection}
-        />
+        >
+          {LocalizedStrings.header.hiring}
+        </Button>
         <LocalizationPopover />
       </nav>
     );

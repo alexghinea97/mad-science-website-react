@@ -1,15 +1,13 @@
 import React from 'react';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import Dialog from 'material-ui/Dialog';
 import LocalizedStrings from '../../../../../LocalizedStrings';
 
 export default function websiteServiceModal(props) {
   const actions = [
-    <FlatButton
-      label={LocalizedStrings.buttons.cancel}
-      primary={true}
-      onClick={props.handleClose}
-    />
+    <Button color="primary" onClick={props.handleClose}>
+      {LocalizedStrings.buttons.cancel}
+    </Button>
   ];
 
   return (

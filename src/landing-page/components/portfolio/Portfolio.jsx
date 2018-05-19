@@ -7,7 +7,7 @@ import {
   CardTitle,
   CardText
 } from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import Button from '@material-ui/core/Button';
 import './Portfolio.css';
 import Divider from 'material-ui/Divider';
 import LocalizedStrings from '../../../LocalizedStrings';
@@ -37,12 +37,12 @@ export default function portfolio(props) {
             </p>
           </CardText>
           <CardActions>
-            <FlatButton
-              label={
+            <Button color="primary">
+              {
                 LocalizedStrings.body.portfolio.bookExchangeProject
                   .buttonForPortfolio
               }
-            />
+            </Button>
           </CardActions>
         </Card>
         <br />
@@ -69,12 +69,12 @@ export default function portfolio(props) {
               href="https://github.com/madsciencebulgaria/mad-science-website-react"
               target="blank"
             >
-              <FlatButton
-                label={
+              <Button color="primary">
+                {
                   LocalizedStrings.body.portfolio.madScienceProject
                     .buttonForPortfolio
                 }
-              />
+              </Button>
             </a>
           </CardActions>
         </Card>
