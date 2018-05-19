@@ -1,7 +1,7 @@
 import React from 'react';
-
-import { List, ListItem } from 'material-ui/List';
-
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import './ServicesRequestConfirmation.css';
 
 export default function servicesRequestConfirmation(props) {
@@ -14,10 +14,18 @@ export default function servicesRequestConfirmation(props) {
       <div>
         <h3>Requested services:</h3>
         <List>
-          <ListItem primaryText="All mail" />
-          <ListItem primaryText="Trash" />
-          <ListItem primaryText="Spam" />
-          <ListItem primaryText="Follow up" />
+          <ListItem button>
+            <ListItemText primary="All mail" />
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="Trash" />
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="Spam" />
+          </ListItem>
+          <ListItem button>
+            <ListItemText primary="Follow up" />
+          </ListItem>
         </List>
       </div>
     </div>
