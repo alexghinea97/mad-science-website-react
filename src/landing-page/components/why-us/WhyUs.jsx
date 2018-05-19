@@ -1,5 +1,5 @@
 import React from 'react';
-import Paper from 'material-ui/Paper';
+import Paper from '@material-ui/core/Paper';
 import Divider from 'material-ui/Divider';
 import { Card, CardText } from 'material-ui/Card';
 import LocalizedStrings from '../../../LocalizedStrings';
@@ -8,7 +8,7 @@ import LocalizedStrings from '../../../LocalizedStrings';
 export default function whyUs(props) {
   return (
     <div id="why-us">
-      <Paper zDepth={5}>
+      <Paper elevation={5}>
         <Card style={{ padding: '15px' }}>
           <h2>{LocalizedStrings.body.whyUs.title}</h2>
           <Divider />

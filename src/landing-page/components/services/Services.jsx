@@ -3,8 +3,7 @@ import ServicesTabs from './components/services-tabs/ServicesTabs';
 import ServicesForm from './components/services-form/ServicesForm';
 import ServicesRequestConfirmation from './components/services-request-confirmation/ServicesRequestConfirmation';
 import ServicesThankYou from './components/services-thank-you/ServicesThankYou';
-
-import Paper from 'material-ui/Paper';
+import Paper from '@material-ui/core/Paper';
 import { Step, Stepper, StepLabel, StepContent } from 'material-ui/Stepper';
 import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -94,7 +93,7 @@ export default class Services extends React.Component {
   render() {
     return (
       <div id="services">
-        <Paper zDepth={3} style={{ padding: '15px' }}>
+        <Paper elevation={3} style={{ padding: '15px' }}>
           <div style={{ maxWidth: '100%', margin: 'auto' }}>
             <Stepper activeStep={this.state.stepIndex} orientation="vertical">
               <Step>

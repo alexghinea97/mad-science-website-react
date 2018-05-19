@@ -1,5 +1,5 @@
 import React from 'react';
-import Paper from 'material-ui/Paper';
+import Paper from '@material-ui/core/Paper';
 import {
   Card,
   CardActions,
@@ -15,7 +15,7 @@ import LocalizedStrings from '../../../LocalizedStrings';
 export default function portfolio(props) {
   return (
     <div id="portfolio">
-      <Paper zDepth={4} style={{ padding: '15px' }}>
+      <Paper elevation={4} style={{ padding: '15px' }}>
         <h2>{LocalizedStrings.body.portfolio.title}</h2>
         <Divider />
         <br />

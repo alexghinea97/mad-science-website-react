@@ -1,5 +1,5 @@
 import React from 'react';
-import Paper from 'material-ui/Paper';
+import Paper from '@material-ui/core/Paper';
 import Divider from 'material-ui/Divider';
 import LocalizedStrings from '../../../LocalizedStrings';
 import './Hiring.css';
@@ -7,7 +7,7 @@ import './Hiring.css';
 export default function hiring(props) {
   return (
     <div id="hiring">
-      <Paper zDepth={4} style={{ padding: '15px' }}>
+      <Paper elevation={4} style={{ padding: '15px' }}>
         <h2>{LocalizedStrings.body.hiring.title}</h2>
         <Divider />
         <h3>{LocalizedStrings.body.hiring.textOne}</h3>

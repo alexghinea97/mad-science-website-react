@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Paper from 'material-ui/Paper';
+import Paper from '@material-ui/core/Paper';
 import uuid from 'uuid';
 import { Card, CardActions, CardText } from 'material-ui/Card';
 import TextField from 'material-ui/TextField';
@@ -138,7 +138,7 @@ export default class Contacts extends Component {
   render() {
     return (
       <div id="contacts">
-        <Paper zDepth={5}>
+        <Paper elevation={5}>
           <Card style={{ padding: '15px' }}>
             <h2>{LocalizedStrings.body.contacts.title}</h2>
             <Divider />
