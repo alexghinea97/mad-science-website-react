@@ -1,13 +1,15 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button';
+import { addEmailSubscriptionIntegrationService } from '../../../../../../../../actions/servicesActions';
 
-export default class EmailSubscriptionIntegrationService extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: 1 };
-  }
-
+class EmailSubscriptionIntegrationService extends React.Component {
   handleChange = (event, index, value) => this.setState({ value });
+
+  handleAddService = () => {
+    this.props.addEmailSubscriptionIntegrationService(true);
+    this.props.handleModalClose();
+  };
 
   render() {
     return (
@@ -31,14 +33,28 @@ export default class EmailSubscriptionIntegrationService extends React.Component
           Please choose on of the following options for the integration of
           google analytics:{' '}
         </p>
-        <RaisedButton
-          fullWidth={true}
-          primary={true}
-          onClick={this.handleAddService}
-          label={'Add Website development service'}
+        <Button
+          fullWidth
+          variant="raised"
+          color="primary"
           style={{ marginBottom: '20px', marginTop: '20px' }}
-        />
+          onClick={this.handleAddService}
+        >
+          {'Add Website development service'}
+        </Button>
       </div>
     );
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addEmailSubscriptionIntegrationService: requestInfoObj => {
+      dispatch(addEmailSubscriptionIntegrationService(requestInfoObj));
+    }
+  };
+}
+
+export default connect(() => {
+  return {};
+}, mapDispatchToProps)(EmailSubscriptionIntegrationService);

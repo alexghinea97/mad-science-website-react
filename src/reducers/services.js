@@ -1,5 +1,6 @@
 import {
   ADD_WEBSITE_DEV_SERVICE,
+  ADD_EMAIL_SUBSCRIPTION_INTEGRATION_SERVICE,
   ADD_FACEBOOK_PIXEL_INTEGRATION_SERVICE,
   ADD_GOOGLE_ANALYTICS_INTEGRATION_SERVICE,
   ADD_FACEBOOK_MESSENGER_INTEGRATION_SERVICE
@@ -11,6 +12,9 @@ export default function services(state = {}, action) {
   switch (action.type) {
     case ADD_WEBSITE_DEV_SERVICE:
       newState.websiteDev = action.requestInfo;
+      return newState;
+    case ADD_EMAIL_SUBSCRIPTION_INTEGRATION_SERVICE:
+      newState.emailSubscription = action.requestInfo;
       return newState;
     case ADD_FACEBOOK_PIXEL_INTEGRATION_SERVICE:
       newState.facebookPixel = action.requestInfo;

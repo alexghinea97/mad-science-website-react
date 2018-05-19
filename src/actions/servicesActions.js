@@ -6,6 +6,15 @@ export function addWebsiteDevService(requestInfoObj) {
   };
 }
 
+export const ADD_EMAIL_SUBSCRIPTION_INTEGRATION_SERVICE =
+  'ADD_EMAIL_SUBSCRIPTION_INTEGRATION_SERVICE';
+export function addEmailSubscriptionIntegrationService(requestInfoObj) {
+  return {
+    type: ADD_EMAIL_SUBSCRIPTION_INTEGRATION_SERVICE,
+    requestInfo: requestInfoObj
+  };
+}
+
 export const ADD_FACEBOOK_PIXEL_INTEGRATION_SERVICE =
   'ADD_FACEBOOK_PIXEL_INTEGRATION_SERVICE';
 export function addFacebookPixelIntegrationService(requestInfoObj) {
