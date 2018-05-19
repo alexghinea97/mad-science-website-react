@@ -1,6 +1,7 @@
 import React from 'react';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const items = [
   <MenuItem value={1} primaryText={`Beginner integration`} />,
@@ -46,6 +47,12 @@ export default class GoogleAnalyticsIntegrationService extends React.Component {
         >
           {items}
         </DropDownMenu>
+        <RaisedButton
+          fullWidth={true}
+          primary={true}
+          onClick={this.handleAddService}
+          label={'Add Website development service'}
+        />
       </div>
     );
   }
