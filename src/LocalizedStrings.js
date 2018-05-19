@@ -58,6 +58,14 @@ let strings = new LocalizedStrings({
           textSecond:
             "... Or you can give us your own concept of a design and we'll implement it."
         },
+        localizationDialog: {
+          textOne:
+            'Localization will help you to develop and scale your ideas because the content will reach the users depending on their language or the country from which the website is opened.',
+          textSecond:
+            'In the menu, you will have the opportunity to choose the languages we can translate your website. We will take care to transmit the content on a high level.',
+          textThird:
+            'The price depends on the volume of the text and the deadline for translating.'
+        },
         websiteOptions: {
           websiteDevelopment: 'WEBSITE DEVELOPMENT',
           googleAnalitycsInt: 'GOOGLE ANALITYCS INTEGRATION',

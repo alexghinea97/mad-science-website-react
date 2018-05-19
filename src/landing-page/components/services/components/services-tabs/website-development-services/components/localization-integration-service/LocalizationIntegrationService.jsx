@@ -1,10 +1,11 @@
 import React from 'react';
-import DropDownMenu from 'material-ui/DropDownMenu';
+import Select from '@material-ui/core/Select';
 import MenuItem from 'material-ui/MenuItem';
-import { List, ListItem } from 'material-ui/List';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 import ActionDelete from 'material-ui/svg-icons/action/delete';
 import LocalizedStrings from '../../../../../../../../LocalizedStrings';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 
 export default class LocalizationIntegrationService extends React.Component {
   constructor(props) {
@@ -39,13 +40,13 @@ export default class LocalizationIntegrationService extends React.Component {
         <p>{LocalizedStrings.body.services.localizationDialog.textOne}</p>
         <p>{LocalizedStrings.body.services.localizationDialog.textSecond}</p>
         <p>{LocalizedStrings.body.services.localizationDialog.textThird}</p>
-        <DropDownMenu
+        <Select
           maxHeight={120}
           value={this.state.value}
           onChange={this.handleChange}
         >
           {items}
-        </DropDownMenu>
+        </Select>
         <List>
           {Array.from(this.state.selectedLanguages).map(language => {
             return (
@@ -53,12 +54,14 @@ export default class LocalizationIntegrationService extends React.Component {
             );
           })}
         </List>
-        <RaisedButton
-          fullWidth={true}
-          primary={true}
+        <Button
+          fullWidth
+          variant="raised"
+          color="primary"
           onClick={this.handleAddService}
-          label={'Add Website development service'}
-        />
+        >
+          {'Add Website development service'}
+        </Button>
       </div>
     );
   }
