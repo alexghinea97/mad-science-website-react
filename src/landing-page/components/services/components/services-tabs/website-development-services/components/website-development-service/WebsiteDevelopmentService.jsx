@@ -21,7 +21,7 @@ class WebsiteDevelopmentService extends React.Component {
     super(props);
     this.state = {
       linkUrl: '',
-      selectedTemplateName: 'Band Template'
+      selectedTemplateName: undefined
     };
   }
 
@@ -29,7 +29,7 @@ class WebsiteDevelopmentService extends React.Component {
     this.setState({ selectedTemplateName: value });
 
   handleAddService = () => {
-    this.props.onAddWebsiteDevelopmentService(this.state);
+    this.props.addWebsiteDevService(this.state);
     this.props.handleModalClose();
   };
 
@@ -37,6 +37,11 @@ class WebsiteDevelopmentService extends React.Component {
     return (
       <div>
         <h2>{LocalizedStrings.body.services.websiteDevelopmentDialog.title}</h2>
+        <p>
+          Having a website in the twenty first centure is sort of a must for
+          everyone who wants to do business online or have any kind of digital
+          presence. This is why we are here to help you with that part.
+        </p>
         <img
           src="/images/website-development-service.jpeg"
           alt=""
@@ -46,6 +51,10 @@ class WebsiteDevelopmentService extends React.Component {
         <p>{LocalizedStrings.body.services.websiteDevelopmentDialog.textOne}</p>
         <WebsiteTemplates />
         <br />
+        <p>
+          If you've chosen a template that will suit you, select it from the
+          dropdown below:{' '}
+        </p>
         <DropDownMenu
           autoWidth={false}
           style={{ width: '100%' }}
@@ -75,6 +84,7 @@ class WebsiteDevelopmentService extends React.Component {
           primary={true}
           onClick={this.handleAddService}
           label={'Add Website development service'}
+          style={{ marginBottom: '20px', marginTop: '20px' }}
         />
       </div>
     );
@@ -83,7 +93,7 @@ class WebsiteDevelopmentService extends React.Component {
 
 function mapDispatchToProps(dispatch) {
   return {
-    onAddWebsiteDevelopmentService: requestInfoObj => {
+    addWebsiteDevService: requestInfoObj => {
       dispatch(addWebsiteDevService(requestInfoObj));
     }
   };

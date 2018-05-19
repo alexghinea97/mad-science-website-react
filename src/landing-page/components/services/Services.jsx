@@ -9,9 +9,9 @@ import { Step, Stepper, StepLabel, StepContent } from 'material-ui/Stepper';
 import Drawer from 'material-ui/Drawer';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
-import Badge from 'material-ui/Badge';
-import IconButton from 'material-ui/IconButton';
-import ActionShoppingCart from 'material-ui/svg-icons/action/shopping-cart';
+// import Badge from 'material-ui/Badge';
+// import IconButton from 'material-ui/IconButton';
+// import ActionShoppingCart from 'material-ui/svg-icons/action/shopping-cart';
 import LocalizedStrings from '../../../LocalizedStrings';
 import './Services.css';
 
@@ -74,17 +74,17 @@ export default class Services extends React.Component {
         />
         {(() => {
           if (stepIndex < 2) {
-            return (
-              <Badge
-                badgeContent={10}
-                secondary={true}
-                badgeStyle={{ top: 12, right: 12 }}
-              >
-                <IconButton onClick={this.handleToggle} tooltip="Notifications">
-                  <ActionShoppingCart />
-                </IconButton>
-              </Badge>
-            );
+            // return (
+            //   <Badge
+            //     badgeContent={10}
+            //     secondary={true}
+            //     badgeStyle={{ top: 12, right: 12 }}
+            //   >
+            //     <IconButton onClick={this.handleToggle} tooltip="Notifications">
+            //       <ActionShoppingCart />
+            //     </IconButton>
+            //   </Badge>
+            // );
           }
         })()}
       </div>

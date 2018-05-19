@@ -1,21 +1,15 @@
 import React from 'react';
-import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
+import { connect } from 'react-redux';
+import { addGoogleAnalyticsIntegrationService } from '../../../../../../../../actions/servicesActions';
 
-const items = [
-  <MenuItem value={1} primaryText={`Beginner integration`} />,
-  <MenuItem value={2} primaryText={`Most common events integration`} />,
-  <MenuItem value={3} primaryText={`Advanced integration`} />
-];
-
-export default class GoogleAnalyticsIntegrationService extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: 1 };
-  }
-
+class GoogleAnalyticsIntegrationService extends React.Component {
   handleChange = (event, index, value) => this.setState({ value });
+
+  handleAddService = () => {
+    this.props.addGoogleAnalyticsIntegrationService(true);
+  };
+
   render() {
     return (
       <div>
@@ -23,9 +17,9 @@ export default class GoogleAnalyticsIntegrationService extends React.Component {
         <p>
           Google analytics is a useful tool for monitoring and measuring the
           performance of your web presence. That is why we can help you with its
-          integration with your web platform. You can choose from the most
-          general to a more detailed implementation of the Google analytics and
-          its events.
+          integration with your web platform. If you are not so familiar with it
+          we can also help you understand why it is so important in future
+          communication with us.
         </p>
         <img
           src="/images/google-analytics.jpeg"
@@ -34,26 +28,27 @@ export default class GoogleAnalyticsIntegrationService extends React.Component {
           height="300px"
           style={{ marginBottom: '10px' }}
         />
-        <p>
-          Please choose on of the following options for the integration of
-          google analytics:{' '}
-        </p>
-        <DropDownMenu
-          autoWidth={false}
-          style={{ width: '100%' }}
-          maxHeight={300}
-          value={this.state.value}
-          onChange={this.handleChange}
-        >
-          {items}
-        </DropDownMenu>
+
         <RaisedButton
           fullWidth={true}
           primary={true}
           onClick={this.handleAddService}
-          label={'Add Website development service'}
+          label={'Add Google Analytics integration service'}
+          style={{ marginBottom: '20px', marginTop: '20px' }}
         />
       </div>
     );
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addGoogleAnalyticsIntegrationService: requestObj => {
+      dispatch(addGoogleAnalyticsIntegrationService(requestObj));
+    }
+  };
+}
+
+export default connect(() => {
+  return {};
+}, mapDispatchToProps)(GoogleAnalyticsIntegrationService);
