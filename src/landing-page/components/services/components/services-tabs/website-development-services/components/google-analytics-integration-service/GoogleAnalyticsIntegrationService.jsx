@@ -1,5 +1,5 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import { addGoogleAnalyticsIntegrationService } from '../../../../../../../../actions/servicesActions';
 
@@ -8,6 +8,7 @@ class GoogleAnalyticsIntegrationService extends React.Component {
 
   handleAddService = () => {
     this.props.addGoogleAnalyticsIntegrationService(true);
+    this.props.handleModalClose();
   };
 
   render() {
@@ -29,13 +30,15 @@ class GoogleAnalyticsIntegrationService extends React.Component {
           style={{ marginBottom: '10px' }}
         />
 
-        <RaisedButton
-          fullWidth={true}
-          primary={true}
+        <Button
+          fullWidth
+          variant="raised"
+          color="primary"
           onClick={this.handleAddService}
-          label={'Add Google Analytics integration service'}
           style={{ marginBottom: '20px', marginTop: '20px' }}
-        />
+        >
+          {'Add Google Analytics integration service'}
+        </Button>
       </div>
     );
   }
