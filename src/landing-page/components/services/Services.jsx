@@ -54,8 +54,6 @@ export default class Services extends React.Component {
           <Button
             variant="raised"
             disabled={stepIndex === 0}
-            disableTouchRipple={true}
-            disableFocusRipple={true}
             onClick={this.handlePrev}
           >
             {LocalizedStrings.buttons.back}
@@ -64,8 +62,6 @@ export default class Services extends React.Component {
         <Button
           variant="raised"
           color="primary"
-          disableTouchRipple={true}
-          disableFocusRipple={true}
           onClick={this.handleNext}
           style={{ marginLeft: 12 }}
         >

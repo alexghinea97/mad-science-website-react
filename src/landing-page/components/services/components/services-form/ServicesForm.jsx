@@ -37,7 +37,6 @@ export default class ServicesForm extends Component {
         <div>
           <TextField
             fullWidth
-            hintText=""
             label={LocalizedStrings.body.services.formAbouTheRequest.name}
             type="text"
             onChange={this.handleNameChange}
@@ -46,7 +45,6 @@ export default class ServicesForm extends Component {
           />
           <TextField
             fullWidth
-            hintText=""
             label={LocalizedStrings.body.services.formAbouTheRequest.email}
             type="text"
             onChange={this.handleEmailChange}
@@ -55,8 +53,7 @@ export default class ServicesForm extends Component {
           />
           <TextField
             fullWidth
-            hintText=""
-            multiLine
+            multiline
             rows="8"
             label={
               LocalizedStrings.body.services.formAbouTheRequest
@@ -69,7 +66,7 @@ export default class ServicesForm extends Component {
           />
           <p>Due date for the project</p>
           <TextField
-            hintText="Due date for the project"
+            helperText="Due date for the project"
             type="date"
             defaultValue="2017-05-24"
             className={this.props.textField}

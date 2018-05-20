@@ -10,7 +10,12 @@ import LocalizedStrings from '../../../LocalizedStrings';
 export default class ThankYou extends Component {
   render() {
     const actions = [
-      <Button color="primary" variant="raised" onClick={this.props.handleClose}>
+      <Button
+        key={0}
+        color="primary"
+        variant="raised"
+        onClick={this.props.handleClose}
+      >
         {LocalizedStrings.body.contacts.thankYou.closeButton}
       </Button>
     ];
@@ -26,11 +31,7 @@ export default class ThankYou extends Component {
               {LocalizedStrings.body.contacts.thankYou.description}
             </DialogContentText>
           </DialogContent>
-          <DialogActions>
-            <Button onClick={this.props.handleClose} color="primary">
-              {actions}
-            </Button>
-          </DialogActions>
+          <DialogActions>{actions}</DialogActions>
         </Dialog>
       </div>
     );

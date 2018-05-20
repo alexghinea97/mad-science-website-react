@@ -4,6 +4,7 @@ import Divider from '@material-ui/core/Divider';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import LocalizedStrings from '../../../LocalizedStrings';
+import { CardContent } from '@material-ui/core';
 //import './WhyUs.css';
 
 export default function whyUs(props) {
@@ -13,15 +14,21 @@ export default function whyUs(props) {
         <Card style={{ padding: '15px' }}>
           <h2>{LocalizedStrings.body.whyUs.title}</h2>
           <Divider />
-          <Typography>
+          <CardContent>
             <br />
             <h3>Our professionals:</h3>
-            <p>{LocalizedStrings.body.whyUs.whyUsFirstParagraph}</p>
+            <Typography component="p">
+              {LocalizedStrings.body.whyUs.whyUsFirstParagraph}
+            </Typography>
             <h3>Technological expertise:</h3>
-            <p>{LocalizedStrings.body.whyUs.whyUsSecondParagraph}</p>
+            <Typography component="p">
+              {LocalizedStrings.body.whyUs.whyUsSecondParagraph}
+            </Typography>
             <h3>Availability:</h3>
-            <p>{LocalizedStrings.body.whyUs.whyUsThirdParagraph}</p>
-          </Typography>
+            <Typography component="p">
+              {LocalizedStrings.body.whyUs.whyUsThirdParagraph}
+            </Typography>
+          </CardContent>
         </Card>
       </Paper>
     </div>

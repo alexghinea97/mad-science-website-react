@@ -1,14 +1,9 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import Popover from '@material-ui/core/Popover';
-import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import LocalizedStrings from '../LocalizedStrings';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import InputLabel from '@material-ui/core/InputLabel';
 
 const styles = theme => ({
   formControl: {
@@ -18,10 +13,6 @@ const styles = theme => ({
 });
 
 class LocalizationPopover extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   handleChange = event => {
     localStorage.setItem('lang', event.target.value);
     document.location.reload();

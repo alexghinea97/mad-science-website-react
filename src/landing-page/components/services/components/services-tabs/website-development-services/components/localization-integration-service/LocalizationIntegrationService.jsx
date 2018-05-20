@@ -1,17 +1,12 @@
 import React from 'react';
 import Select from '@material-ui/core/Select';
-import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Chip from '@material-ui/core/Chip';
 import Input from '@material-ui/core/Input';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import ActionDelete from 'material-ui/svg-icons/action/delete';
 import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 import Button from '@material-ui/core/Button';
 
