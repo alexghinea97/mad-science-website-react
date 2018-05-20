@@ -82,6 +82,13 @@ class LocalizationIntegrationService extends React.Component {
     return (
       <div className={classes.root}>
         <p>{LocalizedStrings.body.services.localizationDialog.textOne}</p>
+        <img
+          src="/images/localization.jpeg"
+          alt=""
+          width="100%"
+          height="300px"
+          style={{ marginBottom: '10px' }}
+        />
         <p>{LocalizedStrings.body.services.localizationDialog.textSecond}</p>
         <p>{LocalizedStrings.body.services.localizationDialog.textThird}</p>
 
