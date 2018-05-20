@@ -1,13 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
-import TextField from 'material-ui/TextField';
-import LocalizedStrings from '../../../../../../../../LocalizedStrings';
+import MenuItem from '@material-ui/core/MenuItem';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 import WebsiteTemplates from './WebsiteTemplates.jsx';
 import websiteTemplatesData from './templates.json';
-import { connect } from 'react-redux';
+import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 import { addWebsiteDevService } from '../../../../../../../../actions/servicesActions';
-import RaisedButton from 'material-ui/RaisedButton';
 
 const items = [];
 websiteTemplatesData.forEach((element, index) => {
@@ -69,9 +69,10 @@ class WebsiteDevelopmentService extends React.Component {
           {LocalizedStrings.body.services.websiteDevelopmentDialog.textSecond}
         </p>
         <TextField
-          fullWidth={true}
-          hintText="Link to a file or a webpage with wanted design: "
-          floatingLabelText="Link"
+          fullWidth
+          multiline
+          label="Link to a file or a webpage with wanted design: "
+          placeholder="Link"
           value={this.state.linkUrl}
           onChange={eventData => {
             this.setState({
@@ -79,13 +80,15 @@ class WebsiteDevelopmentService extends React.Component {
             });
           }}
         />
-        <RaisedButton
-          fullWidth={true}
-          primary={true}
+        <Button
+          fullWidth
+          variant="raised"
+          color="primary"
           onClick={this.handleAddService}
-          label={'Add Website development service'}
           style={{ marginBottom: '20px', marginTop: '20px' }}
-        />
+        >
+          {'Add Website development service'}
+        </Button>
       </div>
     );
   }
