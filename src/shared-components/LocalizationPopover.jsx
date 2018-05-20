@@ -4,72 +4,48 @@ import Popover from '@material-ui/core/Popover';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import LocalizedStrings from '../LocalizedStrings';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import InputLabel from '@material-ui/core/InputLabel';
 
-export default class LocalizationPopover extends React.Component {
+const styles = theme => ({
+  formControl: {
+    margin: theme.spacing.unit,
+    minWidth: 150
+  }
+});
+
+class LocalizationPopover extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      open: false
-    };
   }
 
-  handleClick = event => {
-    // This prevents ghost click.
-    event.preventDefault();
-
-    this.setState({
-      open: true,
-      anchorEl: event.currentTarget
-    });
-  };
-
-  handleRequestClose = () => {
-    this.setState({
-      open: false
-    });
-  };
-
-  onSetLanguageToBulgarian = () => {
-    localStorage.setItem('lang', 'bg');
-    document.location.reload();
-  };
-
-  onSetLanguageToEnglish = () => {
-    localStorage.setItem('lang', 'en');
+  handleChange = event => {
+    localStorage.setItem('lang', event.target.value);
     document.location.reload();
   };
 
   render() {
     return (
       <div>
-        <Button
-          onClick={this.handleClick}
-          variant="raised"
-          color="primary"
-          className="localization-popover"
-        >
-          {LocalizedStrings.header.language}
-        </Button>
-        <Popover
-          open={this.state.open}
-          anchorEl={this.state.anchorEl}
-          anchorOrigin={{ horizontal: 'left', vertical: 'bottom' }}
-          targetOrigin={{ horizontal: 'left', vertical: 'top' }}
-          onRequestClose={this.handleRequestClose}
-        >
-          <Menu>
-            <MenuItem
-              onClick={this.onSetLanguageToBulgarian}
-              primaryText="Български"
-            />
-            <MenuItem
-              onClick={this.onSetLanguageToEnglish}
-              primaryText="English"
-            />
-          </Menu>
-        </Popover>
+        <FormControl className={this.props.formControl}>
+          <Select
+            value={localStorage.getItem('lang')}
+            onChange={this.handleChange}
+          >
+            <MenuItem value="bg">Български</MenuItem>
+            <MenuItem value="en">English</MenuItem>
+          </Select>
+        </FormControl>
       </div>
     );
   }
 }
+
+LocalizationPopover.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(LocalizationPopover);
