@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 import LocalizedStrings from '../../../../../../LocalizedStrings';
-import { RaisedButton } from 'material-ui';
 import services from './website-development-services.js';
 
 import './WebSiteDevelopmentServices.css';
@@ -17,14 +17,16 @@ export default class WebSiteDevelopmentTab extends Component {
           <div>
             {services.map((service, index) => {
               return (
-                <RaisedButton
-                  fullWidth={true}
-                  label={service.name}
-                  secondary={true}
+                <Button
+                  fullWidth
+                  variant="raised"
+                  color="secondary"
                   onClick={this.props.handleOpen}
                   style={{ marginBottom: '10px' }}
                   key={index}
-                />
+                >
+                  {service.name}
+                </Button>
               );
             })}
           </div>
