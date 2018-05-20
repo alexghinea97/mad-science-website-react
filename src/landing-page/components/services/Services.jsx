@@ -4,12 +4,14 @@ import ServicesForm from './components/services-form/ServicesForm';
 import ServicesRequestConfirmation from './components/services-request-confirmation/ServicesRequestConfirmation';
 import ServicesThankYou from './components/services-thank-you/ServicesThankYou';
 import Paper from '@material-ui/core/Paper';
-import { Step, Stepper, StepLabel, StepContent } from 'material-ui/Stepper';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
+import StepContent from '@material-ui/core/StepContent';
 import Drawer from 'material-ui/Drawer';
-import RaisedButton from 'material-ui/RaisedButton';
 import Button from '@material-ui/core/Button';
-// import Badge from 'material-ui/Badge';
-// import IconButton from 'material-ui/IconButton';
+// import Badge from '@material-ui/core/Badge';
+// import IconButton from '@material-ui/core/IconButton';
 // import ActionShoppingCart from 'material-ui/svg-icons/action/shopping-cart';
 import LocalizedStrings from '../../../LocalizedStrings';
 import './Services.css';
@@ -139,7 +141,7 @@ export default class Services extends React.Component {
         <Drawer
           width={300}
           openSecondary={true}
-          zDepth={4}
+          elevation={4}
           containerStyle={{ top: 90 }}
           open={this.state.open}
         >
