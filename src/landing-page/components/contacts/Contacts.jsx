@@ -7,12 +7,21 @@ import CardContent from '@material-ui/core/CardContent';
 import TextField from '@material-ui/core/TextField';
 import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Checkbox from '@material-ui/core/Checkbox';
 import LocalizedStrings from '../../../LocalizedStrings';
 import firebase from '../../../firebase.js';
 import ThankYou from './ThankYou';
 import './Contacts.css';
 
-export default class Contacts extends Component {
+const styles = theme => ({
+  root: {
+    paddingLeft: '10px'
+  }
+});
+
+class Contacts extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +33,8 @@ export default class Contacts extends Component {
         emailErrorMessage: undefined,
         subjectErrorMessage: undefined,
         contentErrorMessage: undefined
-      }
+      },
+      termsAndAgreements: false
     };
   }
 
@@ -138,6 +148,8 @@ export default class Contacts extends Component {
   //#endregion
 
   render() {
+    const { classes } = this.props;
+
     return (
       <div id="contacts">
         <Paper elevation={5}>
@@ -245,6 +257,15 @@ export default class Contacts extends Component {
                 onChange={this.handleContentChange}
               /> */}
             </CardContent>
+            <Checkbox
+              className={classes.root}
+              checked={this.state.termsAndAgreements}
+              onChange={(event, checked) =>
+                this.setState({ termsAndAgreements: checked })
+              }
+            />
+            {'I agree general terms'}
+            <br />
             <Button
               variant="raised"
               color="primary"
@@ -263,3 +284,8 @@ export default class Contacts extends Component {
     );
   }
 }
+Contacts.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(Contacts);

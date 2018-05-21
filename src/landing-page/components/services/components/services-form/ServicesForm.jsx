@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Checkbox from '@material-ui/core/Checkbox';
 import './ServicesForm.css';
 import LocalizedStrings from '../../../../../LocalizedStrings';
 
-export default class ServicesForm extends Component {
+const styles = theme => ({
+  root: {
+    width: 'auto'
+  }
+});
+
+class ServicesForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       email: '',
-      name: ''
+      name: '',
+      termsAndAgreements: false
     };
   }
 
@@ -31,6 +41,8 @@ export default class ServicesForm extends Component {
   };
 
   render() {
+    const { classes } = this.props;
+
     return (
       <div id="services-form">
         <h2>{LocalizedStrings.body.services.formAbouTheRequest.title}</h2>
@@ -74,9 +86,24 @@ export default class ServicesForm extends Component {
               shrink: true
             }}
           />
+          <br />
+          <Checkbox
+            className={classes.root}
+            checked={this.state.termsAndAgreements}
+            onChange={(event, checked) =>
+              this.setState({ termsAndAgreements: checked })
+            }
+          />
+          {'I agree general terms'}
         </div>
         <div id="service-form-img" />
       </div>
     );
   }
 }
+
+ServicesForm.propTypes = {
+  classes: PropTypes.object.isRequired
+};
+
+export default withStyles(styles)(ServicesForm);
