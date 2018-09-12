@@ -8,6 +8,7 @@ import WebsiteTemplates from './WebsiteTemplates.jsx';
 import websiteTemplatesData from './templates.json';
 import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 import { addWebsiteDevService } from '../../../../../../../../actions/servicesActions';
+import './WebSiteDevelopment.css';
 
 const items = [];
 websiteTemplatesData.forEach((element, index) => {
@@ -35,7 +36,7 @@ class WebsiteDevelopmentService extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="website-development">
         <h2>{LocalizedStrings.body.services.websiteDevelopmentDialog.title}</h2>
         <p>
           Having a website in the twenty first centure is sort of a must for

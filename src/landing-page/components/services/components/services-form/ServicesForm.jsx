@@ -76,7 +76,6 @@ class ServicesForm extends Component {
             value={this.state.info}
             margin="normal"
           />
-          <p>Due date for the project</p>
           <TextField
             helperText="Due date for the project"
             type="date"

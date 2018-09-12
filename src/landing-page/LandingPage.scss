@@ -1,3 +1,5 @@
+$color_3: #888989;
+$color_4: #575756;
 #landing-page {
     #landing-page-logo {
         margin: auto;
@@ -8,6 +10,9 @@
         text-align: center;
         margin-top: 0px;
     }
+    // #home{
+    //     color: $color_4;
+    // }
     .center {
         text-align: center;
     }
@@ -15,7 +20,14 @@
         text-align: center;
         width: 85%;
         margin: auto;
+        font-size: 35px;
         margin-bottom: 15px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    p{
+        font-size: 17px;
     }
     .website-title-appear {
         opacity: 0.01;

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import { addEmailSubscriptionIntegrationService } from '../../../../../../../../actions/servicesActions';
+import './EmailSubscription.css';
 
 class EmailSubscriptionIntegrationService extends React.Component {
   handleChange = (event, index, value) => this.setState({ value });
@@ -13,7 +14,7 @@ class EmailSubscriptionIntegrationService extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="email-subscription">
         <h2> Email Subscritpion</h2>
         <p>
           Google analytics is a useful tool for monitoring and measuring the

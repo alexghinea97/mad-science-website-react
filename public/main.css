@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Arimo");
 body {
     font-size: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Karla', sans-serif;
     background: #EFEFBB;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #D4D3DD, #EFEFBB);
@@ -17,7 +17,7 @@ h4,
 h5,
 h6,
 p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Karla', sans-serif;
     letter-spacing: 0.6px;
 }
 

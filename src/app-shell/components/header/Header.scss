@@ -1,4 +1,8 @@
 $color_1: #F34605;
+$color_2: #3f51b5;
+// Colors from logo
+$color_3: #888989;
+$color_4: #575756;
 #page-header {
     .mdl-layout-title {
         img {
@@ -9,7 +13,7 @@ $color_1: #F34605;
             h1 {
                 font-size: x-large;
                 text-decoration: none;
-                color: $color_1;
+                color: $color_2;
                 margin-left: 20px;
                 display: inline-block;
                 font-weight: 550;

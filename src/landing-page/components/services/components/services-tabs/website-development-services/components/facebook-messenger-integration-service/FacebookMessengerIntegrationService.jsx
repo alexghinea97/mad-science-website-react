@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import { addFacebookMessengerIntegrationService } from '../../../../../../../../actions/servicesActions';
+import './FacebookMessenger.css';
 
 class FacebookMessengerIntegrationService extends React.Component {
   handleChange = (event, index, value) => this.setState({ value });
@@ -13,7 +14,7 @@ class FacebookMessengerIntegrationService extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="facebook-messenger">
         <h2> Facebook pixel</h2>
         <p>
           Google analytics is a useful tool for monitoring and measuring the

@@ -17,7 +17,11 @@ export default class LandingPage extends Component {
         <h1 id="home" className="title-landing-page">
           Mad Science
         </h1>
-        <img src="/images/example-logo.jpg" id="landing-page-logo" alt="" />
+        <img
+          src="/images/logo-landing-page.png"
+          id="landing-page-logo"
+          alt=""
+        />
         <h2 className="center">{LocalizedStrings.body.moto}</h2>
         <div className="mdl-grid">
           <div className="mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet" />

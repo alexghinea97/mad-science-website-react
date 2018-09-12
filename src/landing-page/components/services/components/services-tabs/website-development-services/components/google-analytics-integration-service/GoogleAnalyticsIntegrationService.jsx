@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import { addGoogleAnalyticsIntegrationService } from '../../../../../../../../actions/servicesActions';
+import './GoogleAnalytics.css';
 
 class GoogleAnalyticsIntegrationService extends React.Component {
   handleChange = (event, index, value) => this.setState({ value });
@@ -13,7 +14,7 @@ class GoogleAnalyticsIntegrationService extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="google-analytics">
         <h2> Google analyics</h2>
         <p>
           Google analytics is a useful tool for monitoring and measuring the

@@ -9,10 +9,10 @@ export default function servicesRequestConfirmation(props) {
     <div id="request-confirmation">
       <h2>Request summary </h2>
       <div>
-        <h3>Personal info and notes: </h3>
+        <h5>Personal info and notes: </h5>
       </div>
       <div>
-        <h3>Requested services:</h3>
+        <h5>Requested services:</h5>
         <List>
           <ListItem button>
             <ListItemText primary="All mail" />

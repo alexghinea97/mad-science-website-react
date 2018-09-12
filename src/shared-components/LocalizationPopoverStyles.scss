@@ -1,0 +1,13 @@
+$color_3: #888989;
+$color_4: #575756;
+.localization-form {
+   @media (min-width: 768px) and (max-width: 1024px) {
+       justify-content: center;
+       display: inline-flex;
+       align-items: center;
+       padding: 8px 16px;
+   }
+   .MuiInput-root-37{
+       color: $color_4;
+   }
+}

@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 import Button from '@material-ui/core/Button';
+import './Localization.css';
 
 const styles = theme => ({
   root: {
@@ -80,7 +81,7 @@ class LocalizationIntegrationService extends React.Component {
     // }
 
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id="localization">
         <p>{LocalizedStrings.body.services.localizationDialog.textOne}</p>
         <img
           src="/images/localization.jpeg"

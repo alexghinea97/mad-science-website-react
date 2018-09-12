@@ -6,6 +6,7 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import Button from '@material-ui/core/Button';
 import LocalizedStrings from '../../../LocalizedStrings';
+import './ThankYou.css';
 
 export default class ThankYou extends Component {
   render() {
@@ -21,7 +22,7 @@ export default class ThankYou extends Component {
     ];
 
     return (
-      <div>
+      <div id="thank-you">
         <Dialog open={this.props.open} onClose={this.handleClose}>
           <DialogTitle>
             {LocalizedStrings.body.contacts.thankYou.title}

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import './LocalizationPopoverStyles.css';
 
 const styles = theme => ({
   formControl: {
@@ -20,7 +21,7 @@ class LocalizationPopover extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="localization-form">
         <FormControl className={this.props.formControl}>
           <Select
             value={localStorage.getItem('lang')}
