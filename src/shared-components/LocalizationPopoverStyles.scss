@@ -1,13 +1,22 @@
 $color_3: #888989;
 $color_4: #575756;
-.localization-form {
-   @media (min-width: 768px) and (max-width: 1024px) {
-       justify-content: center;
-       display: inline-flex;
-       align-items: center;
-       padding: 8px 16px;
-   }
-   .MuiInput-root-37{
-       color: $color_4;
-   }
+
+@media only screen and (max-width: 1024px) {
+    .localization-form {
+        justify-content: center;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+
+        .MuiFormControl-root-28 {
+            width: 100%;
+            display: inherit;
+            align-items: inherit;
+            justify-content: inherit;
+        }
+
+        .MuiInput-root-37 {
+            color: $color_4;
+        }
+    }
 }
