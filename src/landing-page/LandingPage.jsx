@@ -39,10 +39,10 @@ export default class LandingPage extends Component {
             <Services />
           </div>
           <div className="mdl-cell--1-offset-desktop mdl-cell--1-offset-phone" />
-          <div className="mdl-cell mdl-cell--10-col-desktop mdl-cell--8-col-tablet">
+          {/* <div className="mdl-cell mdl-cell--10-col-desktop mdl-cell--8-col-tablet">
             <Portfolio />
           </div>
-          <div className="mdl-cell--1-offset-desktop mdl-cell--1-offset-phone" />
+          <div className="mdl-cell--1-offset-desktop mdl-cell--1-offset-phone" /> */}
           <div className="mdl-cell mdl-cell--10-col-desktop mdl-cell--8-col-tablet">
             <Contacts />
           </div>
