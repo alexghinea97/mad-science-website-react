@@ -37,13 +37,13 @@ export default class CommonNavigation extends Component {
         >
           SERVICES
         </Button>
-        <Button
+        {/* <Button
           className="portfolio-nav"
           color="primary"
           onClick={this.scrollToSelection}
         >
           PORTFOLIO
-        </Button>
+        </Button> */}
         <Button
           className="contacts-nav"
           color="primary"
