@@ -4,34 +4,33 @@ import FacebookPixelIntegrationModalContent from './components/facebook-pixel-in
 import FacebookMessengerIntegrationModalContent from './components/facebook-messenger-integration-service/FacebookMessengerIntegrationService';
 import EmailSubscriptionIntegrationModalContent from './components/email-subscription-integration-service/EmailSubscriptionIntegrationService';
 import LocalizationIntegrationModalContent from './components/localization-integration-service/LocalizationIntegrationService';
-import LocalizedStrings from '../../../../../../LocalizedStrings';
 
 export default [
   {
-    name: LocalizedStrings.body.services.websiteOptions.websiteDevelopment,
+    name: 'WEBSITE DEVELOPMENT',
     component: WebsiteDevelopmentModalContent
   },
   {
-    name: LocalizedStrings.body.services.websiteOptions.googleAnalitycsInt,
+    name: 'GOOGLE ANALITYCS INTEGRATION',
     component: GoogleAnalyticsIntegrationModalContent
   },
   {
-    name: LocalizedStrings.body.services.websiteOptions.facebookPixelInt,
+    name: 'FACEBOOK PIXEL INTEGRATION',
     component: FacebookPixelIntegrationModalContent
   },
   {
-    name: LocalizedStrings.body.services.websiteOptions.facebookMessengerInt,
+    name: 'FACEBOOK MESSENGER INTEGRATION',
     component: FacebookMessengerIntegrationModalContent
   },
   {
-    name: LocalizedStrings.body.services.websiteOptions.emailSubscrInt,
+    name: 'EMAIL SUBSCRIPTION INTEGRATION',
     component: EmailSubscriptionIntegrationModalContent
   },
   {
-    name: LocalizedStrings.body.services.websiteOptions.localization,
+    name: 'LOCALIZATION',
     component: LocalizationIntegrationModalContent
   },
   {
-    name: LocalizedStrings.body.services.websiteOptions.blogAndBlogManagement
+    name: 'BLOG AND BLOG MANAGEMENT'
   }
 ];

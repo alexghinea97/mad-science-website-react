@@ -6,7 +6,6 @@ import Services from './components/services/Services';
 import Portfolio from './components/portfolio/Portfolio';
 import Contacts from './components/contacts/Contacts';
 import Hiring from './components/hiring/Hiring';
-import LocalizedStrings from '../LocalizedStrings';
 import './LandingPage.css';
 
 export default class LandingPage extends Component {
@@ -22,7 +21,7 @@ export default class LandingPage extends Component {
           id="landing-page-logo"
           alt=""
         />
-        <h2 className="center">{LocalizedStrings.body.moto}</h2>
+        <h2 className="center">Let us help you with your digital presence.</h2>
         <div className="mdl-grid">
           <div className="mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet" />
           <div

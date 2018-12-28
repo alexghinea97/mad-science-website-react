@@ -10,7 +10,6 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Checkbox from '@material-ui/core/Checkbox';
-import LocalizedStrings from '../../../LocalizedStrings';
 import firebase from '../../../firebase.js';
 import ThankYou from './ThankYou';
 import './Contacts.css';
@@ -145,7 +144,7 @@ class Contacts extends Component {
     });
   };
 
-  //#endregion
+  // #endregion
 
   render() {
     const { classes } = this.props;
@@ -154,10 +153,13 @@ class Contacts extends Component {
       <div id="contacts">
         <Paper elevation={5}>
           <Card style={{ padding: '15px' }}>
-            <h2>{LocalizedStrings.body.contacts.title}</h2>
+            <h2>Contacts</h2>
             <Divider />
             <CardContent>
-              <p>{LocalizedStrings.body.contacts.contactsInfo}</p>
+              <p>
+                Need More information? You can contact us here or in one of our
+                other channels
+              </p>
             </CardContent>
             <CardActions>
               <a
@@ -192,43 +194,19 @@ class Contacts extends Component {
                 value={this.state.email}
                 type="email"
                 onChange={this.handleEmailChange}
-                label={LocalizedStrings.body.contacts.form.email}
-                helperText={LocalizedStrings.body.contacts.form.email}
+                label="Enter your email"
+                helperText="Enter your email"
                 margin="normal"
               />
-
-              {/* <TextField
-                hintText={LocalizedStrings.body.contacts.form.email}
-                floatingLabelText={LocalizedStrings.body.contacts.form.email}
-                type="email"
-                onChange={this.handleEmailChange}
-                errorText={this.state.errorMessages.emailErrorMessage}
-                value={this.state.email}
-              /> */}
-
               <TextField
                 fullWidth
                 value={this.state.subject}
                 type="text"
                 onChange={this.handleSubjectChange}
-                label={LocalizedStrings.body.contacts.form.subject}
-                helperText={
-                  LocalizedStrings.body.contacts.form.subjectFloatingLabel
-                }
+                label="Subject"
+                helperText="Enter the reason for which you are contacting us"
                 margin="normal"
               />
-              {/* <TextField
-                fullWidth={true}
-                hintText={
-                  LocalizedStrings.body.contacts.form.subjectFloatingLabel
-                }
-                floatingLabelText={LocalizedStrings.body.contacts.form.subject}
-                type="text"
-                onChange={this.handleSubjectChange}
-                errorText={this.state.errorMessages.subjectErrorMessage}
-                value={this.state.subject}
-              /> */}
-
               <TextField
                 fullWidth
                 multiline
@@ -236,26 +214,10 @@ class Contacts extends Component {
                 value={this.state.content}
                 type="text"
                 onChange={this.handleContentChange}
-                label={LocalizedStrings.body.contacts.form.content}
-                helperText={
-                  LocalizedStrings.body.contacts.form.contentFloatingLabel
-                }
+                label="Content"
+                helperText="Ask us anything or simply share your thoughts"
                 margin="normal"
               />
-
-              {/* <TextField
-                fullWidth={true}
-                hintText={
-                  LocalizedStrings.body.contacts.form.contentFloatingLabel
-                }
-                floatingLabelText={LocalizedStrings.body.contacts.form.content}
-                type="text"
-                multiLine={true}
-                rows={5}
-                value={this.state.content}
-                errorText={this.state.errorMessages.contentErrorMessage}
-                onChange={this.handleContentChange}
-              /> */}
             </CardContent>
             <Checkbox
               className={classes.root}
@@ -272,7 +234,7 @@ class Contacts extends Component {
               onClick={this.handleSubmitForm}
               style={{ margin: '12px' }}
             >
-              {LocalizedStrings.body.contacts.contactsButton}
+              Submit
             </Button>
           </Card>
         </Paper>

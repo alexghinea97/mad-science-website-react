@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
-import LocalizationPopover from '../../../shared-components/LocalizationPopover';
-import LocalizedStrings from '../../../LocalizedStrings';
 import './CommonNavigation.css';
 
 export default class CommonNavigation extends Component {
@@ -16,7 +14,6 @@ export default class CommonNavigation extends Component {
   }
 
   render() {
-    /*<NavLink className="mdl-navigation__link" to="/faq">Често задавани въпроси</NavLink>*/
     return (
       <nav className="mdl-navigation">
         <Button
@@ -24,44 +21,43 @@ export default class CommonNavigation extends Component {
           color="primary"
           onClick={this.scrollToSelection}
         >
-          {LocalizedStrings.header.home}
+          HOME
         </Button>
         <Button
           className="why-us-nav"
           color="primary"
           onClick={this.scrollToSelection}
         >
-          {LocalizedStrings.header.whyUs}
+          WHY US
         </Button>
         <Button
           className="services-nav"
           color="primary"
           onClick={this.scrollToSelection}
         >
-          {LocalizedStrings.header.services}
+          SERVICES
         </Button>
         <Button
           className="portfolio-nav"
           color="primary"
           onClick={this.scrollToSelection}
         >
-          {LocalizedStrings.header.portfolio}
+          PORTFOLIO
         </Button>
         <Button
           className="contacts-nav"
           color="primary"
           onClick={this.scrollToSelection}
         >
-          {LocalizedStrings.header.contacts}
+          CONTACTS
         </Button>
         <Button
           className="hiring-nav"
           color="primary"
           onClick={this.scrollToSelection}
         >
-          {LocalizedStrings.header.hiring}
+          HIRING
         </Button>
-        <LocalizationPopover />
       </nav>
     );
   }

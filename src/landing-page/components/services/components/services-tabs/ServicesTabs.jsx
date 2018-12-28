@@ -2,8 +2,6 @@ import React from 'react';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import WebSiteDevelopmentServices from './website-development-services/WebSiteDevelopmentServices';
 import WebsiteServiceModal from './WebsiteServiceModal';
-import LocalizedStrings from '../../../../../LocalizedStrings';
-
 import services from './website-development-services/website-development-services';
 
 export default class ServicesTabs extends React.Component {
@@ -41,15 +39,13 @@ export default class ServicesTabs extends React.Component {
     const modalFill = services[this.state.selectedService.index].component;
     return (
       <div>
-        <h2 style={{ marginBottom: '20px' }}>
-          {LocalizedStrings.body.services.title}
-        </h2>
+        <h2 style={{ marginBottom: '20px' }}>Our Services</h2>
         <Tabs
           tabItemContainerStyle={{ display: 'block' }}
           inkBarStyle={{ display: 'none' }}
         >
           <Tab
-            label={LocalizedStrings.body.services.buttonWebsiteDevSol}
+            label="Website development solutions"
             className="service-tab"
             style={{ display: 'block', width: '100%' }}
           >

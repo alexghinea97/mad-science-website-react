@@ -7,7 +7,6 @@ import Chip from '@material-ui/core/Chip';
 import Input from '@material-ui/core/Input';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 import Button from '@material-ui/core/Button';
 import './Localization.css';
 
@@ -82,7 +81,11 @@ class LocalizationIntegrationService extends React.Component {
 
     return (
       <div className={classes.root} id="localization">
-        <p>{LocalizedStrings.body.services.localizationDialog.textOne}</p>
+        <p>
+          Localization will help you to develop and scale your ideas because the
+          content will reach the users depending on their language or the
+          country from which the website is opened.
+        </p>
         <img
           src="/images/localization.jpeg"
           alt=""
@@ -90,8 +93,15 @@ class LocalizationIntegrationService extends React.Component {
           height="300px"
           style={{ marginBottom: '10px' }}
         />
-        <p>{LocalizedStrings.body.services.localizationDialog.textSecond}</p>
-        <p>{LocalizedStrings.body.services.localizationDialog.textThird}</p>
+        <p>
+          In the menu, you will have the opportunity to choose the languages we
+          can translate your website. We will take care to transmit the content
+          on a high level.
+        </p>
+        <p>
+          The price depends on the volume of the text and the deadline for
+          translating.
+        </p>
 
         <div className={classes.root}>
           <FormControl className={classes.formControl}>

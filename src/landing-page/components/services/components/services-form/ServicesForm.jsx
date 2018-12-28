@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Checkbox from '@material-ui/core/Checkbox';
 import './ServicesForm.css';
-import LocalizedStrings from '../../../../../LocalizedStrings';
 
 const styles = theme => ({
   root: {
@@ -45,11 +44,11 @@ class ServicesForm extends Component {
 
     return (
       <div id="services-form">
-        <h2>{LocalizedStrings.body.services.formAbouTheRequest.title}</h2>
+        <h2>Just a little bit more and we're done...</h2>
         <div>
           <TextField
             fullWidth
-            label={LocalizedStrings.body.services.formAbouTheRequest.name}
+            label="Name"
             type="text"
             onChange={this.handleNameChange}
             value={this.state.name}
@@ -57,7 +56,7 @@ class ServicesForm extends Component {
           />
           <TextField
             fullWidth
-            label={LocalizedStrings.body.services.formAbouTheRequest.email}
+            label="Email"
             type="text"
             onChange={this.handleEmailChange}
             value={this.state.email}
@@ -67,10 +66,7 @@ class ServicesForm extends Component {
             fullWidth
             multiline
             rows="8"
-            label={
-              LocalizedStrings.body.services.formAbouTheRequest
-                .infoAbotTheRequest
-            }
+            label="Additional info about the request"
             type="text"
             onChange={this.handleInfoChange}
             value={this.state.info}

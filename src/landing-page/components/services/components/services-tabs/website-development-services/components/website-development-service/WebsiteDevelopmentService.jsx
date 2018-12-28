@@ -6,7 +6,6 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import WebsiteTemplates from './WebsiteTemplates.jsx';
 import websiteTemplatesData from './templates.json';
-import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 import { addWebsiteDevService } from '../../../../../../../../actions/servicesActions';
 import './WebSiteDevelopment.css';
 
@@ -37,7 +36,7 @@ class WebsiteDevelopmentService extends React.Component {
   render() {
     return (
       <div id="website-development">
-        <h2>{LocalizedStrings.body.services.websiteDevelopmentDialog.title}</h2>
+        <h2>Let's get started</h2>
         <p>
           Having a website in the twenty first centure is sort of a must for
           everyone who wants to do business online or have any kind of digital
@@ -49,7 +48,12 @@ class WebsiteDevelopmentService extends React.Component {
           width="100%"
           style={{ marginBottom: '10px' }}
         />
-        <p>{LocalizedStrings.body.services.websiteDevelopmentDialog.textOne}</p>
+        <p>
+          Since we wanted you to have a wide choise of designs, so that you can
+          easily relate to the one that suits you best, you can choose from one
+          of the templates below which can later be customized for your own
+          style and needs.
+        </p>
         <WebsiteTemplates />
         <br />
         <p>
@@ -67,7 +71,8 @@ class WebsiteDevelopmentService extends React.Component {
         </DropDownMenu>
         <br />
         <p>
-          {LocalizedStrings.body.services.websiteDevelopmentDialog.textSecond}
+          ... Or you can give us your own concept of a design and we'll
+          implement it.
         </p>
         <TextField
           fullWidth
@@ -103,6 +108,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(() => {
-  return {};
-}, mapDispatchToProps)(WebsiteDevelopmentService);
+export default connect(
+  () => {
+    return {};
+  },
+  mapDispatchToProps
+)(WebsiteDevelopmentService);

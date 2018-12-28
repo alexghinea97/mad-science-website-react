@@ -2,7 +2,6 @@ import React from 'react';
 import { GridList, GridTile } from 'material-ui/GridList';
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import tilesData from './templates.json';
-import LocalizedStrings from '../../../../../../../../LocalizedStrings';
 import './WebSiteDevelopment.css';
 
 const styles = {
@@ -18,9 +17,7 @@ export default function WebsiteTemplates() {
     <div>
       <Card style={{ padding: '7px' }}>
         <CardHeader
-          title={
-            LocalizedStrings.body.services.websiteDevelopmentDialog.textLabel
-          }
+          title="Templates"
           actAsExpander={true}
           showExpandableButton={true}
           className="templates-header"

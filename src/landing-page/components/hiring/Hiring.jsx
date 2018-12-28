@@ -1,17 +1,16 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
-import LocalizedStrings from '../../../LocalizedStrings';
 import './Hiring.css';
 
 export default function hiring(props) {
   return (
     <div id="hiring">
       <Paper elevation={4} style={{ padding: '15px' }}>
-        <h2>{LocalizedStrings.body.hiring.title}</h2>
+        <h2>Do you want to join?</h2>
         <Divider />
-        <h3>{LocalizedStrings.body.hiring.textOne}</h3>
-        <h5>{LocalizedStrings.body.hiring.textSecond}</h5>
+        <h3>Sorry we are currently not having open positions</h3>
+        <h5>Subscribe below to hear from us, when we have open positions.</h5>
       </Paper>
       <div id="mc_embed_signup">
         <form
@@ -24,15 +23,13 @@ export default function hiring(props) {
           noValidate
         >
           <div id="mc_embed_signup_scroll">
-            <label htmlFor="mce-EMAIL">
-              {LocalizedStrings.body.hiring.toSubscribeLabel}
-            </label>
+            <label htmlFor="mce-EMAIL">Subscribe to our mailing list</label>
             <input
               type="email"
               name="EMAIL"
               className="email"
               id="mce-EMAIL"
-              placeholder={LocalizedStrings.body.hiring.input}
+              placeholder="email address"
               required
             />
             <div
@@ -48,7 +45,7 @@ export default function hiring(props) {
             <div className="clear">
               <input
                 type="submit"
-                value={LocalizedStrings.body.hiring.button}
+                value="Subscribe"
                 name="subscribe"
                 id="mc-embedded-subscribe"
                 className="button"

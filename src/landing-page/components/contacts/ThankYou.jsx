@@ -5,7 +5,6 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import Button from '@material-ui/core/Button';
-import LocalizedStrings from '../../../LocalizedStrings';
 import './ThankYou.css';
 
 export default class ThankYou extends Component {
@@ -17,19 +16,17 @@ export default class ThankYou extends Component {
         variant="raised"
         onClick={this.props.handleClose}
       >
-        {LocalizedStrings.body.contacts.thankYou.closeButton}
+        CLOSE
       </Button>
     ];
 
     return (
       <div id="thank-you">
         <Dialog open={this.props.open} onClose={this.handleClose}>
-          <DialogTitle>
-            {LocalizedStrings.body.contacts.thankYou.title}
-          </DialogTitle>
+          <DialogTitle>Thank you for contacting us</DialogTitle>
           <DialogContent>
             <DialogContentText>
-              {LocalizedStrings.body.contacts.thankYou.description}
+              We will try to contact you back as soon as possible.
             </DialogContentText>
           </DialogContent>
           <DialogActions>{actions}</DialogActions>

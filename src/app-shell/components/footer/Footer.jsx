@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import LocalizedStrings from '../../../LocalizedStrings';
 import './Footer.css';
 
 export default class Footer extends Component {
@@ -10,23 +9,19 @@ export default class Footer extends Component {
         <div className="mdl-mini-footer__left-section">
           <ul className="mdl-mini-footer__link-list">
             <li>
-              <NavLink to="/">{LocalizedStrings.footer.home}</NavLink>
+              <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/faq">{LocalizedStrings.footer.faq}</NavLink>
+              <NavLink to="/faq">FAQ</NavLink>
             </li>
             <li>
-              <NavLink to="/general-terms">
-                {LocalizedStrings.footer.generalTerms}
-              </NavLink>
+              <NavLink to="/general-terms">General terms</NavLink>
             </li>
             <li>
-              <NavLink to="/about">{LocalizedStrings.footer.aboutUs}</NavLink>
+              <NavLink to="/about">About us</NavLink>
             </li>
             <li>
-              <NavLink to="/contacts">
-                {LocalizedStrings.footer.contacts}
-              </NavLink>
+              <NavLink to="/contacts">Contacts</NavLink>
             </li>
           </ul>
         </div>
