@@ -17,15 +17,13 @@ export default class ServicesTabs extends React.Component {
   }
 
   handleModalOpen = eventData => {
+    let innerSpanText = eventData.currentTarget.children[0].innerText;
     this.setState({
       isModalOpen: true,
       selectedService: {
-        name: eventData.target.innerText,
+        name: innerSpanText,
         index: services.findIndex(service => {
-          return (
-            service.name.toUpperCase() ===
-            eventData.target.innerText.toUpperCase()
-          );
+          return service.name.toUpperCase() === innerSpanText.toUpperCase();
         })
       }
     });
