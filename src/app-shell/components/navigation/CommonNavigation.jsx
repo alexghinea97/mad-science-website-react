@@ -4,7 +4,7 @@ import './CommonNavigation.css';
 
 export default class CommonNavigation extends Component {
   scrollToSelection(eventData) {
-    let selectedNav = eventData.target.className;
+    let selectedNav = eventData.currentTarget.className;
     let lastClass = selectedNav.substring(selectedNav.lastIndexOf(' ') + 1);
     let wantedSection = lastClass.substring(0, lastClass.lastIndexOf('-'));
 
