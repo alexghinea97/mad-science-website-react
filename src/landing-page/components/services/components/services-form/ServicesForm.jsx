@@ -3,6 +3,7 @@ import TextField from '@material-ui/core/TextField';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import './ServicesForm.css';
 
 const styles = theme => ({
@@ -82,14 +83,27 @@ class ServicesForm extends Component {
             }}
           />
           <br />
-          <Checkbox
+
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={this.state.termsAndAgreements}
+                onChange={(event, checked) =>
+                  this.setState({ termsAndAgreements: checked })
+                }
+              />
+            }
+            label="I agree general terms"
+          />
+
+          {/* <Checkbox
             className={classes.root}
             checked={this.state.termsAndAgreements}
             onChange={(event, checked) =>
               this.setState({ termsAndAgreements: checked })
             }
           />
-          {'I agree general terms'}
+          {'I agree general terms'} */}
         </div>
         <div id="service-form-img" />
       </div>
