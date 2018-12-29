@@ -10,13 +10,14 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 import firebase from '../../../firebase.js';
 import ThankYou from './ThankYou';
 import './Contacts.css';
 
 const styles = theme => ({
   root: {
-    paddingLeft: '10px'
+    paddingLeft: '24px'
   }
 });
 
@@ -219,14 +220,29 @@ class Contacts extends Component {
                 margin="normal"
               />
             </CardContent>
-            <Checkbox
+
+            <FormControlLabel
+              control={
+                <Checkbox
+                  className={classes.root}
+                  checked={this.state.termsAndAgreements}
+                  onChange={(event, checked) =>
+                    this.setState({ termsAndAgreements: checked })
+                  }
+                />
+              }
+              label="I agree general terms"
+            />
+
+            {/* <Checkbox
               className={classes.root}
               checked={this.state.termsAndAgreements}
               onChange={(event, checked) =>
                 this.setState({ termsAndAgreements: checked })
               }
             />
-            {'I agree general terms'}
+            {'I agree general terms'} */}
+
             <br />
             <Button
               variant="raised"
