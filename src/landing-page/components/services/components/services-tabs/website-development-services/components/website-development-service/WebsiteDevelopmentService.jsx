@@ -4,7 +4,6 @@ import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import WebsiteTemplates from './WebsiteTemplates.jsx';
@@ -13,6 +12,7 @@ import { addWebsiteDevService } from '../../../../../../../../actions/servicesAc
 import './WebSiteDevelopment.css';
 
 const items = [];
+
 websiteTemplatesData.forEach((element, index) => {
   items.push(
     <MenuItem value={element.title} key={index} onClick={this.handleChange}>
@@ -31,7 +31,6 @@ class WebsiteDevelopmentService extends React.Component {
   }
 
   handleChange = event => {
-    console.dir(event.target.value);
     this.setState({ selectedTemplateName: event.target.value });
   };
 
@@ -67,14 +66,14 @@ class WebsiteDevelopmentService extends React.Component {
           If you've chosen a template that will suit you, select it from the
           dropdown below:{' '}
         </p>
-        <FormControl>
-          <InputLabel htmlFor="age-simple">Age</InputLabel>
+        <FormControl style={{ minWidth: '50%' }}>
+          <InputLabel htmlFor="template-selected">Template</InputLabel>
           <Select
             value={this.state.selectedTemplateName}
             onChange={this.handleChange}
             inputProps={{
-              name: 'age',
-              id: 'age-simple'
+              name: 'template',
+              id: 'template-selected'
             }}
           >
             {items}
