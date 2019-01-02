@@ -12,7 +12,10 @@ import './WebSiteDevelopment.css';
 const items = [];
 websiteTemplatesData.forEach((element, index) => {
   items.push(
-    <MenuItem value={element.title} key={index} primaryText={element.title} />
+    <MenuItem value={element.title} key={index} onClick={this.handleChange}>
+      {' '}
+      {element.title}{' '}
+    </MenuItem>
   );
 });
 
@@ -108,9 +111,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(
-  () => {
-    return {};
-  },
-  mapDispatchToProps
-)(WebsiteDevelopmentService);
+export default connect(() => {
+  return {};
+}, mapDispatchToProps)(WebsiteDevelopmentService);
