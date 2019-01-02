@@ -15,7 +15,7 @@ class GoogleAnalyticsIntegrationService extends React.Component {
   render() {
     return (
       <div id="google-analytics">
-        <h2> Google analyics</h2>
+        <h2> Google analytics</h2>
         <p>
           Google analytics is a useful tool for monitoring and measuring the
           performance of your web presence. That is why we can help you with its

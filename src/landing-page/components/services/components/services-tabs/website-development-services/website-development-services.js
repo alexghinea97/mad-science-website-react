@@ -11,7 +11,7 @@ export default [
     component: WebsiteDevelopmentModalContent
   },
   {
-    name: 'GOOGLE ANALITYCS INTEGRATION',
+    name: 'GOOGLE ANALYTICS INTEGRATION',
     component: GoogleAnalyticsIntegrationModalContent
   },
   {
