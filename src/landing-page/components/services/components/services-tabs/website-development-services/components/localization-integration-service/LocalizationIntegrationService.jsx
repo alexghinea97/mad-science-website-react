@@ -103,7 +103,7 @@ class LocalizationIntegrationService extends React.Component {
           translating.
         </p>
 
-        <div className={classes.root}>
+        <div className={classes.root} style={{ minWidth: '50%' }}>
           <FormControl className={classes.formControl}>
             <InputLabel htmlFor="select-multiple-chip">Languages</InputLabel>
             <Select
