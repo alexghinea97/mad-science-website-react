@@ -20,16 +20,7 @@ class FacebookPixelIntegrationService extends React.Component {
           The Facebook pixel allows you to monitor how people interact with your
           website after viewing your Facebook ad. When someone visits your
           website and takes an action (for example, buying something), the
-          Facebook pixel is triggered and reports this action. This way, you'll
-          know when a customer took an action after seeing your Facebook ad.
-          You'll also be able to reach this customer again by using a custom
-          audience. It helps you track conversions from Facebook ads, optimize
-          ads based on collected data, build targeted audiences for future ads,
-          and remarket to qualified leads. You can even track customers across
-          their devices so you know, for example, if people tend to see your ads
-          on mobile but switch to a desktop before making a purchase—or maybe
-          it’s the other way around. This information can help you refine your
-          ad strategy and calculate your return on investment.
+          Facebook pixel is triggered and reports this action.
         </p>
         <img
           src="/images/facebook-pixel.jpg"
@@ -38,6 +29,17 @@ class FacebookPixelIntegrationService extends React.Component {
           height="500px"
           style={{ marginBottom: '10px' }}
         />
+        <p>
+          This way, you'll know when a customer took an action after seeing your
+          Facebook ad. You'll also be able to reach this customer again by using
+          a custom audience. It helps you track conversions from Facebook ads,
+          optimize ads based on collected data, build targeted audiences for
+          future ads, and remarket to qualified leads. You can even track
+          customers across their devices so you know, for example, if people
+          tend to see your ads on mobile but switch to a desktop before making a
+          purchase—or maybe it’s the other way around. This information can help
+          you refine your ad strategy and calculate your return on investment.
+        </p>
         <Button
           fullWidth
           variant="raised"

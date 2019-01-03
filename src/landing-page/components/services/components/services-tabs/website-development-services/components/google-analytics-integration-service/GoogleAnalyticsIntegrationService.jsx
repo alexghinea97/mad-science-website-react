@@ -19,9 +19,7 @@ class GoogleAnalyticsIntegrationService extends React.Component {
         <p>
           Google analytics is a useful tool for monitoring and measuring the
           performance of your web presence. That is why we can help you with its
-          integration with your web platform. If you are not so familiar with it
-          we can also help you understand why it is so important in future
-          communication with us.
+          integration with your web platform.
         </p>
         <img
           src="/images/google-analytics.jpeg"
@@ -30,7 +28,10 @@ class GoogleAnalyticsIntegrationService extends React.Component {
           height="300px"
           style={{ marginBottom: '10px' }}
         />
-
+        <p>
+          If you are not so familiar with it we can also help you understand why
+          it is so important in future communication with us.
+        </p>
         <Button
           fullWidth
           variant="raised"

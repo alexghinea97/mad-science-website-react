@@ -19,11 +19,7 @@ class EmailSubscriptionIntegrationService extends React.Component {
         <p>
           Email subscription allows users not to miss the updates and important
           notifications from a website or a blog by subscribing to the
-          newsletter. The only thing needed is an email address. Once a user
-          fills in the subscription form on a website, a confirmation email is
-          sent to this email address to get the user to double opt-in. After
-          this, a user’s email address is added to the website’s mailing list.
-          As a result, a customer starts to receive automated emails.
+          newsletter. The only thing needed is an email address.
         </p>
         <img
           src="/images/email-subscription.jpeg"
@@ -33,8 +29,11 @@ class EmailSubscriptionIntegrationService extends React.Component {
           style={{ marginBottom: '10px' }}
         />
         <p>
-          Please choose on of the following options for the integration of
-          google analytics:{' '}
+          Once a user fills in the subscription form on a website, a
+          confirmation email is sent to this email address to get the user to
+          double opt-in. After this, a user’s email address is added to the
+          website’s mailing list. As a result, a customer starts to receive
+          automated emails.
         </p>
         <Button
           fullWidth
