@@ -45,7 +45,7 @@ export default class ServicesTabs extends React.Component {
           <Tab
             label="Website development solutions"
             className="service-tab"
-            style={{ display: 'block', width: '100%' }}
+            style={{ display: 'inherit', width: '100%', whiteSpace: 'normal' }}
           >
             <WebSiteDevelopmentServices handleOpen={this.handleModalOpen} />
           </Tab>
