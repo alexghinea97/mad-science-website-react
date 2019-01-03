@@ -3,14 +3,29 @@ import Button from '@material-ui/core/Button';
 import services from './website-development-services.js';
 import './WebSiteDevelopmentServices.css';
 
+const styles = {
+  imageStyle: {
+    height: '305px',
+    width: '45%',
+    backgroundSize: 'cover',
+    marginRight: '25px',
+    marginTop: '-300px'
+  },
+  buttonRaised: {
+    marginBottom: '10px'
+  }
+};
 export default class WebSiteDevelopmentTab extends Component {
   render() {
     return (
       <div id="website-development-tab">
         <h3>WEBSITE DEVELOPMENT</h3>
-        <div>
-          <div id="website-services-image" />
-        </div>
+        <img
+          src="/images/website-development-service.jpeg"
+          alt=""
+          width="100%"
+          style={styles.imageStyle}
+        />
         <div>
           <div>
             {services.map((service, index) => {
@@ -20,7 +35,7 @@ export default class WebSiteDevelopmentTab extends Component {
                   variant="raised"
                   color="secondary"
                   onClick={this.props.handleOpen}
-                  style={{ marginBottom: '10px' }}
+                  style={styles.buttonRaised}
                   key={index}
                 >
                   {service.name}
