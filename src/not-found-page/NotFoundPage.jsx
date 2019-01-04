@@ -23,9 +23,9 @@ export default class NotFoundPage extends Component {
         />
         {/* <main className="mdl-layout__content" /> */}
         <h2>Oops ...this page is not found</h2>
-
         <Button
           fullWidth
+          href="/"
           variant="raised"
           color="primary"
           onClick={this.handleAddService}
