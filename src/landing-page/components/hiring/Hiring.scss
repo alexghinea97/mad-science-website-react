@@ -5,21 +5,40 @@
     width: 100%;
 }
 
-#mc_embed_signup form{
+@media only screen and (max-width: 768px) {
+    #mc_embed_signup {
+        input.email {
+            width: 90%;
+        }
+    }
+
+    #mc_embed_signup {
+        .button {
+            width: 90%;
+        }
+
+        .clear {
+            display: block;
+            margin-top: 3px;
+        }
+    }
+}
+
+#mc_embed_signup form {
     padding: 10px 0 25px 0;
 }
 
-#hiring{
-    h2{
+#hiring {
+    h2 {
         font-size: 35px;
     }
 
-    h3{
+    h3 {
         font-size: 25px;
         text-align: center;
     }
-    
-    h5{
+
+    h5 {
         font-size: 18px;
         text-align: center;
     }
