@@ -5,7 +5,7 @@ import './WebSiteDevelopmentServices.css';
 
 const styles = {
   imageStyle: {
-    height: '305px',
+    height: '300px',
     width: '45%',
     backgroundSize: 'cover',
     marginRight: '25px',
@@ -21,7 +21,7 @@ export default class WebSiteDevelopmentTab extends Component {
       <div id="website-development-tab">
         <h3>WEBSITE DEVELOPMENT</h3>
         <img
-          src="/images/website-development-service.jpeg"
+          src="/images/website-services.jpeg"
           alt=""
           width="100%"
           style={styles.imageStyle}

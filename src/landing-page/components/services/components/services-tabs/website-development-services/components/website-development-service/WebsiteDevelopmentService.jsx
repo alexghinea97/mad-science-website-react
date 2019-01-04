@@ -16,7 +16,8 @@ const items = [];
 websiteTemplatesData.forEach((element, index) => {
   items.push(
     <MenuItem value={element.title} key={index} onClick={this.handleChange}>
-      {element.title}
+      {' '}
+      {element.title}{' '}
     </MenuItem>
   );
 });
