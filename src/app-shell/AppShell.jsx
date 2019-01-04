@@ -12,7 +12,7 @@ export default class AppShell extends React.Component {
         <Header />
         <MobileNavigation />
         <main className="mdl-layout__content">
-          <Route exact path="/" component={LandingPage} />
+          <LandingPage />
           <Footer />
         </main>
       </div>
