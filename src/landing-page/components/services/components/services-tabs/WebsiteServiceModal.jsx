@@ -25,7 +25,7 @@ export default function websiteServiceModal(props) {
   //     autoDetectWindowHeight={true}
 
   return (
-    <Dialog open={props.open} fullWidth>
+    <Dialog open={props.open} fullWidth onClick={props.handleClose}>
       <DialogTitle>{props.title}</DialogTitle>
       <DialogContent>{props.children}</DialogContent>
       <DialogActions onClick={props.handleClose} color="primary">
