@@ -3,7 +3,6 @@ import ValueProposition from './components/value-proposition/ValueProposition';
 import SocialMediaBar from './components/social-media-bar/SocialMediaBar';
 import WhyUs from './components/why-us/WhyUs';
 import Services from './components/services/Services';
-import Portfolio from './components/portfolio/Portfolio';
 import Contacts from './components/contacts/Contacts';
 import Hiring from './components/hiring/Hiring';
 import './LandingPage.css';

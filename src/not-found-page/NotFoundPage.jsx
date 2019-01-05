@@ -20,6 +20,7 @@ export default class NotFoundPage extends Component {
             position: 'fixed',
             top: '40%'
           }}
+          alt="A cat looking thowards a Not found text."
         />
         {/* <main className="mdl-layout__content" /> */}
         <h2>Oops ...this page is not found</h2>
