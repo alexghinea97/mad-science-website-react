@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ValueProposition from './components/value-proposition/ValueProposition';
-import SocialMediaBar from './components/social-media-bar/SocialMediaBar';
-import WhyUs from './components/why-us/WhyUs';
-import Services from './components/services/Services';
-import Contacts from './components/contacts/Contacts';
-import Hiring from './components/hiring/Hiring';
+import ValueProposition from './value-proposition/ValueProposition';
+import SocialMediaBar from './social-media-bar/SocialMediaBar';
+import WhyUs from './why-us/WhyUs';
+import Services from './services/Services';
+import Contacts from './contacts/Contacts';
+import Hiring from './hiring/Hiring';
 import './LandingPage.css';
 
 export default class LandingPage extends Component {

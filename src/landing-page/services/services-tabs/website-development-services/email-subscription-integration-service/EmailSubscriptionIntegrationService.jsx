@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
-import { addEmailSubscriptionIntegrationService } from '../../../../../../../../actions/servicesActions';
+import { addEmailSubscriptionIntegrationService } from '../../../../../actions/servicesActions';
 import './EmailSubscription.css';
 
 class EmailSubscriptionIntegrationService extends React.Component {
@@ -57,6 +57,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(() => {
-  return {};
-}, mapDispatchToProps)(EmailSubscriptionIntegrationService);
+export default connect(
+  () => {
+    return {};
+  },
+  mapDispatchToProps
+)(EmailSubscriptionIntegrationService);

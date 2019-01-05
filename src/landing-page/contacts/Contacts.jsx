@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import firebase from '../../../firebase.js';
+import firebase from '../../firebase.js';
 import ThankYou from './ThankYou';
 import './Contacts.css';
 

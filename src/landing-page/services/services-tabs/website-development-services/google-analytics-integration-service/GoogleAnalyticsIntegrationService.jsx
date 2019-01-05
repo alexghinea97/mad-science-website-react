@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
-import { addGoogleAnalyticsIntegrationService } from '../../../../../../../../actions/servicesActions';
+import { addGoogleAnalyticsIntegrationService } from '../../../../../actions/servicesActions';
 import './GoogleAnalytics.css';
 
 class GoogleAnalyticsIntegrationService extends React.Component {
@@ -54,6 +54,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(() => {
-  return {};
-}, mapDispatchToProps)(GoogleAnalyticsIntegrationService);
+export default connect(
+  () => {
+    return {};
+  },
+  mapDispatchToProps
+)(GoogleAnalyticsIntegrationService);

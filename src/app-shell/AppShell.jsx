@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import MobileNavigation from './components/mobile-navigation/MobileNavigation';
+import Header from './header/Header';
+import Footer from './footer/Footer';
+import MobileNavigation from './mobile-navigation/MobileNavigation';
 import LandingPage from '../landing-page/LandingPage';
 
 export default class AppShell extends React.Component {

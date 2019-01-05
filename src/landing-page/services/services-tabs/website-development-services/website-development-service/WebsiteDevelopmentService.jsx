@@ -8,7 +8,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import WebsiteTemplates from './WebsiteTemplates.jsx';
 import websiteTemplatesData from './templates.json';
-import { addWebsiteDevService } from '../../../../../../../../actions/servicesActions';
+import { addWebsiteDevService } from '../../../../../actions/servicesActions';
 import './WebSiteDevelopment.css';
 
 const items = [];
@@ -119,6 +119,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(() => {
-  return {};
-}, mapDispatchToProps)(WebsiteDevelopmentService);
+export default connect(
+  () => {
+    return {};
+  },
+  mapDispatchToProps
+)(WebsiteDevelopmentService);
