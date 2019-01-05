@@ -41,3 +41,12 @@ export function addFacebookMessengerIntegrationService(requestInfoObj) {
     requestInfo: requestInfoObj
   };
 }
+
+export const ADD_BLOG_AND_BLOG_MANAGMENT_SERVICE =
+  'ADD_BLOG_AND_BLOG_MANAGMENT_SERVICE';
+export function addBlogAndBlogManagmentService(requestInfoObj) {
+  return {
+    type: ADD_BLOG_AND_BLOG_MANAGMENT_SERVICE,
+    requestInfo: requestInfoObj
+  };
+}

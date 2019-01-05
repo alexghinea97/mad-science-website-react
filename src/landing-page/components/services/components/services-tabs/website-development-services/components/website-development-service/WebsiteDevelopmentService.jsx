@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import DropDownMenu from 'material-ui/DropDownMenu';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
@@ -10,9 +12,13 @@ import { addWebsiteDevService } from '../../../../../../../../actions/servicesAc
 import './WebSiteDevelopment.css';
 
 const items = [];
+
 websiteTemplatesData.forEach((element, index) => {
   items.push(
-    <MenuItem value={element.title} key={index} primaryText={element.title} />
+    <MenuItem value={element.title} key={index} onClick={this.handleChange}>
+      {' '}
+      {element.title}{' '}
+    </MenuItem>
   );
 });
 
@@ -21,12 +27,13 @@ class WebsiteDevelopmentService extends React.Component {
     super(props);
     this.state = {
       linkUrl: '',
-      selectedTemplateName: undefined
+      selectedTemplateName: ''
     };
   }
 
-  handleChange = (event, index, value) =>
-    this.setState({ selectedTemplateName: value });
+  handleChange = event => {
+    this.setState({ selectedTemplateName: event.target.value });
+  };
 
   handleAddService = () => {
     this.props.addWebsiteDevService(this.state);
@@ -60,15 +67,19 @@ class WebsiteDevelopmentService extends React.Component {
           If you've chosen a template that will suit you, select it from the
           dropdown below:{' '}
         </p>
-        <DropDownMenu
-          autoWidth={false}
-          style={{ width: '100%' }}
-          maxHeight={300}
-          value={this.state.selectedTemplateName}
-          onChange={this.handleChange}
-        >
-          {items}
-        </DropDownMenu>
+        <FormControl style={{ minWidth: '50%' }}>
+          <InputLabel htmlFor="template-selected">Template</InputLabel>
+          <Select
+            value={this.state.selectedTemplateName}
+            onChange={this.handleChange}
+            inputProps={{
+              name: 'template',
+              id: 'template-selected'
+            }}
+          >
+            {items}
+          </Select>
+        </FormControl>
         <br />
         <p>
           ... Or you can give us your own concept of a design and we'll
@@ -108,9 +119,6 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(
-  () => {
-    return {};
-  },
-  mapDispatchToProps
-)(WebsiteDevelopmentService);
+export default connect(() => {
+  return {};
+}, mapDispatchToProps)(WebsiteDevelopmentService);

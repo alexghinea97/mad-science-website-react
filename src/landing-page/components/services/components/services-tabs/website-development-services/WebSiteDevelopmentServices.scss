@@ -2,18 +2,25 @@
     .templates-header:hover {
         background: lightblue;
     }
+
     .row {
         margin-bottom: 5px;
     }
-    #website-services-image {
-        background: url('/images/website-services.jpeg');
-        background-size: cover;
-        height: 305px;
-        margin-top: 10px;
-        margin-right: 10px;
-    }
+
     >div {
-        display: inline-block;
-        width: 50%;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        img {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        >div {
+            display: inline-block;
+            width: 50%;
+        }
     }
 }

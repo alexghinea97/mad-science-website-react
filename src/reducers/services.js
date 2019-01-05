@@ -3,7 +3,8 @@ import {
   ADD_EMAIL_SUBSCRIPTION_INTEGRATION_SERVICE,
   ADD_FACEBOOK_PIXEL_INTEGRATION_SERVICE,
   ADD_GOOGLE_ANALYTICS_INTEGRATION_SERVICE,
-  ADD_FACEBOOK_MESSENGER_INTEGRATION_SERVICE
+  ADD_FACEBOOK_MESSENGER_INTEGRATION_SERVICE,
+  ADD_BLOG_AND_BLOG_MANAGMENT_SERVICE
 } from '../actions/servicesActions';
 
 export default function services(state = {}, action) {
@@ -24,6 +25,9 @@ export default function services(state = {}, action) {
       return newState;
     case ADD_FACEBOOK_MESSENGER_INTEGRATION_SERVICE:
       newState.facebookMessenger = action.requestInfo;
+      return newState;
+    case ADD_BLOG_AND_BLOG_MANAGMENT_SERVICE:
+      newState.blogMan = action.requestInfo;
       return newState;
     default:
       return state;

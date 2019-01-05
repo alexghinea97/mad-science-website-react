@@ -15,13 +15,11 @@ class EmailSubscriptionIntegrationService extends React.Component {
   render() {
     return (
       <div id="email-subscription">
-        <h2> Email Subscritpion</h2>
+        <h2> Email subscritpion</h2>
         <p>
-          Google analytics is a useful tool for monitoring and measuring the
-          performance of your web presence. That is why we can help you with its
-          integration with your web platform. You can choose from the most
-          general to a more detailed implementation of the Google analytics and
-          its events.
+          Email subscription allows users not to miss the updates and important
+          notifications from a website or a blog by subscribing to the
+          newsletter. The only thing needed is an email address.
         </p>
         <img
           src="/images/email-subscription.jpeg"
@@ -31,8 +29,11 @@ class EmailSubscriptionIntegrationService extends React.Component {
           style={{ marginBottom: '10px' }}
         />
         <p>
-          Please choose on of the following options for the integration of
-          google analytics:{' '}
+          Once a user fills in the subscription form on a website, a
+          confirmation email is sent to this email address to get the user to
+          double opt-in. After this, a user’s email address is added to the
+          website’s mailing list. As a result, a customer starts to receive
+          automated emails.
         </p>
         <Button
           fullWidth

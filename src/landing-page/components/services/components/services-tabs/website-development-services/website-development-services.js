@@ -4,6 +4,7 @@ import FacebookPixelIntegrationModalContent from './components/facebook-pixel-in
 import FacebookMessengerIntegrationModalContent from './components/facebook-messenger-integration-service/FacebookMessengerIntegrationService';
 import EmailSubscriptionIntegrationModalContent from './components/email-subscription-integration-service/EmailSubscriptionIntegrationService';
 import LocalizationIntegrationModalContent from './components/localization-integration-service/LocalizationIntegrationService';
+import BlogAndBlogManagmentModalContent from './components/blog-and-blog-managment-service/BlogAndBlogManagmentService';
 
 export default [
   {
@@ -11,7 +12,7 @@ export default [
     component: WebsiteDevelopmentModalContent
   },
   {
-    name: 'GOOGLE ANALITYCS INTEGRATION',
+    name: 'GOOGLE ANALYTICS INTEGRATION',
     component: GoogleAnalyticsIntegrationModalContent
   },
   {
@@ -31,6 +32,7 @@ export default [
     component: LocalizationIntegrationModalContent
   },
   {
-    name: 'BLOG AND BLOG MANAGEMENT'
+    name: 'BLOG AND BLOG MANAGEMENT',
+    component: BlogAndBlogManagmentModalContent
   }
 ];

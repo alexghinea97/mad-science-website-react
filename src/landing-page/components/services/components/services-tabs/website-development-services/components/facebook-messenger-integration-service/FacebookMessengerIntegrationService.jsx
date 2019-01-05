@@ -15,13 +15,11 @@ class FacebookMessengerIntegrationService extends React.Component {
   render() {
     return (
       <div id="facebook-messenger">
-        <h2> Facebook pixel</h2>
+        <h2> Facebook messenger</h2>
         <p>
-          Google analytics is a useful tool for monitoring and measuring the
-          performance of your web presence. That is why we can help you with its
-          integration with your web platform. You can choose from the most
-          general to a more detailed implementation of the Google analytics and
-          its events.
+          Facebook Messenger is a messaging app and platform. Originally
+          developed as Facebook Chat. Messenger is just like texting, but you
+          don't have to pay for every message (it works with your data plan).
         </p>
         <img
           src="/images/messenger-integration.jpeg"
