@@ -13,7 +13,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import firebase from '../../../firebase.js';
 import ThankYou from './ThankYou';
-import './Contacts.css';
+import './Contacts.scss';
 
 const styles = theme => ({
   root: {
@@ -76,22 +76,22 @@ class Contacts extends Component {
       );
   };
 
-  isStateValid() {
-    let stateErrorMessages = { ...this.state.errorMessages };
-    let validContent = this.isValidContent(stateErrorMessages);
-    let validEmail = this.isValidEmail(stateErrorMessages);
-    let validSubject = this.isValidSubject(stateErrorMessages);
+  // isStateValid() {
+  //   let stateErrorMessages = { ...this.state.errorMessages };
+  //   let validContent = this.isValidContent(stateErrorMessages);
+  //   let validEmail = this.isValidEmail(stateErrorMessages);
+  //   let validSubject = this.isValidSubject(stateErrorMessages);
 
-    if (validContent && validEmail && validSubject) {
-      return true;
-    } else {
-      this.setState({
-        errorMessages: stateErrorMessages
-      });
+  //   if (validContent && validEmail && validSubject) {
+  //     return true;
+  //   } else {
+  //     this.setState({
+  //       errorMessages: stateErrorMessages
+  //     });
 
-      return false;
-    }
-  }
+  //     return false;
+  //   }
+  // }
 
   isValidEmail(stateErrorMessages) {
     var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

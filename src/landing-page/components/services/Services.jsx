@@ -13,7 +13,7 @@ import Button from '@material-ui/core/Button';
 // import Badge from '@material-ui/core/Badge';
 // import IconButton from '@material-ui/core/IconButton';
 // import ActionShoppingCart from 'material-ui/svg-icons/action/shopping-cart';
-import './Services.css';
+import './Services.scss';
 
 export default class Services extends React.Component {
   constructor(props) {

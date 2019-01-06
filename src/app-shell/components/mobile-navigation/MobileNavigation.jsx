@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MobileNavigation.css';
+import './MobileNavigation.scss';
 import CommonNavigation from '../navigation/CommonNavigation';
 
 export default class MobileNavigation extends Component {

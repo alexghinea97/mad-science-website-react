@@ -6,7 +6,7 @@ import Services from './components/services/Services';
 import Portfolio from './components/portfolio/Portfolio';
 import Contacts from './components/contacts/Contacts';
 import Hiring from './components/hiring/Hiring';
-import './LandingPage.css';
+import './LandingPage.scss';
 
 export default class LandingPage extends Component {
   render() {

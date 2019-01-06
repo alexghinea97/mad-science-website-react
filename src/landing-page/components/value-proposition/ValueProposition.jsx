@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ValueProposition.css';
+import './ValueProposition.scss';
 
 export default class ValueProposition extends Component {
   render() {

@@ -8,7 +8,7 @@ import Input from '@material-ui/core/Input';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import './Localization.css';
+import './Localization.scss';
 
 const styles = theme => ({
   root: {

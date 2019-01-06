@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
-import './NotFound.css';
+// import Button from '@material-ui/core/Button';
+import './NotFound.scss';
 
 export default class NotFoundPage extends Component {
   render() {
@@ -23,16 +23,21 @@ export default class NotFoundPage extends Component {
         />
         {/* <main className="mdl-layout__content" /> */}
         <h2>Oops ...this page is not found</h2>
-        <Button
+
+        <button className="mdc-button mdc-button--raised mdc-ripple-upgraded">
+          <span className="mdc-button__label">Go back</span>
+        </button>
+
+        {/* <Button
           fullWidth
           href="/"
           variant="raised"
           color="primary"
           onClick={this.handleAddService}
-          style={{ marginLeft: '35%', marginTop: '40px', width: '30%' }}
+          style={{ marginLeft: "35%", marginTop: "40px", width: "30%" }}
         >
-          {'Go back'}
-        </Button>
+          {"Go back"}
+        </Button> */}
       </div>
     );
   }

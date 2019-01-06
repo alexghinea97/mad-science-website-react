@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import services from './website-development-services.js';
-import './WebSiteDevelopmentServices.css';
+import './WebSiteDevelopmentServices.scss';
 
 export default class WebSiteDevelopmentTab extends Component {
   render() {

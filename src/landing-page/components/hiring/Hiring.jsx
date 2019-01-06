@@ -1,7 +1,7 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
-import './Hiring.css';
+import './Hiring.scss';
 
 export default function hiring(props) {
   return (

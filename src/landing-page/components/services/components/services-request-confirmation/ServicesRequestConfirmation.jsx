@@ -2,7 +2,7 @@ import React from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import './ServicesRequestConfirmation.css';
+import './ServicesRequestConfirmation.scss';
 
 export default function servicesRequestConfirmation(props) {
   return (

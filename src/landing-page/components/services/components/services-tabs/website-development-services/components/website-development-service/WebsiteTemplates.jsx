@@ -2,7 +2,7 @@ import React from 'react';
 import { GridList, GridTile } from 'material-ui/GridList';
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import tilesData from './templates.json';
-import './WebSiteDevelopment.css';
+import './WebSiteDevelopment.scss';
 
 const styles = {
   gridList: {

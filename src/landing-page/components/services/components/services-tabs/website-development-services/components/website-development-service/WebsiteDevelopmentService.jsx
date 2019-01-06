@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import WebsiteTemplates from './WebsiteTemplates.jsx';
 import websiteTemplatesData from './templates.json';
 import { addWebsiteDevService } from '../../../../../../../../actions/servicesActions';
-import './WebSiteDevelopment.css';
+import './WebSiteDevelopment.scss';
 
 const items = [];
 websiteTemplatesData.forEach((element, index) => {

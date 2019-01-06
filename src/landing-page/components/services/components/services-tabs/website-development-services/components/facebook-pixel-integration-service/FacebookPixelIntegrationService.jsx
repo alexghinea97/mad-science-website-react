@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import { addFacebookPixelIntegrationService } from '../../../../../../../../actions/servicesActions';
-import './FacebookPixel.css';
+import './FacebookPixel.scss';
 
 class FacebookPixelIntegrationService extends React.Component {
   handleChange = (event, index, value) => this.setState({ value });
@@ -52,6 +52,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(() => {
-  return {};
-}, mapDispatchToProps)(FacebookPixelIntegrationService);
+export default connect(
+  () => {
+    return {};
+  },
+  mapDispatchToProps
+)(FacebookPixelIntegrationService);

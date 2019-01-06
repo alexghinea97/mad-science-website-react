@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import { addFacebookMessengerIntegrationService } from '../../../../../../../../actions/servicesActions';
-import './FacebookMessenger.css';
+import './FacebookMessenger.scss';
 
 class FacebookMessengerIntegrationService extends React.Component {
   handleChange = (event, index, value) => this.setState({ value });
@@ -56,6 +56,9 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(() => {
-  return {};
-}, mapDispatchToProps)(FacebookMessengerIntegrationService);
+export default connect(
+  () => {
+    return {};
+  },
+  mapDispatchToProps
+)(FacebookMessengerIntegrationService);

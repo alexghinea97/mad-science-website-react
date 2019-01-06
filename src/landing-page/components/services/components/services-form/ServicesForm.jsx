@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import './ServicesForm.css';
+import './ServicesForm.scss';
 
 const styles = theme => ({
   root: {
